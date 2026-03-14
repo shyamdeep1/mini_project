@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Watchlist - Cinematic</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                <span>CINEMATIC</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Browse <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../browse/genres.html">All Genres</a></li>
+                        <li><a href="../browse/movies.html">Latest / Top Rated / Popular</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">Features <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="watchlist.html">My Watchlist</a></li>
+                        <li><a href="downloads.html">Downloads & History</a></li>
+                        <li><a href="movie-map.html">Movie Map</a></li>
+                        <li><a href="bundles.html">Movie Bundles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Tools <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../tools/calendar.html">Release Calendar</a></li>
+                        <li><a href="../tools/request.html">Request Movie</a></li>
+                    </ul>
+                </li>
+                <li><a href="../info/about-help.html" class="nav-link">About & Help</a></li>
+            </ul>
+            
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="../search-results.html" class="search-btn">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="#" class="profile-btn">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="watchlist-hero">
+            <div class="container">
+                <div class="hero-content text-center">
+                    <div class="hero-icon">
+                        <i class="bi bi-bookmark-heart-fill"></i>
+                    </div>
+                    <h1 class="hero-title">📚 My Personal Watchlist</h1>
+                    <p class="hero-subtitle">Track, Organize, and Never Miss a Movie</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="watchlist-tabs-section">
+            <div class="container">
+                <div class="tabs-container">
+                    <div class="tab-navigation">
+                        <button class="tab-btn active" data-tab="toWatch">
+                            <div class="tab-icon">
+                                <i class="bi bi-bookmark-plus-fill"></i>
+                            </div>
+                            <div class="tab-info">
+                                <h3>To Watch</h3>
+                                <span class="tab-count">18 Movies</span>
+                            </div>
+                            <div class="tab-indicator"></div>
+                        </button>
+
+                        <button class="tab-btn" data-tab="watching">
+                            <div class="tab-icon">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                            <div class="tab-info">
+                                <h3>Watching</h3>
+                                <span class="tab-count">4 Movies</span>
+                            </div>
+                            <div class="tab-indicator"></div>
+                        </button>
+
+                        <button class="tab-btn" data-tab="completed">
+                            <div class="tab-icon">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+                            <div class="tab-info">
+                                <h3>Completed</h3>
+                                <span class="tab-count">9 Movies</span>
+                            </div>
+                            <div class="tab-indicator"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filters-controls">
+                    <div class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search in watchlist...">
+                    </div>
+                    <div class="filter-options">
+                        <select class="filter-select">
+                            <option>Sort: Date Added</option>
+                            <option>Sort: Title A-Z</option>
+                            <option>Sort: Rating High-Low</option>
+                            <option>Sort: Release Date</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>Genre: All</option>
+                            <option>Action</option>
+                            <option>Drama</option>
+                            <option>Comedy</option>
+                            <option>Thriller</option>
+                            <option>Sci-Fi</option>
+                        </select>
+                        <div class="view-toggles">
+                            <button class="view-btn" data-view="grid">
+                                <i class="bi bi-grid-3x3-gap-fill"></i>
+                            </button>
+                            <button class="view-btn active" data-view="list">
+                                <i class="bi bi-list-ul"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="toWatch">
+                        <div class="section-header-small">
+                            <h3 class="section-title-small">📌 To Watch (18 Movies)</h3>
+                        </div>
+
+                        <div class="movies-list">
+                            <div class="movie-item">
+                                <div class="movie-poster">
+                                    <img src="https://image.tmdb.org/t/p/w500/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg" alt="Inception">
+                                    <div class="poster-overlay">
+                                        <button class="play-btn">
+                                            <i class="bi bi-play-fill"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="movie-details">
+                                    <h4 class="movie-title">Inception</h4>
+                                    <div class="movie-meta">
+                                        <span class="rating"><i class="bi bi-star-fill"></i> 8.8</span>
+                                        <span class="genre">Sci-Fi, Thriller</span>
+                                        <span class="duration">2h 28m</span>
+                                        <span class="year">2010</span>
+                                    </div>
+                                    <p class="movie-description">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.</p>
+                                    <div class="movie-actions">
+                                        <button class="btn-action btn-primary">
+                                            <i class="bi bi-check-circle"></i>
+                                            <span>Mark Watched</span>
+                                        </button>
+                                        <button class="btn-action btn-secondary">
+                                            <i class="bi bi-x-circle"></i>
+                                            <span>Remove</span>
+                                        </button>
+                                        <button class="btn-action btn-secondary">
+                                            <i class="bi bi-info-circle"></i>
+                                            <span>Details</span>
+                                        </button>
+                                        <button class="btn-action btn-play">
+                                            <i class="bi bi-play-circle-fill"></i>
+                                            <span>Play</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="movie-item">
+                                <div class="movie-poster">
+                                    <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight">
+                                    <div class="poster-overlay">
+                                        <button class="play-btn">
+                                            <i class="bi bi-play-fill"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="movie-details">
+                                    <h4 class="movie-title">The Dark Knight</h4>
+                                    <div class="movie-meta">
+                                        <span class="rating"><i class="bi bi-star-fill"></i> 9.0</span>
+                                        <span class="genre">Action, Crime, Drama</span>
+                                        <span class="duration">2h 32m</span>
+                                        <span class="year">2008</span>
+                                    </div>
+                                    <p class="movie-description">When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological tests.</p>
+                                    <div class="movie-actions">
+                                        <button class="btn-action btn-primary">
+                                            <i class="bi bi-check-circle"></i>
+                                            <span>Mark Watched</span>
+                                        </button>
+                                        <button class="btn-action btn-secondary">
+                                            <i class="bi bi-x-circle"></i>
+                                            <span>Remove</span>
+                                        </button>
+                                        <button class="btn-action btn-secondary">
+                                            <i class="bi bi-info-circle"></i>
+                                            <span>Details</span>
+                                        </button>
+                                        <button class="btn-action btn-play">
+                                            <i class="bi bi-play-circle-fill"></i>
+                                            <span>Play</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="movie-item">
+                                <div class="movie-poster">
+                                    <img src="https://image.tmdb.org/t/p/w500/nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg" alt="Interstellar">
+                                    <div class="poster-overlay">
+                                        <button class="play-btn">
+                                            <i class="bi bi-play-fill"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="movie-details">
+                                    <h4 class="movie-title">Interstellar</h4>
+                                    <div class="movie-meta">
+                                        <span class="rating"><i class="bi bi-star-fill"></i> 8.7</span>
+                                        <span class="genre">Sci-Fi, Drama, Adventure</span>
+                                        <span class="duration">2h 49m</span>
+                                        <span class="year">2014</span>
+                                    </div>
+                                    <p class="movie-description">A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</p>
+                                    <div class="movie-actions">
+                                        <button class="btn-action btn-primary">
+                                            <i class="bi bi-check-circle"></i>
+                                            <span>Mark Watched</span>
+                                        </button>
+                                        <button class="btn-action btn-secondary">
+                                            <i class="bi bi-x-circle"></i>
+                                            <span>Remove</span>
+                                        </button>
+                                        <button class="btn-action btn-secondary">
+                                            <i class="bi bi-info-circle"></i>
+                                            <span>Details</span>
+                                        </button>
+                                        <button class="btn-action btn-play">
+                                            <i class="bi bi-play-circle-fill"></i>
+                                            <span>Play</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="load-more-container">
+                            <button class="btn-load-more">
+                                <span>View All 18 Movies</span>
+                                <i class="bi bi-arrow-down-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="watching">
+                        <div class="section-header-small">
+                            <h3 class="section-title-small">🎬 Watching (4 Movies)</h3>
+                        </div>
+
+                        <div class="movies-list">
+                            <div class="movie-item">
+                                <div class="movie-poster">
+                                    <img src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="Fight Club">
+                                    <div class="poster-overlay">
+                                        <button class="play-btn">
+                                            <i class="bi bi-play-fill"></i>
+                                        </button>
+                                    </div>
+                                    <div class="progress-badge">45%</div>
+                                </div>
+                                <div class="movie-details">
+                                    <h4 class="movie-title">Fight Club</h4>
+                                    <div class="movie-meta">
+                                        <span class="rating"><i class="bi bi-star-fill"></i> 8.8</span>
+                                        <span class="genre">Drama</span>
+                                        <span class="duration">2h 19m</span>
+                                        <span class="year">1999</span>
+                                    </div>
+                                    <p class="movie-description">An insomniac office worker and a devil-may-care soap maker form an underground fight club.</p>
+                                    <div class="progress-bar-watch">
+                                        <div class="progress-fill-watch" style="width: 45%;"></div>
+                                    </div>
+                                    <div class="movie-actions">
+                                        <button class="btn-action btn-primary">
+                                            <i class="bi bi-play-fill"></i>
+                                            <span>Continue Watching</span>
+                                        </button>
+                                        <button class="btn-action btn-secondary">
+                                            <i class="bi bi-check-circle"></i>
+                                            <span>Mark Complete</span>
+                                        </button>
+                                        <button class="btn-action btn-secondary">
+                                            <i class="bi bi-x-circle"></i>
+                                            <span>Remove</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="completed">
+                        <div class="section-header-small">
+                            <h3 class="section-title-small">✅ Completed (9 Movies)</h3>
+                        </div>
+
+                        <div class="movies-list">
+                            <div class="movie-item completed">
+                                <div class="movie-poster">
+                                    <img src="https://image.tmdb.org/t/p/w500/9O7gLzmreU0nGkIB6K3BsJbzvNv.jpg" alt="The Shawshank Redemption">
+                                    <div class="poster-overlay">
+                                        <button class="play-btn">
+                                            <i class="bi bi-play-fill"></i>
+                                        </button>
+                                    </div>
+                                    <div class="completed-badge">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="movie-details">
+                                    <h4 class="movie-title">The Shawshank Redemption</h4>
+                                    <div class="movie-meta">
+                                        <span class="rating"><i class="bi bi-star-fill"></i> 9.3</span>
+                                        <span class="genre">Drama</span>
+                                        <span class="duration">2h 22m</span>
+                                        <span class="year">1994</span>
+                                    </div>
+                                    <p class="movie-description">Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</p>
+                                    <div class="movie-actions">
+                                        <button class="btn-action btn-primary">
+                                            <i class="bi bi-arrow-counterclockwise"></i>
+                                            <span>Watch Again</span>
+                                        </button>
+                                        <button class="btn-action btn-secondary">
+                                            <i class="bi bi-x-circle"></i>
+                                            <span>Remove</span>
+                                        </button>
+                                        <button class="btn-action btn-secondary">
+                                            <i class="bi bi-info-circle"></i>
+                                            <span>Details</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                        <span>CINEMATIC</span>
+                    </div>
+                    <p>Your ultimate destination for movies and entertainment. Stream thousands of titles anytime, anywhere.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Browse</h4>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../browse/genres.html">All Genres</a></li>
+                        <li><a href="../browse/movies.html">Latest Movies</a></li>
+                        <li><a href="smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="../tools/calendar.html">Release Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Features -->
+                <div class="footer-links">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="watchlist.html">Watchlist</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="movie-map.html">Movie Map</a></li>
+                        <li><a href="bundles.html">Movie Bundles</a></li>
+                        <li><a href="../tools/request.html">Request Movie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../info/about-help.html">About Us</a></li>
+                        <li><a href="../info/about-help.html#help">Help Center</a></li>
+                        <li><a href="../info/about-help.html#faq">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get updates on new releases and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cinematic. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <span>•</span>
+                    <a href="#">Terms</a>
+                    <span>•</span>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        .watchlist-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .watchlist-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            border-radius: 50%;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 50px rgba(220, 38, 38, 0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .hero-icon i {
+            font-size: 3.5rem;
+            color: #fff;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 20px 50px rgba(220, 38, 38, 0.5);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 20px 60px rgba(220, 38, 38, 0.7);
+                transform: scale(1.05);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+
+        .watchlist-tabs-section {
+            padding: 60px 0 40px;
+        }
+
+        .tabs-container {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .tab-navigation {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .tab-btn {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .tab-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(220, 38, 38, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.3);
+        }
+
+        .tab-btn:hover::before {
+            opacity: 1;
+        }
+
+        .tab-btn.active {
+            background: rgba(220, 38, 38, 0.15);
+            border-color: #dc2626;
+            box-shadow: 0 10px 40px rgba(220, 38, 38, 0.4);
+        }
+
+        .tab-btn.active::before {
+            opacity: 1;
+        }
+
+        .tab-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tab-btn:hover .tab-icon {
+            background: rgba(220, 38, 38, 0.2);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .tab-btn.active .tab-icon {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.5);
+        }
+
+        .tab-icon i {
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover .tab-icon i {
+            color: #dc2626;
+        }
+
+        .tab-btn.active .tab-icon i {
+            color: #fff;
+        }
+
+        .tab-info {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tab-info h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active .tab-info h3 {
+            color: #dc2626;
+        }
+
+        .tab-count {
+            font-size: 1rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover .tab-count {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .tab-btn.active .tab-count {
+            color: rgba(220, 38, 38, 0.9);
+        }
+
+        .tab-indicator {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #dc2626, #991b1b);
+            border-radius: 4px 4px 0 0;
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .tab-btn.active .tab-indicator {
+            transform: scaleX(1);
+        }
+
+        @media (max-width: 992px) {
+            .tab-navigation {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .tab-btn {
+                flex-direction: row;
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .tab-icon {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 0;
+            }
+
+            .tab-icon i {
+                font-size: 2rem;
+            }
+
+            .tab-info {
+                text-align: left;
+            }
+
+            .tab-info h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .hero-icon i {
+                font-size: 2.5rem;
+            }
+
+            .tabs-container {
+                padding: 1.5rem;
+            }
+        }
+        
+        .filters-controls {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 1.2rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #dc2626;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
+        }
+
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .filter-options {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-select {
+            flex: 1;
+            min-width: 200px;
+            padding: 0.9rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #dc2626;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .filter-select option {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .view-toggles {
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.4rem;
+            border-radius: 12px;
+        }
+
+        .view-btn {
+            padding: 0.7rem 1.2rem;
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .view-btn:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .view-btn.active {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            color: #fff;
+        }
+
+        .tab-content {
+            margin-top: 2rem;
+        }
+
+        .tab-pane {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-header-small {
+            margin-bottom: 2rem;
+        }
+
+        .section-title-small {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(220, 38, 38, 0.3);
+        }
+
+        .movies-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .movie-item {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .movie-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(220, 38, 38, 0.3);
+            box-shadow: 0 10px 40px rgba(220, 38, 38, 0.2);
+            transform: translateX(10px);
+        }
+
+        .movie-poster {
+            position: relative;
+            flex-shrink: 0;
+            width: 150px;
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .movie-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .movie-item:hover .movie-poster img {
+            transform: scale(1.1);
+        }
+
+        .poster-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .movie-poster:hover .poster-overlay {
+            opacity: 1;
+        }
+
+        .play-btn {
+            width: 60px;
+            height: 60px;
+            background: rgba(220, 38, 38, 0.9);
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn:hover {
+            background: #dc2626;
+            transform: scale(1.1);
+        }
+
+        .progress-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 0.4rem 0.8rem;
+            background: rgba(220, 38, 38, 0.9);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .completed-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            background: rgba(34, 197, 94, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .movie-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .movie-meta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .movie-meta span {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .movie-meta .rating {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+
+        .movie-meta .rating i {
+            margin-right: 0.3rem;
+        }
+
+        .movie-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-bar-watch {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-fill-watch {
+            height: 100%;
+            background: linear-gradient(90deg, #dc2626, #991b1b);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .movie-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+
+        .btn-action {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-action i {
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            color: #fff;
+            box-shadow: 0 5px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(220, 38, 38, 0.5);
+            color: #fff;
+        }
+
+        .btn-play {
+            background: rgba(220, 38, 38, 0.2);
+            border: 1px solid rgba(220, 38, 38, 0.4);
+            color: #dc2626;
+        }
+
+        .btn-play:hover {
+            background: rgba(220, 38, 38, 0.3);
+            border-color: #dc2626;
+            color: #fff;
+        }
+
+        .load-more-container {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .btn-load-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1.2rem 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-load-more:hover {
+            background: rgba(220, 38, 38, 0.2);
+            border-color: #dc2626;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-load-more i {
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-load-more:hover i {
+            transform: translateY(5px);
+        }
+
+        @media (max-width: 992px) {
+            .tab-navigation {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .tab-btn {
+                flex-direction: row;
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .tab-icon {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 0;
+            }
+
+            .tab-icon i {
+                font-size: 2rem;
+            }
+
+            .tab-info {
+                text-align: left;
+            }
+
+            .tab-info h3 {
+                font-size: 1.5rem;
+            }
+
+            .movie-item {
+                flex-direction: column;
+            }
+
+            .movie-poster {
+                width: 100%;
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .hero-icon i {
+                font-size: 2.5rem;
+            }
+
+            .tabs-container {
+                padding: 1.5rem;
+            }
+
+            .filter-options {
+                flex-direction: column;
+            }
+
+            .filter-select {
+                width: 100%;
+                min-width: unset;
+            }
+
+            .view-toggles {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .movie-item {
+                padding: 1.5rem;
+            }
+
+            .movie-actions {
+                flex-direction: column;
+            }
+
+            .btn-action {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabName = this.getAttribute('data-tab');
+                    
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    tabPanes.forEach(pane => {
+                        pane.classList.remove('active');
+                        if (pane.id === tabName) {
+                            pane.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            const viewButtons = document.querySelectorAll('.view-btn');
+            viewButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    viewButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

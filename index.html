@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Portal - Navigation</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="#" class="nav-logo">
+                <img src="images/wb_logo_without_bg.png" alt="Logo">
+                <span>CINEMATIC</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Browse <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/browse/genres.html">All Genres</a></li>
+                        <li><a href="pages/browse/movies.html">Latest / Top Rated / Popular</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Features <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/features/smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="pages/features/watchlist.html">My Watchlist</a></li>
+                        <li><a href="pages/features/downloads.html">Downloads & History</a></li>
+                        <li><a href="pages/features/movie-map.html">Movie Map</a></li>
+                        <li><a href="pages/features/bundles.html">Movie Bundles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Tools <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/tools/calendar.html">Release Calendar</a></li>
+                        <li><a href="pages/tools/request.html">Request Movie</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/info/about-help.html" class="nav-link">About & Help</a></li>
+            </ul>
+            
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="pages/search-results.html" class="search-btn">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="#" class="profile-btn">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="carousel-card">
+                    <div class="carousel-image">
+                        <img src="images/mv_poster_1.jpg" alt="Featured Movie 1">
+                    </div>
+                    <div class="carousel-content">
+                        <span class="carousel-badge">Featured</span>
+                        <h1>Discover Amazing Movies</h1>
+                        <div class="carousel-meta">
+                            <span><i class="bi bi-star-fill"></i> 8.5</span>
+                            <span><i class="bi bi-calendar3"></i> 2024</span>
+                            <span><i class="bi bi-clock"></i> 2h 15m</span>
+                        </div>
+                        <p>Explore thousands of movies and TV shows. Watch trailers, read reviews, and find your next favorite film from our extensive collection.</p>
+                        <div class="carousel-actions">
+                            <a href="#" class="carousel-btn">
+                                <i class="bi bi-play-fill"></i>
+                                Watch Now
+                            </a>
+                            <a href="#" class="carousel-btn carousel-btn-outline">
+                                <i class="bi bi-info-circle"></i>
+                                More Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="carousel-card">
+                    <div class="carousel-image">
+                        <img src="images/mv_poater_2.jpg" alt="Featured Movie 2">
+                    </div>
+                    <div class="carousel-content">
+                        <span class="carousel-badge">Trending Now</span>
+                        <h1>This Week's Blockbuster</h1>
+                        <div class="carousel-meta">
+                            <span><i class="bi bi-star-fill"></i> 9.2</span>
+                            <span><i class="bi bi-calendar3"></i> 2025</span>
+                            <span><i class="bi bi-clock"></i> 2h 30m</span>
+                        </div>
+                        <p>Stay updated with the latest blockbusters and trending content from around the world. Don't miss out on what everyone's watching.</p>
+                        <div class="carousel-actions">
+                            <a href="#" class="carousel-btn">
+                                <i class="bi bi-play-fill"></i>
+                                Watch Now
+                            </a>
+                            <a href="#" class="carousel-btn carousel-btn-outline">
+                                <i class="bi bi-info-circle"></i>
+                                More Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="carousel-card">
+                    <div class="carousel-image">
+                        <img src="images/mv_poster_3.jpg" alt="Featured Movie 3">
+                    </div>
+                    <div class="carousel-content">
+                        <span class="carousel-badge">Recommended</span>
+                        <h1>Personalized For You</h1>
+                        <div class="carousel-meta">
+                            <span><i class="bi bi-star-fill"></i> 8.8</span>
+                            <span><i class="bi bi-calendar3"></i> 2024</span>
+                            <span><i class="bi bi-clock"></i> 1h 58m</span>
+                        </div>
+                        <p>Get personalized recommendations based on your viewing history and preferences. Discover content tailored just for you.</p>
+                        <div class="carousel-actions">
+                            <a href="#" class="carousel-btn">
+                                <i class="bi bi-play-fill"></i>
+                                Watch Now
+                            </a>
+                            <a href="#" class="carousel-btn carousel-btn-outline">
+                                <i class="bi bi-info-circle"></i>
+                                More Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+    </div>
+
+    <!-- OTT Platforms Section -->
+    <section class="ott-section">
+        <div class="section-header">
+            <h2>Explore Top Streaming Platforms</h2>
+            <p>Access exclusive content from the world's leading OTT platforms</p>
+        </div>
+        
+        <div class="ott-container">
+            <!-- Netflix Card -->
+            <div class="ott-card netflix">
+                <div class="ott-icon">
+                    <i class="bi bi-play-circle-fill"></i>
+                </div>
+                <h3>Netflix</h3>
+                <p>Stream unlimited movies and TV shows. Discover award-winning originals and exclusive content.</p>
+                <a href="#" class="ott-btn"><i class="bi bi-box-arrow-up-right me-2"></i>Explore Netflix</a>
+            </div>
+            
+            <!-- Amazon Prime Card -->
+            <div class="ott-card prime">
+                <div class="ott-icon">
+                    <i class="bi bi-film"></i>
+                </div>
+                <h3>Prime Video</h3>
+                <p>Watch thousands of movies and series. Enjoy Amazon Originals and exclusive releases.</p>
+                <a href="#" class="ott-btn"><i class="bi bi-box-arrow-up-right me-2"></i>Explore Prime</a>
+            </div>
+            
+            <!-- Disney+ Card -->
+            <div class="ott-card disney">
+                <div class="ott-icon">
+                    <i class="bi bi-stars"></i>
+                </div>
+                <h3>Disney+</h3>
+                <p>Experience Disney, Pixar, Marvel, Star Wars, and National Geographic all in one place.</p>
+                <a href="#" class="ott-btn"><i class="bi bi-box-arrow-up-right me-2"></i>Explore Disney+</a>
+            </div>
+            
+            <!-- HBO Max Card -->
+            <div class="ott-card hbo">
+                <div class="ott-icon">
+                    <i class="bi bi-tv-fill"></i>
+                </div>
+                <h3>HBO Max</h3>
+                <p>Premium entertainment with blockbuster movies, iconic series, and exclusive Max Originals.</p>
+                <a href="#" class="ott-btn"><i class="bi bi-box-arrow-up-right me-2"></i>Explore HBO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Movies Section -->
+    <section class="latest-movies-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Movies</h2>
+                <p>Watch the newest releases and trending blockbusters</p>
+            </div>
+            
+            <div class="movies-grid">
+                <!-- Movie Card 1 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="images/mv_poster_1.jpg" alt="Movie 1">
+                        <div class="movie-overlay">
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+                        <span class="movie-badge">New</span>
+                        <span class="movie-rating">
+                            <i class="bi bi-star-fill"></i> 8.5
+                        </span>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Epic Adventure</h3>
+                        <div class="movie-meta">
+                            <span>2024</span>
+                            <span>•</span>
+                            <span>Action</span>
+                            <span>•</span>
+                            <span>2h 15m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 2 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="images/mv_poater_2.jpg" alt="Movie 2">
+                        <div class="movie-overlay">
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+                        <span class="movie-badge trending">Trending</span>
+                        <span class="movie-rating">
+                            <i class="bi bi-star-fill"></i> 9.2
+                        </span>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Mystery Thriller</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>•</span>
+                            <span>Thriller</span>
+                            <span>•</span>
+                            <span>2h 30m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 3 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="images/mv_poster_3.jpg" alt="Movie 3">
+                        <div class="movie-overlay">
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+                        <span class="movie-badge hot">Hot</span>
+                        <span class="movie-rating">
+                            <i class="bi bi-star-fill"></i> 8.8
+                        </span>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Romantic Story</h3>
+                        <div class="movie-meta">
+                            <span>2024</span>
+                            <span>•</span>
+                            <span>Romance</span>
+                            <span>•</span>
+                            <span>1h 58m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 4 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="images/mv_poster_1.jpg" alt="Movie 4">
+                        <div class="movie-overlay">
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+                        <span class="movie-rating">
+                            <i class="bi bi-star-fill"></i> 7.9
+                        </span>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Sci-Fi Journey</h3>
+                        <div class="movie-meta">
+                            <span>2024</span>
+                            <span>•</span>
+                            <span>Sci-Fi</span>
+                            <span>•</span>
+                            <span>2h 05m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 5 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="images/mv_poater_2.jpg" alt="Movie 5">
+                        <div class="movie-overlay">
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+                        <span class="movie-badge">New</span>
+                        <span class="movie-rating">
+                            <i class="bi bi-star-fill"></i> 8.3
+                        </span>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Comedy Night</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>•</span>
+                            <span>Comedy</span>
+                            <span>•</span>
+                            <span>1h 45m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 6 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="images/mv_poster_3.jpg" alt="Movie 6">
+                        <div class="movie-overlay">
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                        </div>
+                        <span class="movie-rating">
+                            <i class="bi bi-star-fill"></i> 8.1
+                        </span>
+                    </div>
+                    <div class="movie-info">
+                        <h3>Horror House</h3>
+                        <div class="movie-meta">
+                            <span>2024</span>
+                            <span>•</span>
+                            <span>Horror</span>
+                            <span>•</span>
+                            <span>1h 52m</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all-container">
+                <a href="#" class="view-all-btn">
+                    View All Movies
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Section -->
+    <section class="bento-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Collections</h2>
+                <p>Handpicked selections just for you</p>
+            </div>
+            
+            <div class="bento-grid">
+                <!-- Large Feature Card -->
+                <div class="bento-item large">
+                    <img src="images/mv_poster_1.jpg" alt="Featured">
+                    <div class="bento-content">
+                        <span class="bento-tag">Editor's Choice</span>
+                        <h3>Epic Blockbuster</h3>
+                        <p>The most anticipated movie of the year</p>
+                        <a href="#" class="bento-link">
+                            <i class="bi bi-play-circle-fill"></i> Watch Trailer
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Tall Card -->
+                <div class="bento-item tall">
+                    <img src="images/mv_poater_2.jpg" alt="Top Rated">
+                    <div class="bento-content">
+                        <span class="bento-tag gold">Top Rated</span>
+                        <h3>Award Winner</h3>
+                        <div class="bento-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wide Card -->
+                <div class="bento-item wide">
+                    <img src="images/mv_poster_3.jpg" alt="Trending">
+                    <div class="bento-content">
+                        <span class="bento-tag pink">Trending #1</span>
+                        <h3>Fan Favorite</h3>
+                        <p>Everyone's talking about this</p>
+                    </div>
+                </div>
+                
+                <!-- Small Card 1 -->
+                <div class="bento-item small">
+                    <img src="images/mv_poster_1.jpg" alt="Action">
+                    <div class="bento-content">
+                        <h3>Action</h3>
+                    </div>
+                </div>
+                
+                <!-- Small Card 2 -->
+                <div class="bento-item small">
+                    <img src="images/mv_poater_2.jpg" alt="Comedy">
+                    <div class="bento-content">
+                        <h3>Comedy</h3>
+                    </div>
+                </div>
+                
+                <!-- Medium Card -->
+                <div class="bento-item medium">
+                    <img src="images/mv_poster_3.jpg" alt="New Release">
+                    <div class="bento-content">
+                        <span class="bento-tag orange">Just Added</span>
+                        <h3>Fresh Release</h3>
+                        <p>Available now</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horizontal Scrolling Showcase -->
+    <section class="showcase-section">
+        <div class="section-header">
+            <h2>Must-Watch This Month</h2>
+            <p>Scroll through our handpicked selection</p>
+        </div>
+        
+        <div class="showcase-scroll">
+            <!-- Showcase Card 1 -->
+            <div class="showcase-card">
+                <div class="showcase-image">
+                    <img src="images/mv_poster_1.jpg" alt="Movie 1">
+                    <div class="showcase-gradient"></div>
+                </div>
+                <div class="showcase-content">
+                    <div class="showcase-number">01</div>
+                    <span class="showcase-category">Action • Thriller</span>
+                    <h3>The Last Mission</h3>
+                    <p>A gripping tale of courage and sacrifice in the face of impossible odds. Experience the ultimate action thriller.</p>
+                    <div class="showcase-stats">
+                        <div class="stat">
+                            <i class="bi bi-star-fill"></i>
+                            <span>9.2</span>
+                        </div>
+                        <div class="stat">
+                            <i class="bi bi-eye-fill"></i>
+                            <span>2.5M views</span>
+                        </div>
+                        <div class="stat">
+                            <i class="bi bi-clock-fill"></i>
+                            <span>2h 25m</span>
+                        </div>
+                    </div>
+                    <button class="showcase-btn">
+                        <i class="bi bi-play-fill"></i>
+                        Watch Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Showcase Card 2 -->
+            <div class="showcase-card">
+                <div class="showcase-image">
+                    <img src="images/mv_poater_2.jpg" alt="Movie 2">
+                    <div class="showcase-gradient"></div>
+                </div>
+                <div class="showcase-content">
+                    <div class="showcase-number">02</div>
+                    <span class="showcase-category">Mystery • Drama</span>
+                    <h3>Echoes of Tomorrow</h3>
+                    <p>Unravel the mysteries of time in this mind-bending journey that will keep you on the edge of your seat.</p>
+                    <div class="showcase-stats">
+                        <div class="stat">
+                            <i class="bi bi-star-fill"></i>
+                            <span>8.8</span>
+                        </div>
+                        <div class="stat">
+                            <i class="bi bi-eye-fill"></i>
+                            <span>1.8M views</span>
+                        </div>
+                        <div class="stat">
+                            <i class="bi bi-clock-fill"></i>
+                            <span>2h 10m</span>
+                        </div>
+                    </div>
+                    <button class="showcase-btn">
+                        <i class="bi bi-play-fill"></i>
+                        Watch Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Showcase Card 3 -->
+            <div class="showcase-card">
+                <div class="showcase-image">
+                    <img src="images/mv_poster_3.jpg" alt="Movie 3">
+                    <div class="showcase-gradient"></div>
+                </div>
+                <div class="showcase-content">
+                    <div class="showcase-number">03</div>
+                    <span class="showcase-category">Romance • Comedy</span>
+                    <h3>Love in Paris</h3>
+                    <p>A heartwarming romantic comedy set in the city of lights. Discover love, laughter, and unforgettable moments.</p>
+                    <div class="showcase-stats">
+                        <div class="stat">
+                            <i class="bi bi-star-fill"></i>
+                            <span>8.5</span>
+                        </div>
+                        <div class="stat">
+                            <i class="bi bi-eye-fill"></i>
+                            <span>3.2M views</span>
+                        </div>
+                        <div class="stat">
+                            <i class="bi bi-clock-fill"></i>
+                            <span>1h 55m</span>
+                        </div>
+                    </div>
+                    <button class="showcase-btn">
+                        <i class="bi bi-play-fill"></i>
+                        Watch Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Showcase Card 4 -->
+            <div class="showcase-card">
+                <div class="showcase-image">
+                    <img src="images/mv_poster_1.jpg" alt="Movie 4">
+                    <div class="showcase-gradient"></div>
+                </div>
+                <div class="showcase-content">
+                    <div class="showcase-number">04</div>
+                    <span class="showcase-category">Sci-Fi • Adventure</span>
+                    <h3>Beyond the Stars</h3>
+                    <p>Journey to the far reaches of space in this epic science fiction adventure that redefines the genre.</p>
+                    <div class="showcase-stats">
+                        <div class="stat">
+                            <i class="bi bi-star-fill"></i>
+                            <span>9.0</span>
+                        </div>
+                        <div class="stat">
+                            <i class="bi bi-eye-fill"></i>
+                            <span>4.1M views</span>
+                        </div>
+                        <div class="stat">
+                            <i class="bi bi-clock-fill"></i>
+                            <span>2h 40m</span>
+                        </div>
+                    </div>
+                    <button class="showcase-btn">
+                        <i class="bi bi-play-fill"></i>
+                        Watch Now
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="showcase-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/wb_logo_without_bg.png" alt="Logo">
+                        <span>CINEMATIC</span>
+                    </div>
+                    <p>Your ultimate destination for movies and entertainment. Stream thousands of titles anytime, anywhere.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Browse</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/browse/genres.html">All Genres</a></li>
+                        <li><a href="pages/browse/movies.html">Latest Movies</a></li>
+                        <li><a href="pages/features/smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="pages/tools/calendar.html">Release Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Features -->
+                <div class="footer-links">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="pages/features/watchlist.html">Watchlist</a></li>
+                        <li><a href="pages/features/downloads.html">Downloads</a></li>
+                        <li><a href="pages/features/movie-map.html">Movie Map</a></li>
+                        <li><a href="pages/features/bundles.html">Movie Bundles</a></li>
+                        <li><a href="pages/tools/request.html">Request Movie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="pages/info/about-help.html">About Us</a></li>
+                        <li><a href="pages/info/about-help.html#help">Help Center</a></li>
+                        <li><a href="pages/info/about-help.html#faq">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get updates on new releases and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cinematic. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <span>•</span>
+                    <a href="#">Terms</a>
+                    <span>•</span>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Release Calendar - Cinematic</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                <span>CINEMATIC</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Browse <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../browse/genres.html">All Genres</a></li>
+                        <li><a href="../browse/movies.html">Latest / Top Rated / Popular</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Features <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../features/smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="../features/watchlist.html">My Watchlist</a></li>
+                        <li><a href="../features/downloads.html">Downloads & History</a></li>
+                        <li><a href="../features/movie-map.html">Movie Map</a></li>
+                        <li><a href="../features/bundles.html">Movie Bundles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">Tools <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="calendar.html">Release Calendar</a></li>
+                        <li><a href="request.html">Request Movie</a></li>
+                    </ul>
+                </li>
+                <li><a href="../info/about-help.html" class="nav-link">About & Help</a></li>
+            </ul>
+            
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="../search-results.html" class="search-btn">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="#" class="profile-btn">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="calendar-hero">
+            <div class="container">
+                <div class="hero-content text-center">
+                    <div class="hero-icon">
+                        <i class="bi bi-calendar-event-fill"></i>
+                    </div>
+                    <h1 class="hero-title">🎬 Movie Release Calendar 🎬</h1>
+                    <p class="hero-subtitle">Track Every Upcoming Movie Release</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="calendar-filters-section">
+            <div class="container">
+                <div class="filters-container">
+                    <div class="filter-row">
+                        <select class="filter-select">
+                            <option value="thisWeek">Filter: This Week</option>
+                            <option value="nextWeek">Next Week</option>
+                            <option value="thisMonth">This Month</option>
+                            <option value="nextMonth">Next Month</option>
+                            <option value="all">All Upcoming</option>
+                        </select>
+
+                        <select class="filter-select">
+                            <option value="all">Genre: All</option>
+                            <option value="action">Action</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="drama">Drama</option>
+                            <option value="horror">Horror</option>
+                            <option value="romance">Romance</option>
+                            <option value="scifi">Sci-Fi</option>
+                            <option value="thriller">Thriller</option>
+                        </select>
+
+                        <select class="filter-select">
+                            <option value="date">Sort: By Date</option>
+                            <option value="title">By Title</option>
+                            <option value="rating">By Rating</option>
+                            <option value="popularity">By Popularity</option>
+                        </select>
+
+                        <div class="view-toggles">
+                            <button class="view-btn" data-view="calendar">
+                                <i class="bi bi-calendar3"></i>
+                            </button>
+                            <button class="view-btn active" data-view="list">
+                                <i class="bi bi-list-ul"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="releases-section">
+            <div class="container">
+                <div class="today-releases">
+                    <div class="date-header">
+                        <div class="date-badge">
+                            <i class="bi bi-star-fill"></i>
+                            <span>TODAY</span>
+                        </div>
+                        <h2 class="date-title">February 11, 2026</h2>
+                    </div>
+
+                    <div class="releases-list">
+                        <div class="release-card">
+                            <div class="release-time">
+                                <div class="time-badge">
+                                    <i class="bi bi-clock"></i>
+                                    <span>11:00 AM</span>
+                                </div>
+                                <div class="time-label">Release</div>
+                            </div>
+                            <div class="release-poster">
+                                <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="The Last Guardian">
+                                <div class="poster-overlay">
+                                    <button class="play-btn">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="release-details">
+                                <h3 class="release-title">The Last Guardian</h3>
+                                <div class="release-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>8.5/10</span>
+                                </div>
+                                <div class="release-meta">
+                                    <span class="genre">Action, Adventure</span>
+                                    <span class="separator">•</span>
+                                    <span class="duration">2h 15m</span>
+                                </div>
+                                <p class="release-description">
+                                    A legendary warrior embarks on an epic quest to protect the ancient kingdom from a rising darkness that threatens to consume everything.
+                                </p>
+                                <div class="release-actions">
+                                    <button class="btn-release btn-remind">
+                                        <i class="bi bi-bell"></i>
+                                        <span>Remind Me</span>
+                                    </button>
+                                    <button class="btn-release btn-watchlist">
+                                        <i class="bi bi-plus-circle"></i>
+                                        <span>Watchlist</span>
+                                    </button>
+                                    <button class="btn-release btn-details">
+                                        <i class="bi bi-info-circle"></i>
+                                        <span>Details</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="release-card">
+                            <div class="release-time">
+                                <div class="time-badge">
+                                    <i class="bi bi-clock"></i>
+                                    <span>06:00 PM</span>
+                                </div>
+                                <div class="time-label">Release</div>
+                            </div>
+                            <div class="release-poster">
+                                <img src="https://image.tmdb.org/t/p/w500/yGNnjoIGOdQy3douq60tULY8teK.jpg" alt="Love in Paris">
+                                <div class="poster-overlay">
+                                    <button class="play-btn">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="release-details">
+                                <h3 class="release-title">Love in Paris</h3>
+                                <div class="release-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>7.8/10</span>
+                                </div>
+                                <div class="release-meta">
+                                    <span class="genre">Romance, Comedy</span>
+                                    <span class="separator">•</span>
+                                    <span class="duration">1h 52m</span>
+                                </div>
+                                <p class="release-description">
+                                    Two strangers meet in the city of love and discover that sometimes the best adventures are the ones we never planned for.
+                                </p>
+                                <div class="release-actions">
+                                    <button class="btn-release btn-remind">
+                                        <i class="bi bi-bell"></i>
+                                        <span>Remind Me</span>
+                                    </button>
+                                    <button class="btn-release btn-watchlist">
+                                        <i class="bi bi-plus-circle"></i>
+                                        <span>Watchlist</span>
+                                    </button>
+                                    <button class="btn-release btn-details">
+                                        <i class="bi bi-info-circle"></i>
+                                        <span>Details</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tomorrow-releases">
+                    <div class="date-header">
+                        <div class="date-badge">
+                            <i class="bi bi-calendar-check"></i>
+                            <span>TOMORROW</span>
+                        </div>
+                        <h2 class="date-title">February 12, 2026</h2>
+                    </div>
+
+                    <div class="releases-list">
+                        <div class="release-card">
+                            <div class="release-time">
+                                <div class="time-badge">
+                                    <i class="bi bi-clock"></i>
+                                    <span>12:00 AM</span>
+                                </div>
+                                <div class="time-label">Release</div>
+                            </div>
+                            <div class="release-poster">
+                                <img src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="Midnight Assassin">
+                                <div class="poster-overlay">
+                                    <button class="play-btn">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="release-details">
+                                <h3 class="release-title">Midnight Assassin</h3>
+                                <div class="release-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>9.0/10</span>
+                                </div>
+                                <div class="release-meta">
+                                    <span class="genre">Thriller, Action</span>
+                                    <span class="separator">•</span>
+                                    <span class="duration">2h 08m</span>
+                                </div>
+                                <p class="release-description">
+                                    A skilled hitman is forced to come out of retirement for one last mission that could change everything he thought he knew about his past.
+                                </p>
+                                <div class="release-actions">
+                                    <button class="btn-release btn-remind">
+                                        <i class="bi bi-bell"></i>
+                                        <span>Remind Me</span>
+                                    </button>
+                                    <button class="btn-release btn-watchlist">
+                                        <i class="bi bi-plus-circle"></i>
+                                        <span>Watchlist</span>
+                                    </button>
+                                    <button class="btn-release btn-details">
+                                        <i class="bi bi-info-circle"></i>
+                                        <span>Details</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="special-releases">
+                    <div class="date-header special-date">
+                        <div class="date-badge valentine-badge">
+                            <i class="bi bi-heart-fill"></i>
+                            <span>VALENTINE'S DAY</span>
+                        </div>
+                        <h2 class="date-title">February 14, 2026</h2>
+                    </div>
+
+                    <div class="releases-list">
+                        <div class="release-card featured">
+                            <div class="featured-ribbon">
+                                <i class="bi bi-star-fill"></i>
+                                <span>Featured</span>
+                            </div>
+                            <div class="release-time">
+                                <div class="time-badge">
+                                    <i class="bi bi-clock"></i>
+                                    <span>03:00 PM</span>
+                                </div>
+                                <div class="time-label">Release</div>
+                            </div>
+                            <div class="release-poster">
+                                <img src="https://image.tmdb.org/t/p/w500/kxVXhB8qJONUAFoxTYJYnzIAGUH.jpg" alt="Eternal Love">
+                                <div class="poster-overlay">
+                                    <button class="play-btn">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="release-details">
+                                <h3 class="release-title">Eternal Love</h3>
+                                <div class="release-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>8.9/10</span>
+                                </div>
+                                <div class="release-meta">
+                                    <span class="genre">Romance, Drama</span>
+                                    <span class="separator">•</span>
+                                    <span class="duration">2h 20m</span>
+                                </div>
+                                <p class="release-description">
+                                    A timeless love story that transcends decades, following two souls destined to find each other across multiple lifetimes.
+                                </p>
+                                <div class="release-actions">
+                                    <button class="btn-release btn-remind">
+                                        <i class="bi bi-bell"></i>
+                                        <span>Remind Me</span>
+                                    </button>
+                                    <button class="btn-release btn-watchlist">
+                                        <i class="bi bi-plus-circle"></i>
+                                        <span>Watchlist</span>
+                                    </button>
+                                    <button class="btn-release btn-details">
+                                        <i class="bi bi-info-circle"></i>
+                                        <span>Details</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="release-card">
+                            <div class="release-time">
+                                <div class="time-badge">
+                                    <i class="bi bi-clock"></i>
+                                    <span>07:00 PM</span>
+                                </div>
+                                <div class="time-label">Release</div>
+                            </div>
+                            <div class="release-poster">
+                                <img src="https://image.tmdb.org/t/p/w500/2XQQWHCCBNhpIDe3wZjQKKAJKVJ.jpg" alt="Heart to Heart">
+                                <div class="poster-overlay">
+                                    <button class="play-btn">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="release-details">
+                                <h3 class="release-title">Heart to Heart</h3>
+                                <div class="release-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>8.2/10</span>
+                                </div>
+                                <div class="release-meta">
+                                    <span class="genre">Romance, Comedy</span>
+                                    <span class="separator">•</span>
+                                    <span class="duration">1h 45m</span>
+                                </div>
+                                <p class="release-description">
+                                    A charming romantic comedy about two people who couldn't be more different but find themselves drawn together by fate and a shared love of music.
+                                </p>
+                                <div class="release-actions">
+                                    <button class="btn-release btn-remind">
+                                        <i class="bi bi-bell"></i>
+                                        <span>Remind Me</span>
+                                    </button>
+                                    <button class="btn-release btn-watchlist">
+                                        <i class="bi bi-plus-circle"></i>
+                                        <span>Watchlist</span>
+                                    </button>
+                                    <button class="btn-release btn-details">
+                                        <i class="bi bi-info-circle"></i>
+                                        <span>Details</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="more-releases">
+                        <button class="btn-more">
+                            <i class="bi bi-plus-circle"></i>
+                            <span>+ 2 More Valentine's Releases</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="upcoming-releases">
+                    <div class="date-header">
+                        <div class="date-badge">
+                            <i class="bi bi-calendar3"></i>
+                            <span>UPCOMING</span>
+                        </div>
+                        <h2 class="date-title">This Week & Beyond</h2>
+                    </div>
+
+                    <div class="releases-list">
+                        <div class="release-card">
+                            <div class="release-time">
+                                <div class="time-badge">
+                                    <i class="bi bi-calendar-event"></i>
+                                    <span>Feb 16</span>
+                                </div>
+                                <div class="time-label">Saturday</div>
+                            </div>
+                            <div class="release-poster">
+                                <img src="https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg" alt="Quantum Shift">
+                                <div class="poster-overlay">
+                                    <button class="play-btn">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="release-details">
+                                <h3 class="release-title">Quantum Shift</h3>
+                                <div class="release-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>8.7/10</span>
+                                </div>
+                                <div class="release-meta">
+                                    <span class="genre">Sci-Fi, Thriller</span>
+                                    <span class="separator">•</span>
+                                    <span class="duration">2h 12m</span>
+                                </div>
+                                <p class="release-description">
+                                    A brilliant physicist discovers a way to manipulate time, but soon realizes that altering the past has dangerous consequences for the present.
+                                </p>
+                                <div class="release-actions">
+                                    <button class="btn-release btn-remind">
+                                        <i class="bi bi-bell"></i>
+                                        <span>Remind Me</span>
+                                    </button>
+                                    <button class="btn-release btn-watchlist">
+                                        <i class="bi bi-plus-circle"></i>
+                                        <span>Watchlist</span>
+                                    </button>
+                                    <button class="btn-release btn-details">
+                                        <i class="bi bi-info-circle"></i>
+                                        <span>Details</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="release-card">
+                            <div class="release-time">
+                                <div class="time-badge">
+                                    <i class="bi bi-calendar-event"></i>
+                                    <span>Feb 21</span>
+                                </div>
+                                <div class="time-label">Friday</div>
+                            </div>
+                            <div class="release-poster">
+                                <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Dark Forces">
+                                <div class="poster-overlay">
+                                    <button class="play-btn">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="release-details">
+                                <h3 class="release-title">Dark Forces</h3>
+                                <div class="release-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>8.4/10</span>
+                                </div>
+                                <div class="release-meta">
+                                    <span class="genre">Action, Sci-Fi</span>
+                                    <span class="separator">•</span>
+                                    <span class="duration">2h 25m</span>
+                                </div>
+                                <p class="release-description">
+                                    An elite team of soldiers must battle an alien invasion force that threatens to destroy humanity in this pulse-pounding action thriller.
+                                </p>
+                                <div class="release-actions">
+                                    <button class="btn-release btn-remind">
+                                        <i class="bi bi-bell"></i>
+                                        <span>Remind Me</span>
+                                    </button>
+                                    <button class="btn-release btn-watchlist">
+                                        <i class="bi bi-plus-circle"></i>
+                                        <span>Watchlist</span>
+                                    </button>
+                                    <button class="btn-release btn-details">
+                                        <i class="bi bi-info-circle"></i>
+                                        <span>Details</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="load-more-container">
+                    <button class="btn-load-more">
+                        <span>Load More Releases</span>
+                        <i class="bi bi-arrow-down-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                        <span>CINEMATIC</span>
+                    </div>
+                    <p>Your ultimate destination for movies and entertainment. Stream thousands of titles anytime, anywhere.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Browse</h4>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../browse/genres.html">All Genres</a></li>
+                        <li><a href="../browse/movies.html">Latest Movies</a></li>
+                        <li><a href="../features/smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="calendar.html">Release Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Features -->
+                <div class="footer-links">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="../features/watchlist.html">Watchlist</a></li>
+                        <li><a href="../features/downloads.html">Downloads</a></li>
+                        <li><a href="../features/movie-map.html">Movie Map</a></li>
+                        <li><a href="../features/bundles.html">Movie Bundles</a></li>
+                        <li><a href="request.html">Request Movie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../info/about-help.html">About Us</a></li>
+                        <li><a href="../info/about-help.html#help">Help Center</a></li>
+                        <li><a href="../info/about-help.html#faq">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get updates on new releases and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cinematic. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <span>•</span>
+                    <a href="#">Terms</a>
+                    <span>•</span>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .calendar-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calendar-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            border-radius: 50%;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 50px rgba(220, 38, 38, 0.5);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .hero-icon i {
+            font-size: 3.5rem;
+            color: #fff;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+
+        .calendar-filters-section {
+            padding: 40px 0;
+        }
+
+        .filters-container {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-select {
+            flex: 1;
+            min-width: 180px;
+            padding: 0.9rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #dc2626;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+        }
+
+        .filter-select option {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .view-toggles {
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.4rem;
+            border-radius: 12px;
+        }
+
+        .view-btn {
+            padding: 0.7rem 1.2rem;
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .view-btn:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .view-btn.active {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            color: #fff;
+        }
+
+        .releases-section {
+            padding: 40px 0 80px;
+        }
+
+        .today-releases {
+            margin-bottom: 3rem;
+        }
+
+        .date-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(220, 38, 38, 0.3);
+        }
+
+        .date-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(220, 38, 38, 0.4);
+        }
+
+        .date-badge i {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .date-badge span {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .date-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+        }
+
+        .releases-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .release-card {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .release-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(220, 38, 38, 0.3);
+            box-shadow: 0 15px 50px rgba(220, 38, 38, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .release-time {
+            flex-shrink: 0;
+            text-align: center;
+            padding-right: 2rem;
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .time-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: rgba(220, 38, 38, 0.2);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            border-radius: 12px;
+            margin-bottom: 0.8rem;
+        }
+
+        .time-badge i {
+            font-size: 1.5rem;
+            color: #dc2626;
+        }
+
+        .time-badge span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .time-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .release-poster {
+            position: relative;
+            flex-shrink: 0;
+            width: 150px;
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .release-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .release-card:hover .release-poster img {
+            transform: scale(1.1);
+        }
+
+        .poster-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .release-poster:hover .poster-overlay {
+            opacity: 1;
+        }
+
+        .play-btn {
+            width: 60px;
+            height: 60px;
+            background: rgba(220, 38, 38, 0.9);
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn:hover {
+            background: #dc2626;
+            transform: scale(1.1);
+        }
+
+        .release-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .release-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.8rem;
+        }
+
+        .release-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .release-rating i {
+            color: #fbbf24;
+            font-size: 1.2rem;
+        }
+
+        .release-rating span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fbbf24;
+        }
+
+        .release-meta {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .release-meta .separator {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .release-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .release-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+
+        .btn-release {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-release i {
+            font-size: 1.1rem;
+        }
+
+        .btn-remind {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            color: #fff;
+            box-shadow: 0 5px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-remind:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.5);
+        }
+
+        .btn-watchlist {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .btn-watchlist:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(220, 38, 38, 0.5);
+            color: #fff;
+        }
+
+        .btn-details {
+            background: rgba(220, 38, 38, 0.2);
+            border: 1px solid rgba(220, 38, 38, 0.4);
+            color: #dc2626;
+        }
+
+        .btn-details:hover {
+            background: rgba(220, 38, 38, 0.3);
+            border-color: #dc2626;
+            color: #fff;
+        }
+
+        .tomorrow-releases,
+        .special-releases,
+        .upcoming-releases {
+            margin-bottom: 3rem;
+        }
+
+        .valentine-badge {
+            background: linear-gradient(135deg, #ec4899, #be185d);
+            box-shadow: 0 5px 20px rgba(236, 72, 153, 0.4);
+        }
+
+        .valentine-badge i {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.2);
+            }
+            50% {
+                transform: scale(1);
+            }
+        }
+
+        .special-date {
+            position: relative;
+        }
+
+        .special-date::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ec4899, #be185d);
+        }
+
+        .featured {
+            position: relative;
+            border-color: rgba(236, 72, 153, 0.3);
+        }
+
+        .featured:hover {
+            border-color: rgba(236, 72, 153, 0.5);
+            box-shadow: 0 15px 50px rgba(236, 72, 153, 0.3);
+        }
+
+        .featured-ribbon {
+            position: absolute;
+            top: 20px;
+            right: -10px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.5rem;
+            background: linear-gradient(135deg, #ec4899, #be185d);
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+        }
+
+        .featured-ribbon i {
+            font-size: 1rem;
+        }
+
+        .more-releases {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .btn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-more:hover {
+            background: rgba(220, 38, 38, 0.1);
+            border-color: #dc2626;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-more i {
+            font-size: 1.2rem;
+        }
+
+        .load-more-container {
+            margin-top: 3rem;
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-load-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.3rem 3.5rem;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(153, 27, 27, 0.2));
+            border: 2px solid rgba(220, 38, 38, 0.3);
+            border-radius: 50px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
+        }
+
+        .btn-load-more:hover {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            border-color: #dc2626;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
+        }
+
+        .btn-load-more i {
+            font-size: 1.4rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-load-more:hover i {
+            transform: translateY(5px);
+        }
+
+        @media (max-width: 992px) {
+            .release-card {
+                flex-direction: column;
+            }
+
+            .release-time {
+                border-right: none;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+                padding-right: 0;
+                padding-bottom: 1.5rem;
+            }
+
+            .time-badge {
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .release-poster {
+                width: 100%;
+                height: 400px;
+            }
+
+            .featured-ribbon {
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .hero-icon i {
+                font-size: 2.5rem;
+            }
+
+            .filter-row {
+                flex-direction: column;
+            }
+
+            .filter-select {
+                width: 100%;
+                min-width: unset;
+            }
+
+            .view-toggles {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .date-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .release-actions {
+                flex-direction: column;
+            }
+
+            .btn-release {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .featured-ribbon {
+                top: 10px;
+                right: 5px;
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            const viewButtons = document.querySelectorAll('.view-btn');
+            
+            viewButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    viewButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

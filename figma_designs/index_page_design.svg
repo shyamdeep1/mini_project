@@ -1,0 +1,373 @@
+<svg viewBox="0 0 1920 12800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Define Styles -->
+  <defs>
+    <style>
+      .nav-bg { fill: #1a1a1a; }
+      .hero-bg { fill: #0f0f0f; }
+      .section-bg { fill: #161616; }
+      .card-bg { fill: #242424; }
+      .text-white { fill: #ffffff; }
+      .text-gray { fill: #b0b0b0; }
+      .accent-color { fill: #ff6b6b; }
+      .btn-color { fill: #ff6b6b; }
+      .border-color { stroke: #333333; stroke-width: 1; }
+      .section-title { font-size: 48px; font-weight: bold; fill: #ffffff; font-family: Arial, sans-serif; }
+      .section-subtitle { font-size: 18px; fill: #b0b0b0; font-family: Arial, sans-serif; }
+      .card-title { font-size: 24px; font-weight: bold; fill: #ffffff; font-family: Arial, sans-serif; }
+      .card-text { font-size: 14px; fill: #b0b0b0; font-family: Arial, sans-serif; }
+      .badge { font-size: 12px; font-weight: bold; fill: #ffffff; font-family: Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- NAVIGATION BAR (0-120px) -->
+  <rect x="0" y="0" width="1920" height="120" class="nav-bg"/>
+  
+  <!-- Logo Area -->
+  <circle cx="80" cy="60" r="40" fill="#ff6b6b" opacity="0.2"/>
+  <text x="150" y="75" class="section-title" font-size="28">CINEMATIC</text>
+  
+  <!-- Nav Links -->
+  <text x="600" y="75" class="text-white" font-size="16">Home</text>
+  <text x="750" y="75" class="text-white" font-size="16">Browse</text>
+  <text x="900" y="75" class="text-white" font-size="16">Features</text>
+  <text x="1050" y="75" class="text-white" font-size="16">Tools</text>
+  <text x="1200" y="75" class="text-white" font-size="16">About & Help</text>
+  
+  <!-- Search and Profile Icons -->
+  <circle cx="1800" cy="60" r="24" class="card-bg" class="border-color"/>
+  <circle cx="1880" cy="60" r="24" class="card-bg" class="border-color"/>
+
+  <!-- HERO CAROUSEL SECTION (120-800px) -->
+  <rect x="0" y="120" width="1920" height="680" class="hero-bg"/>
+  
+  <!-- Hero Image Placeholder (Left Side) -->
+  <rect x="60" y="180" width="900" height="600" fill="#2a2a2a" class="border-color" rx="12"/>
+  <text x="510" y="480" class="text-gray" font-size="48" text-anchor="middle">Featured Movie Image</text>
+  
+  <!-- Hero Content (Right Side) -->
+  <rect x="1000" y="180" width="860" height="600" class="card-bg" rx="12"/>
+  
+  <!-- Badge -->
+  <rect x="1020" y="200" width="120" height="40" fill="#ff6b6b" rx="20"/>
+  <text x="1080" y="225" class="text-white" font-size="12" font-weight="bold" text-anchor="middle">Featured</text>
+  
+  <!-- Title -->
+  <text x="1020" y="300" class="section-title">Discover Amazing Movies</text>
+  
+  <!-- Meta Info -->
+  <text x="1020" y="360" class="text-gray" font-size="14">⭐ 8.5  |  📅 2024  |  ⏱️ 2h 15m</text>
+  
+  <!-- Description -->
+  <text x="1020" y="420" class="card-text">Explore thousands of movies and TV shows. Watch trailers,</text>
+  <text x="1020" y="450" class="card-text">read reviews, and find your next favorite film from our</text>
+  <text x="1020" y="480" class="card-text">extensive collection.</text>
+  
+  <!-- Buttons -->
+  <rect x="1020" y="520" width="200" height="50" fill="#ff6b6b" rx="8"/>
+  <text x="1120" y="551" class="text-white" font-size="16" font-weight="bold" text-anchor="middle">▶ Watch Now</text>
+  
+  <rect x="1240" y="520" width="200" height="50" class="card-bg" class="border-color" rx="8"/>
+  <text x="1340" y="551" class="text-white" font-size="16" font-weight="bold" text-anchor="middle">ℹ️ More Info</text>
+
+  <!-- OTT PLATFORMS SECTION (800-1200px) -->
+  <rect x="0" y="800" width="1920" height="400" class="section-bg"/>
+  
+  <!-- Section Header -->
+  <text x="960" y="870" class="section-title" text-anchor="middle">Explore Top Streaming Platforms</text>
+  <text x="960" y="920" class="section-subtitle" text-anchor="middle">Access exclusive content from the world's leading OTT platforms</text>
+  
+  <!-- OTT Card 1 (Netflix) -->
+  <rect x="100" y="980" width="400" height="180" class="card-bg" class="border-color" rx="12"/>
+  <circle cx="300" cy="1050" r="40" fill="#E50914"/>
+  <text x="300" y="1080" class="text-white" font-size="32" font-weight="bold" text-anchor="middle">N</text>
+  <text x="300" y="1130" class="card-title" text-anchor="middle">Netflix</text>
+  <text x="300" y="1160" class="card-text" text-anchor="middle">Stream unlimited movies</text>
+  
+  <!-- OTT Card 2 (Prime) -->
+  <rect x="560" y="980" width="400" height="180" class="card-bg" class="border-color" rx="12"/>
+  <circle cx="760" cy="1050" r="40" fill="#146EB4"/>
+  <text x="760" y="1085" class="text-white" font-size="32" font-weight="bold" text-anchor="middle">▶</text>
+  <text x="760" y="1130" class="card-title" text-anchor="middle">Prime Video</text>
+  <text x="760" y="1160" class="card-text" text-anchor="middle">Watch thousands of movies</text>
+  
+  <!-- OTT Card 3 (Disney+) -->
+  <rect x="1020" y="980" width="400" height="180" class="card-bg" class="border-color" rx="12"/>
+  <circle cx="1220" cy="1050" r="40" fill="#113CCF"/>
+  <text x="1220" y="1085" class="text-white" font-size="32" font-weight="bold" text-anchor="middle">✨</text>
+  <text x="1220" y="1130" class="card-title" text-anchor="middle">Disney+</text>
+  <text x="1220" y="1160" class="card-text" text-anchor="middle">Disney, Pixar, Marvel</text>
+  
+  <!-- OTT Card 4 (HBO) -->
+  <rect x="1480" y="980" width="400" height="180" class="card-bg" class="border-color" rx="12"/>
+  <circle cx="1680" cy="1050" r="40" fill="#000000"/>
+  <text x="1680" y="1085" class="text-white" font-size="32" font-weight="bold" text-anchor="middle">📺</text>
+  <text x="1680" y="1130" class="card-title" text-anchor="middle">HBO Max</text>
+  <text x="1680" y="1160" class="card-text" text-anchor="middle">Premium entertainment</text>
+
+  <!-- LATEST MOVIES SECTION (1200-2400px) -->
+  <rect x="0" y="1200" width="1920" height="1200" class="section-bg"/>
+  
+  <!-- Section Header -->
+  <text x="960" y="1280" class="section-title" text-anchor="middle">Latest Movies</text>
+  <text x="960" y="1330" class="section-subtitle" text-anchor="middle">Watch the newest releases and trending blockbusters</text>
+  
+  <!-- Movie Grid (6 columns x 2 rows) -->
+  <!-- Row 1 -->
+  <!-- Movie Card 1 -->
+  <rect x="80" y="1400" width="280" height="420" class="card-bg" class="border-color" rx="8"/>
+  <rect x="80" y="1400" width="280" height="320" fill="#2a2a2a" rx="8"/>
+  <text x="220" y="1560" class="text-gray" font-size="32" text-anchor="middle">🎬</text>
+  <text x="100" y="1740" class="card-title" font-size="18">Epic Adventure</text>
+  <text x="100" y="1765" class="card-text" font-size="12">2024 • Action • 2h 15m</text>
+  <text x="260" y="1745" class="badge" font-size="14">8.5⭐</text>
+  <rect x="80" y="1780" width="280" height="35" fill="#ff6b6b" opacity="0.1" rx="4"/>
+  
+  <!-- Movie Card 2 -->
+  <rect x="400" y="1400" width="280" height="420" class="card-bg" class="border-color" rx="8"/>
+  <rect x="400" y="1400" width="280" height="320" fill="#2a2a2a" rx="8"/>
+  <text x="540" y="1560" class="text-gray" font-size="32" text-anchor="middle">🎬</text>
+  <text x="420" y="1740" class="card-title" font-size="18">Mystery Thriller</text>
+  <text x="420" y="1765" class="card-text" font-size="12">2025 • Thriller • 2h 30m</text>
+  <rect x="420" y="1710" width="60" height="24" fill="#ff6b6b" rx="4"/>
+  <text x="450" y="1728" class="text-white" font-size="10" font-weight="bold" text-anchor="middle">Trending</text>
+  <text x="660" y="1745" class="badge" font-size="14">9.2⭐</text>
+  
+  <!-- Movie Card 3 -->
+  <rect x="720" y="1400" width="280" height="420" class="card-bg" class="border-color" rx="8"/>
+  <rect x="720" y="1400" width="280" height="320" fill="#2a2a2a" rx="8"/>
+  <text x="860" y="1560" class="text-gray" font-size="32" text-anchor="middle">🎬</text>
+  <text x="740" y="1740" class="card-title" font-size="18">Romantic Story</text>
+  <text x="740" y="1765" class="card-text" font-size="12">2024 • Romance • 1h 58m</text>
+  <rect x="740" y="1710" width="50" height="24" fill="#ff6b6b" rx="4"/>
+  <text x="765" y="1728" class="text-white" font-size="10" font-weight="bold" text-anchor="middle">Hot</text>
+  <text x="980" y="1745" class="badge" font-size="14">8.8⭐</text>
+  
+  <!-- Movie Card 4 -->
+  <rect x="1040" y="1400" width="280" height="420" class="card-bg" class="border-color" rx="8"/>
+  <rect x="1040" y="1400" width="280" height="320" fill="#2a2a2a" rx="8"/>
+  <text x="1180" y="1560" class="text-gray" font-size="32" text-anchor="middle">🎬</text>
+  <text x="1060" y="1740" class="card-title" font-size="18">Sci-Fi Journey</text>
+  <text x="1060" y="1765" class="card-text" font-size="12">2024 • Sci-Fi • 2h 05m</text>
+  <text x="1300" y="1745" class="badge" font-size="14">7.9⭐</text>
+  
+  <!-- Movie Card 5 -->
+  <rect x="1360" y="1400" width="280" height="420" class="card-bg" class="border-color" rx="8"/>
+  <rect x="1360" y="1400" width="280" height="320" fill="#2a2a2a" rx="8"/>
+  <text x="1500" y="1560" class="text-gray" font-size="32" text-anchor="middle">🎬</text>
+  <text x="1380" y="1740" class="card-title" font-size="18">Comedy Night</text>
+  <text x="1380" y="1765" class="card-text" font-size="12">2025 • Comedy • 1h 45m</text>
+  <rect x="1380" y="1710" width="50" height="24" fill="#ff6b6b" rx="4"/>
+  <text x="1405" y="1728" class="text-white" font-size="10" font-weight="bold" text-anchor="middle">New</text>
+  <text x="1620" y="1745" class="badge" font-size="14">8.3⭐</text>
+  
+  <!-- Movie Card 6 -->
+  <rect x="1680" y="1400" width="280" height="420" class="card-bg" class="border-color" rx="8"/>
+  <rect x="1680" y="1400" width="280" height="320" fill="#2a2a2a" rx="8"/>
+  <text x="1820" y="1560" class="text-gray" font-size="32" text-anchor="middle">🎬</text>
+  <text x="1700" y="1740" class="card-title" font-size="18">Horror House</text>
+  <text x="1700" y="1765" class="card-text" font-size="12">2024 • Horror • 1h 52m</text>
+  <text x="1940" y="1745" class="badge" font-size="14">8.1⭐</text>
+  
+  <!-- View All Button -->
+  <rect x="760" y="1900" width="400" height="60" class="card-bg" class="border-color" rx="8"/>
+  <text x="960" y="1940" class="text-white" font-size="18" font-weight="bold" text-anchor="middle">View All Movies →</text>
+
+  <!-- BENTO GRID SECTION (2400-3600px) -->
+  <rect x="0" y="2400" width="1920" height="1200" class="section-bg"/>
+  
+  <!-- Section Header -->
+  <text x="960" y="2480" class="section-title" text-anchor="middle">Featured Collections</text>
+  <text x="960" y="2530" class="section-subtitle" text-anchor="middle">Handpicked selections just for you</text>
+  
+  <!-- Large Featured Card (2 cols x 2 rows) -->
+  <rect x="100" y="2600" width="600" height="520" class="card-bg" class="border-color" rx="12"/>
+  <rect x="100" y="2600" width="600" height="380" fill="#2a2a2a" rx="12"/>
+  <rect x="120" y="2620" width="120" height="36" fill="#ff6b6b" rx="18"/>
+  <text x="180" y="2644" class="text-white" font-size="12" font-weight="bold" text-anchor="middle">Editor's Choice</text>
+  <text x="120" y="3020" class="card-title" font-size="24">Epic Blockbuster</text>
+  <text x="120" y="3055" class="card-text">The most anticipated...</text>
+  <rect x="120" y="3070" width="140" height="40" fill="#ff6b6b" opacity="0.2" rx="6"/>
+  <text x="190" y="3098" class="text-white" font-size="12" text-anchor="middle">▶ Watch Trailer</text>
+  
+  <!-- Tall Card (1 col x 2 rows) -->
+  <rect x="740" y="2600" width="320" height="520" class="card-bg" class="border-color" rx="12"/>
+  <rect x="740" y="2600" width="320" height="380" fill="#2a2a2a" rx="12"/>
+  <rect x="760" y="2620" width="100" height="36" fill="#ffd700" rx="18"/>
+  <text x="810" y="2644" class="text-white" font-size="12" font-weight="bold" text-anchor="middle">Top Rated</text>
+  <text x="760" y="2750" class="card-title" font-size="20">Award Winner</text>
+  <text x="900" y="2860" class="text-white" font-size="20" text-anchor="middle">⭐⭐⭐⭐⭐</text>
+  
+  <!-- Wide Card (2 cols x 1 row) - Top Right -->
+  <rect x="1100" y="2600" width="760" height="280" class="card-bg" class="border-color" rx="12"/>
+  <rect x="1100" y="2600" width="760" height="200" fill="#2a2a2a" rx="12"/>
+  <rect x="1120" y="2620" width="120" height="36" fill="#ff69b4" rx="18"/>
+  <text x="1180" y="2644" class="text-white" font-size="12" font-weight="bold" text-anchor="middle">Trending #1</text>
+  <text x="1120" y="2730" class="card-title" font-size="24">Fan Favorite</text>
+  <text x="1120" y="2770" class="card-text">Everyone's talking about this...</text>
+  
+  <!-- Small Cards Row (3 cards x 1 row) -->
+  <!-- Small Card 1 -->
+  <rect x="100" y="3160" width="300" height="200" class="card-bg" class="border-color" rx="12"/>
+  <rect x="100" y="3160" width="300" height="140" fill="#2a2a2a" rx="12"/>
+  <text x="250" y="3300" class="card-title" font-size="18" text-anchor="middle">Action</text>
+  
+  <!-- Small Card 2 -->
+  <rect x="440" y="3160" width="300" height="200" class="card-bg" class="border-color" rx="12"/>
+  <rect x="440" y="3160" width="300" height="140" fill="#2a2a2a" rx="12"/>
+  <text x="590" y="3300" class="card-title" font-size="18" text-anchor="middle">Comedy</text>
+  
+  <!-- Medium Card -->
+  <rect x="780" y="3160" width="450" height="200" class="card-bg" class="border-color" rx="12"/>
+  <rect x="780" y="3160" width="450" height="140" fill="#2a2a2a" rx="12"/>
+  <rect x="800" y="3180" width="100" height="36" fill="#ff8c42" rx="18"/>
+  <text x="850" y="3204" class="text-white" font-size="12" font-weight="bold" text-anchor="middle">Just Added</text>
+  <text x="800" y="3280" class="card-title" font-size="20">Fresh Release</text>
+  <text x="800" y="3310" class="card-text" font-size="14">Available now...</text>
+
+  <!-- SHOWCASE SECTION (3600-5200px) -->
+  <rect x="0" y="3600" width="1920" height="1600" class="section-bg"/>
+  
+  <!-- Section Header -->
+  <text x="960" y="3680" class="section-title" text-anchor="middle">Must-Watch This Month</text>
+  <text x="960" y="3730" class="section-subtitle" text-anchor="middle">Scroll through our handpicked selection</text>
+  
+  <!-- Showcase Cards Container -->
+  <!-- Card 1 -->
+  <rect x="100" y="3820" width="800" height="400" class="card-bg" class="border-color" rx="12"/>
+  <rect x="100" y="3820" width="350" height="400" fill="#2a2a2a" rx="12"/>
+  <text x="275" y="4020" class="text-gray" font-size="80" text-anchor="middle">01</text>
+  
+  <text x="480" y="3900" class="card-text" font-size="14">Action • Thriller</text>
+  <text x="480" y="3950" class="card-title" font-size="24">The Last Mission</text>
+  <text x="480" y="4010" class="card-text">A gripping tale of courage and sacrifice...</text>
+  
+  <circle cx="480" cy="4080" r="4" fill="#ff6b6b"/>
+  <text x="510" y="4085" class="card-text" font-size="12">9.2</text>
+  
+  <circle cx="600" cy="4080" r="4" fill="#ff6b6b"/>
+  <text x="630" y="4085" class="card-text" font-size="12">2.5M views</text>
+  
+  <circle cx="750" cy="4080" r="4" fill="#ff6b6b"/>
+  <text x="780" y="4085" class="card-text" font-size="12">2h 25m</text>
+  
+  <rect x="480" y="4120" width="280" height="45" fill="#ff6b6b" rx="6"/>
+  <text x="620" y="4150" class="text-white" font-size="14" font-weight="bold" text-anchor="middle">▶ Watch Now</text>
+  
+  <!-- Card 2 -->
+  <rect x="950" y="3820" width="800" height="400" class="card-bg" class="border-color" rx="12"/>
+  <rect x="950" y="3820" width="350" height="400" fill="#2a2a2a" rx="12"/>
+  <text x="1125" y="4020" class="text-gray" font-size="80" text-anchor="middle">02</text>
+  
+  <text x="1330" y="3900" class="card-text" font-size="14">Mystery • Drama</text>
+  <text x="1330" y="3950" class="card-title" font-size="24">Echoes of Tomorrow</text>
+  <text x="1330" y="4010" class="card-text">Unravel the mysteries of time...</text>
+  
+  <circle cx="1330" cy="4080" r="4" fill="#ff6b6b"/>
+  <text x="1360" y="4085" class="card-text" font-size="12">8.8</text>
+  
+  <circle cx="1450" cy="4080" r="4" fill="#ff6b6b"/>
+  <text x="1480" y="4085" class="card-text" font-size="12">1.8M views</text>
+  
+  <circle cx="1600" cy="4080" r="4" fill="#ff6b6b"/>
+  <text x="1630" y="4085" class="card-text" font-size="12">2h 10m</text>
+  
+  <rect x="1330" y="4120" width="280" height="45" fill="#ff6b6b" rx="6"/>
+  <text x="1470" y="4150" class="text-white" font-size="14" font-weight="bold" text-anchor="middle">▶ Watch Now</text>
+  
+  <!-- Card 3 -->
+  <rect x="100" y="4260" width="800" height="400" class="card-bg" class="border-color" rx="12"/>
+  <rect x="100" y="4260" width="350" height="400" fill="#2a2a2a" rx="12"/>
+  <text x="275" y="4460" class="text-gray" font-size="80" text-anchor="middle">03</text>
+  
+  <text x="480" y="4340" class="card-text" font-size="14">Romance • Comedy</text>
+  <text x="480" y="4390" class="card-title" font-size="24">Love in Paris</text>
+  <text x="480" y="4450" class="card-text">A heartwarming romantic comedy...</text>
+  
+  <circle cx="480" cy="4520" r="4" fill="#ff6b6b"/>
+  <text x="510" y="4525" class="card-text" font-size="12">8.5</text>
+  
+  <circle cx="600" cy="4520" r="4" fill="#ff6b6b"/>
+  <text x="630" y="4525" class="card-text" font-size="12">3.2M views</text>
+  
+  <circle cx="750" cy="4520" r="4" fill="#ff6b6b"/>
+  <text x="780" y="4525" class="card-text" font-size="12">1h 55m</text>
+  
+  <rect x="480" y="4560" width="280" height="45" fill="#ff6b6b" rx="6"/>
+  <text x="620" y="4590" class="text-white" font-size="14" font-weight="bold" text-anchor="middle">▶ Watch Now</text>
+  
+  <!-- Card 4 -->
+  <rect x="950" y="4260" width="800" height="400" class="card-bg" class="border-color" rx="12"/>
+  <rect x="950" y="4260" width="350" height="400" fill="#2a2a2a" rx="12"/>
+  <text x="1125" y="4460" class="text-gray" font-size="80" text-anchor="middle">04</text>
+  
+  <text x="1330" y="4340" class="card-text" font-size="14">Sci-Fi • Adventure</text>
+  <text x="1330" y="4390" class="card-title" font-size="24">Beyond the Stars</text>
+  <text x="1330" y="4450" class="card-text">Journey to the far reaches of space...</text>
+  
+  <circle cx="1330" cy="4520" r="4" fill="#ff6b6b"/>
+  <text x="1360" y="4525" class="card-text" font-size="12">9.0</text>
+  
+  <circle cx="1450" cy="4520" r="4" fill="#ff6b6b"/>
+  <text x="1480" y="4525" class="card-text" font-size="12">4.1M views</text>
+  
+  <circle cx="1600" cy="4520" r="4" fill="#ff6b6b"/>
+  <text x="1630" y="4525" class="card-text" font-size="12">2h 40m</text>
+  
+  <rect x="1330" y="4560" width="280" height="45" fill="#ff6b6b" rx="6"/>
+  <text x="1470" y="4590" class="text-white" font-size="14" font-weight="bold" text-anchor="middle">▶ Watch Now</text>
+  
+  <!-- Indicators -->
+  <circle cx="890" cy="4800" r="8" fill="#ff6b6b" opacity="0.3"/>
+  <circle cx="920" cy="4800" r="8" fill="#ff6b6b" opacity="0.1"/>
+  <circle cx="950" cy="4800" r="8" fill="#ff6b6b" opacity="0.1"/>
+  <circle cx="980" cy="4800" r="8" fill="#ff6b6b" opacity="0.1"/>
+
+  <!-- FOOTER SECTION (5200-6000px) -->
+  <rect x="0" y="5200" width="1920" height="800" class="nav-bg"/>
+  
+  <!-- Footer Content -->
+  <circle cx="100" cy="5300" r="35" fill="#ff6b6b" opacity="0.2"/>
+  <text x="170" y="5325" class="card-title" font-size="24">CINEMATIC</text>
+  <text x="100" y="5380" class="card-text">Your ultimate destination for movies and entertainment.</text>
+  <text x="100" y="5410" class="card-text">Stream thousands of titles anytime, anywhere.</text>
+  
+  <!-- Social Links -->
+  <circle cx="100" cy="5480" r="20" class="card-bg" class="border-color"/>
+  <circle cx="140" cy="5480" r="20" class="card-bg" class="border-color"/>
+  <circle cx="180" cy="5480" r="20" class="card-bg" class="border-color"/>
+  <circle cx="220" cy="5480" r="20" class="card-bg" class="border-color"/>
+  <circle cx="260" cy="5480" r="20" class="card-bg" class="border-color"/>
+  
+  <!-- Footer Links Column 1 -->
+  <text x="500" y="5320" class="card-title" font-size="16">Browse</text>
+  <text x="500" y="5360" class="card-text">Home</text>
+  <text x="500" y="5390" class="card-text">All Genres</text>
+  <text x="500" y="5420" class="card-text">Latest Movies</text>
+  <text x="500" y="5450" class="card-text">Smart Discovery</text>
+  
+  <!-- Footer Links Column 2 -->
+  <text x="800" y="5320" class="card-title" font-size="16">Features</text>
+  <text x="800" y="5360" class="card-text">Watchlist</text>
+  <text x="800" y="5390" class="card-text">Downloads</text>
+  <text x="800" y="5420" class="card-text">Movie Map</text>
+  <text x="800" y="5450" class="card-text">Movie Bundles</text>
+  
+  <!-- Footer Links Column 3 -->
+  <text x="1100" y="5320" class="card-title" font-size="16">Support</text>
+  <text x="1100" y="5360" class="card-text">About Us</text>
+  <text x="1100" y="5390" class="card-text">Help Center</text>
+  <text x="1100" y="5420" class="card-text">FAQ</text>
+  <text x="1100" y="5450" class="card-text">Privacy Policy</text>
+  
+  <!-- Newsletter -->
+  <text x="1500" y="5320" class="card-title" font-size="16">Stay Updated</text>
+  <text x="1500" y="5360" class="card-text">Subscribe to get updates</text>
+  <text x="1500" y="5390" class="card-text">on new releases and offers.</text>
+  <rect x="1500" y="5420" width="380" height="45" class="card-bg" class="border-color" rx="6"/>
+  <text x="1700" y="5450" class="card-text">Enter your email</text>
+  
+  <!-- Footer Bottom -->
+  <line x1="100" y1="5550" x2="1820" y2="5550" stroke="#333333" stroke-width="1"/>
+  <text x="100" y="5600" class="card-text">&copy; 2026 Cinematic. All rights reserved.</text>
+  <text x="1600" y="5600" class="card-text">Privacy • Terms • Cookies</text>
+</svg>

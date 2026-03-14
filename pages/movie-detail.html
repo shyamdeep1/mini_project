@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - Cinematic</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/wb_logo_without_bg.png" alt="Logo">
+                <span>CINEMATIC</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Browse <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="browse/genres.html">All Genres</a></li>
+                        <li><a href="browse/movies.html">Latest / Top Rated / Popular</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Features <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="features/smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="features/watchlist.html">My Watchlist</a></li>
+                        <li><a href="features/downloads.html">Downloads & History</a></li>
+                        <li><a href="features/movie-map.html">Movie Map</a></li>
+                        <li><a href="features/bundles.html">Movie Bundles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Tools <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools/calendar.html">Release Calendar</a></li>
+                        <li><a href="tools/request.html">Request Movie</a></li>
+                    </ul>
+                </li>
+                <li><a href="info/about-help.html" class="nav-link">About & Help</a></li>
+            </ul>
+            
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="search-results.html" class="search-btn">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="#" class="profile-btn">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="split-hero">
+            <div class="hero-poster">
+                <div class="poster-wrapper">
+                    <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Movie Poster">
+                </div>
+            </div>
+            
+            <div class="hero-details">
+                <div class="details-wrapper">
+                    <div class="movie-badge">NOW STREAMING</div>
+                    
+                    <h1 class="movie-title">The Last Adventure</h1>
+                    <p class="movie-tagline">"Some journeys change everything"</p>
+                    
+                    <div class="movie-meta">
+                        <span class="meta-item">2024</span>
+                        <span class="meta-divider">•</span>
+                        <span class="meta-item">2h 34m</span>
+                        <span class="meta-divider">•</span>
+                        <span class="meta-item">PG-13</span>
+                        <span class="meta-divider">•</span>
+                        <span class="meta-item">Action, Adventure</span>
+                    </div>
+                    
+                    <div class="rating-stars">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <span class="rating-text">4.5/5 (12.5K reviews)</span>
+                    </div>
+                    
+                    <p class="movie-synopsis">
+                        When a mysterious artifact surfaces in the remote mountains of Tibet, 
+                        archaeologist Sarah Chen must race against time to prevent it from 
+                        falling into the wrong hands. Joined by an unlikely team of experts, 
+                        she embarks on a globe-spanning adventure that will test not only 
+                        her skills, but everything she believes about the ancient world.
+                    </p>
+                    
+                    <div class="quick-ratings">
+                        <div class="rating-box">
+                            <div class="rating-value">8.7</div>
+                            <div class="rating-label">IMDb</div>
+                        </div>
+                        <div class="rating-box">
+                            <div class="rating-value">94%</div>
+                            <div class="rating-label">RT</div>
+                        </div>
+                        <div class="rating-box">
+                            <div class="rating-value">85</div>
+                            <div class="rating-label">Meta</div>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn-primary-action">
+                            <i class="bi bi-play-fill"></i>
+                            Watch Trailer
+                        </button>
+                        <button class="btn-secondary-action">
+                            <i class="bi bi-plus-lg"></i>
+                            Watchlist
+                        </button>
+                        <button class="btn-icon-action">
+                            <i class="bi bi-share"></i>
+                        </button>
+                        <button class="btn-icon-action">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="streaming-platforms">
+                        <div class="platform-label">Available on:</div>
+                        <div class="platform-icons">
+                            <div class="platform-badge">Netflix</div>
+                            <div class="platform-badge">Prime Video</div>
+                            <div class="platform-badge">Disney+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tabs-section">
+            <div class="container">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="cast">Cast & Crew</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews</button>
+                    <button class="tab-btn" data-tab="specs">Technical Specs</button>
+                </div>
+
+                <div class="tabs-content">
+                    <div class="tab-panel active" id="cast">
+                        <div class="cast-grid">
+                            <div class="cast-member">
+                                <div class="cast-image">
+                                    <img src="https://i.pravatar.cc/200?img=12" alt="Actor">
+                                </div>
+                                <div class="cast-info">
+                                    <h4>Emily Clarke</h4>
+                                    <p>Sarah Chen</p>
+                                    <span class="role-badge">Lead Role</span>
+                                </div>
+                            </div>
+                            <div class="cast-member">
+                                <div class="cast-image">
+                                    <img src="https://i.pravatar.cc/200?img=33" alt="Actor">
+                                </div>
+                                <div class="cast-info">
+                                    <h4>Marcus Webb</h4>
+                                    <p>Dr. James Carter</p>
+                                    <span class="role-badge">Supporting</span>
+                                </div>
+                            </div>
+                            <div class="cast-member">
+                                <div class="cast-image">
+                                    <img src="https://i.pravatar.cc/200?img=27" alt="Actor">
+                                </div>
+                                <div class="cast-info">
+                                    <h4>Sophia Martinez</h4>
+                                    <p>Maria Lopez</p>
+                                    <span class="role-badge">Supporting</span>
+                                </div>
+                            </div>
+                            <div class="cast-member">
+                                <div class="cast-image">
+                                    <img src="https://i.pravatar.cc/200?img=52" alt="Actor">
+                                </div>
+                                <div class="cast-info">
+                                    <h4>David Chen</h4>
+                                    <p>Li Wei</p>
+                                    <span class="role-badge">Supporting</span>
+                                </div>
+                            </div>
+                            <div class="cast-member">
+                                <div class="cast-image">
+                                    <img src="https://i.pravatar.cc/200?img=68" alt="Director">
+                                </div>
+                                <div class="cast-info">
+                                    <h4>Christopher Nolan</h4>
+                                    <p>Director</p>
+                                    <span class="role-badge crew">Crew</span>
+                                </div>
+                            </div>
+                            <div class="cast-member">
+                                <div class="cast-image">
+                                    <img src="https://i.pravatar.cc/200?img=15" alt="Producer">
+                                </div>
+                                <div class="cast-info">
+                                    <h4>Emma Thomas</h4>
+                                    <p>Producer</p>
+                                    <span class="role-badge crew">Crew</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="reviews">
+                        <div class="reviews-container">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://i.pravatar.cc/80?img=8" alt="Reviewer">
+                                        <div>
+                                            <h4>Alex Thompson</h4>
+                                            <div class="review-meta">
+                                                <div class="review-stars">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                </div>
+                                                <span class="review-date">2 days ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-text">
+                                    An absolute masterpiece! The cinematography is breathtaking, and the story 
+                                    keeps you on the edge of your seat from start to finish. Emily Clarke delivers 
+                                    a career-defining performance that's both powerful and nuanced.
+                                </p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://i.pravatar.cc/80?img=23" alt="Reviewer">
+                                        <div>
+                                            <h4>Sarah Johnson</h4>
+                                            <div class="review-meta">
+                                                <div class="review-stars">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star"></i>
+                                                </div>
+                                                <span class="review-date">1 week ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-text">
+                                    Great adventure film with stunning visuals and a compelling narrative. 
+                                    The pacing is excellent, though some might find the second act a bit slow. 
+                                    Overall, highly recommended for fans of the genre.
+                                </p>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://i.pravatar.cc/80?img=41" alt="Reviewer">
+                                        <div>
+                                            <h4>Michael Rivera</h4>
+                                            <div class="review-meta">
+                                                <div class="review-stars">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-half"></i>
+                                                </div>
+                                                <span class="review-date">2 weeks ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-text">
+                                    Nolan delivers another visual spectacle! The attention to detail is remarkable, 
+                                    and the ensemble cast works beautifully together. A must-watch on the big screen.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="specs">
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="bi bi-camera-reels"></i>
+                                </div>
+                                <div class="spec-content">
+                                    <h4>Format</h4>
+                                    <p>IMAX 70mm, Digital</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="bi bi-film"></i>
+                                </div>
+                                <div class="spec-content">
+                                    <h4>Aspect Ratio</h4>
+                                    <p>2.39:1 (Scope)</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="bi bi-soundwave"></i>
+                                </div>
+                                <div class="spec-content">
+                                    <h4>Sound Mix</h4>
+                                    <p>Dolby Atmos, IMAX 12-Track</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="bi bi-palette"></i>
+                                </div>
+                                <div class="spec-content">
+                                    <h4>Color</h4>
+                                    <p>Color (Kodak Vision3)</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="bi bi-globe"></i>
+                                </div>
+                                <div class="spec-content">
+                                    <h4>Language</h4>
+                                    <p>English, Mandarin, Spanish</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="bi bi-translate"></i>
+                                </div>
+                                <div class="spec-content">
+                                    <h4>Subtitles</h4>
+                                    <p>Available in 25+ languages</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="bi bi-building"></i>
+                                </div>
+                                <div class="spec-content">
+                                    <h4>Production</h4>
+                                    <p>Warner Bros. Pictures</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="bi bi-currency-dollar"></i>
+                                </div>
+                                <div class="spec-content">
+                                    <h4>Budget</h4>
+                                    <p>$200 Million</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-download-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Gallery & Downloads</h2>
+                    <p>Browse screenshots and download the movie in your preferred quality</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/movie1/800/450" alt="Movie Scene">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/movie2/800/450" alt="Movie Scene">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/movie3/800/450" alt="Movie Scene">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/movie4/800/450" alt="Movie Scene">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/movie5/800/450" alt="Movie Scene">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/movie6/800/450" alt="Movie Scene">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-section">
+                    <div class="download-header">
+                        <div class="download-icon">
+                            <i class="bi bi-cloud-download"></i>
+                        </div>
+                        <div class="download-info">
+                            <h3>Download Options</h3>
+                            <p>Choose your preferred quality and download the movie</p>
+                        </div>
+                    </div>
+
+                    <div class="download-cards">
+                        <div class="download-card">
+                            <div class="quality-badge">480p</div>
+                            <div class="quality-details">
+                                <h4>Standard Quality</h4>
+                                <p>Perfect for mobile devices</p>
+                                <div class="file-info">
+                                    <span><i class="bi bi-file-earmark"></i> 1.2 GB</span>
+                                    <span><i class="bi bi-clock"></i> Fast Download</span>
+                                </div>
+                            </div>
+                            <button class="download-btn">
+                                <i class="bi bi-download"></i>
+                                Download 480p
+                            </button>
+                        </div>
+
+                        <div class="download-card featured">
+                            <div class="popular-tag">MOST POPULAR</div>
+                            <div class="quality-badge">720p</div>
+                            <div class="quality-details">
+                                <h4>HD Quality</h4>
+                                <p>Great balance of quality and size</p>
+                                <div class="file-info">
+                                    <span><i class="bi bi-file-earmark"></i> 2.8 GB</span>
+                                    <span><i class="bi bi-clock"></i> Medium Download</span>
+                                </div>
+                            </div>
+                            <button class="download-btn">
+                                <i class="bi bi-download"></i>
+                                Download 720p
+                            </button>
+                        </div>
+
+                        <div class="download-card">
+                            <div class="quality-badge">1080p</div>
+                            <div class="quality-details">
+                                <h4>Full HD Quality</h4>
+                                <p>Best viewing experience</p>
+                                <div class="file-info">
+                                    <span><i class="bi bi-file-earmark"></i> 5.4 GB</span>
+                                    <span><i class="bi bi-clock"></i> Slower Download</span>
+                                </div>
+                            </div>
+                            <button class="download-btn">
+                                <i class="bi bi-download"></i>
+                                Download 1080p
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="download-notice">
+                        <i class="bi bi-info-circle"></i>
+                        <p>Please ensure you have the appropriate licenses to download this content. Downloads are available for 48 hours after purchase.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../images/wb_logo_without_bg.png" alt="Logo">
+                        <span>CINEMATIC</span>
+                    </div>
+                    <p>Your ultimate destination for movies and entertainment. Stream thousands of titles anytime, anywhere.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Browse</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="browse/genres.html">All Genres</a></li>
+                        <li><a href="browse/movies.html">Latest Movies</a></li>
+                        <li><a href="features/smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="tools/calendar.html">Release Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Features -->
+                <div class="footer-links">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="features/watchlist.html">Watchlist</a></li>
+                        <li><a href="features/downloads.html">Downloads</a></li>
+                        <li><a href="features/movie-map.html">Movie Map</a></li>
+                        <li><a href="features/bundles.html">Movie Bundles</a></li>
+                        <li><a href="tools/request.html">Request Movie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="info/about-help.html">About Us</a></li>
+                        <li><a href="info/about-help.html#help">Help Center</a></li>
+                        <li><a href="info/about-help.html#faq">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get updates on new releases and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cinematic. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <span>•</span>
+                    <a href="#">Terms</a>
+                    <span>•</span>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+                
+                button.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

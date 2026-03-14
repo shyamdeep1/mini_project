@@ -1,0 +1,1262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Map - Cinematic</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                <span>CINEMATIC</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Browse <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../browse/genres.html">All Genres</a></li>
+                        <li><a href="../browse/movies.html">Latest / Top Rated / Popular</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">Features <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="watchlist.html">My Watchlist</a></li>
+                        <li><a href="downloads.html">Downloads & History</a></li>
+                        <li><a href="movie-map.html">Movie Map</a></li>
+                        <li><a href="bundles.html">Movie Bundles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Tools <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../tools/calendar.html">Release Calendar</a></li>
+                        <li><a href="../tools/request.html">Request Movie</a></li>
+                    </ul>
+                </li>
+                <li><a href="../info/about-help.html" class="nav-link">About & Help</a></li>
+            </ul>
+            
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="../search-results.html" class="search-btn">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="#" class="profile-btn">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding: 100px 0 60px;">
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content text-center">
+                    <div class="hero-icon mb-4">
+                        <i class="bi bi-globe-americas"></i>
+                    </div>
+                    <h1 class="hero-title mb-3">Movie Universe Map</h1>
+                    <p class="hero-description">Explore the interconnected world of cinema through our interactive genre universe. Discover how different genres connect and find movies that bridge your favorite categories.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legend & Controls -->
+        <section class="map-controls">
+            <div class="container">
+                <div class="controls-wrapper">
+                    <div class="view-selector">
+                        <button class="view-btn active" data-view="universe">
+                            <i class="bi bi-diagram-3"></i>
+                            <span>Universe View</span>
+                        </button>
+                        <button class="view-btn" data-view="cluster">
+                            <i class="bi bi-grid-3x3-gap"></i>
+                            <span>Cluster View</span>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="bi bi-list-ul"></i>
+                            <span>List View</span>
+                        </button>
+                    </div>
+                    
+                    <div class="legend-box">
+                        <div class="legend-item">
+                            <div class="legend-icon" style="background: linear-gradient(135deg, #dc2626, #991b1b);">
+                                <i class="bi bi-circle-fill"></i>
+                            </div>
+                            <span>Action & Thriller</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-icon" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);">
+                                <i class="bi bi-circle-fill"></i>
+                            </div>
+                            <span>Drama & Romance</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-icon" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
+                                <i class="bi bi-circle-fill"></i>
+                            </div>
+                            <span>Sci-Fi & Fantasy</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                                <i class="bi bi-circle-fill"></i>
+                            </div>
+                            <span>Comedy & Family</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Universe Map Container -->
+        <section class="universe-map-section">
+            <div class="container-fluid">
+                <div class="universe-container">
+                    
+                    <!-- Connection Lines (SVG) -->
+                    <svg class="connection-lines">
+                        <line x1="25%" y1="20%" x2="50%" y2="30%" class="connection-line" />
+                        <line x1="50%" y1="30%" x2="75%" y2="20%" class="connection-line" />
+                        <line x1="25%" y1="20%" x2="15%" y2="50%" class="connection-line" />
+                        <line x1="75%" y1="20%" x2="85%" y2="50%" class="connection-line" />
+                        <line x1="15%" y1="50%" x2="25%" y2="80%" class="connection-line" />
+                        <line x1="85%" y1="50%" x2="75%" y2="80%" class="connection-line" />
+                        <line x1="25%" y1="80%" x2="50%" y2="70%" class="connection-line" />
+                        <line x1="75%" y1="80%" x2="50%" y2="70%" class="connection-line" />
+                        <line x1="50%" y1="30%" x2="50%" y2="70%" class="connection-line" />
+                    </svg>
+
+                    <!-- Genre Planets/Bubbles -->
+                    
+                    <!-- Action (Top Left) -->
+                    <div class="genre-planet" style="top: 15%; left: 20%;" data-genre="action">
+                        <div class="planet-core" style="background: linear-gradient(135deg, #dc2626, #991b1b);">
+                            <i class="bi bi-lightning-charge-fill planet-icon"></i>
+                        </div>
+                        <div class="planet-orbit">
+                            <div class="movie-satellite" style="--rotation: 0deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>John Wick 4</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.5</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 120deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/sv1xJUazXeYqALzczSZ3O6nkH75.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Oppenheimer</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.8</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 240deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/kHlX3oqdD4VGaLpB8O78M25KfdS.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Mission Impossible</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planet-label">Action</div>
+                    </div>
+
+                    <!-- Sci-Fi (Top Center) -->
+                    <div class="genre-planet" style="top: 25%; left: 47%;" data-genre="scifi">
+                        <div class="planet-core" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
+                            <i class="bi bi-rocket-takeoff-fill planet-icon"></i>
+                        </div>
+                        <div class="planet-orbit">
+                            <div class="movie-satellite" style="--rotation: 60deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Dune: Part Two</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.9</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 180deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/5ScPNT6fHtfYJeWBajZciPV3hEL.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Interstellar</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.7</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 300deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/8I37NtDffNV7AZlDa7uDvvqhovU.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>The Matrix</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planet-label">Sci-Fi</div>
+                    </div>
+
+                    <!-- Thriller (Top Right) -->
+                    <div class="genre-planet" style="top: 15%; left: 72%;" data-genre="thriller">
+                        <div class="planet-core" style="background: linear-gradient(135deg, #dc2626, #7f1d1d);">
+                            <i class="bi bi-eye-fill planet-icon"></i>
+                        </div>
+                        <div class="planet-orbit">
+                            <div class="movie-satellite" style="--rotation: 30deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/eGM9arOzHlGvKWcD7mVXuGKhxJx.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Shutter Island</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.2</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 150deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Inception</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.8</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 270deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/npXJU668xH3zTLCqLvmJNs4ZRH.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Gone Girl</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planet-label">Thriller</div>
+                    </div>
+
+                    <!-- Horror (Middle Left) -->
+                    <div class="genre-planet" style="top: 45%; left: 12%;" data-genre="horror">
+                        <div class="planet-core" style="background: linear-gradient(135deg, #7f1d1d, #450a0a);">
+                            <i class="bi bi-moon-stars-fill planet-icon"></i>
+                        </div>
+                        <div class="planet-orbit">
+                            <div class="movie-satellite" style="--rotation: 45deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>The Conjuring</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 7.5</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 165deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/db32LaOibwEliAmSL2jjDF6oDdj.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Get Out</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 7.7</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 285deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>A Quiet Place</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 7.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planet-label">Horror</div>
+                    </div>
+
+                    <!-- Drama (Middle Right) -->
+                    <div class="genre-planet" style="top: 45%; left: 82%;" data-genre="drama">
+                        <div class="planet-core" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);">
+                            <i class="bi bi-film planet-icon"></i>
+                        </div>
+                        <div class="planet-orbit">
+                            <div class="movie-satellite" style="--rotation: 90deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Fight Club</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.8</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 210deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/8Xs20y8gFR0W9K2Tujvjyr6xVLf.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Parasite</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.6</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 330deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>The Shawshank</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 9.3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planet-label">Drama</div>
+                    </div>
+
+                    <!-- Comedy (Bottom Left) -->
+                    <div class="genre-planet" style="top: 75%; left: 22%;" data-genre="comedy">
+                        <div class="planet-core" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                            <i class="bi bi-emoji-laughing-fill planet-icon"></i>
+                        </div>
+                        <div class="planet-orbit">
+                            <div class="movie-satellite" style="--rotation: 15deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/xfWac8MTYDxujaxgPVcRD9yZaul.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>The Grand Budapest</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.1</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 135deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/hU42CRk14JuPEdqZG3AWmagiPAP.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Deadpool</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.0</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 255deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/zHdQ6yaqDf3OQO5uhr0auAgwK6O.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>The Hangover</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 7.7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planet-label">Comedy</div>
+                    </div>
+
+                    <!-- Fantasy (Bottom Center) -->
+                    <div class="genre-planet" style="top: 65%; left: 47%;" data-genre="fantasy">
+                        <div class="planet-core" style="background: linear-gradient(135deg, #a855f7, #7e22ce);">
+                            <i class="bi bi-stars planet-icon"></i>
+                        </div>
+                        <div class="planet-orbit">
+                            <div class="movie-satellite" style="--rotation: 75deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Lord of the Rings</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.9</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 195deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Harry Potter</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 7.9</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 315deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Pan's Labyrinth</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planet-label">Fantasy</div>
+                    </div>
+
+                    <!-- Romance (Bottom Right) -->
+                    <div class="genre-planet" style="top: 75%; left: 72%;" data-genre="romance">
+                        <div class="planet-core" style="background: linear-gradient(135deg, #ec4899, #be185d);">
+                            <i class="bi bi-heart-fill planet-icon"></i>
+                        </div>
+                        <div class="planet-orbit">
+                            <div class="movie-satellite" style="--rotation: 105deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>The Notebook</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 7.8</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 225deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/yb6Un2dAmfI3NCVVY8u7MPhZZPQ.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>Titanic</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 7.9</span>
+                                </div>
+                            </div>
+                            <div class="movie-satellite" style="--rotation: 345deg;">
+                                <img src="https://image.tmdb.org/t/p/w200/kxB9E6fo0ycHzd13oOTHmGa5Njd.jpg" alt="Movie">
+                                <div class="satellite-info">
+                                    <span>La La Land</span>
+                                    <span class="rating"><i class="bi bi-star-fill"></i> 8.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planet-label">Romance</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Genre Details Panel (Appears on Planet Click) -->
+        <section class="genre-details-panel" id="genreDetailsPanel">
+            <div class="container">
+                <button class="close-panel" id="closePanel">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <div class="details-content">
+                    <div class="details-header">
+                        <div class="genre-icon-large" id="genreIconLarge">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                        <div>
+                            <h2 id="genreName">Action</h2>
+                            <p id="genreDescription">Experience heart-pounding excitement and adrenaline-fueled adventures</p>
+                        </div>
+                    </div>
+                    
+                    <div class="related-genres">
+                        <h3>Connected Genres</h3>
+                        <div class="related-badges" id="relatedBadges">
+                            <span class="genre-badge">Thriller</span>
+                            <span class="genre-badge">Sci-Fi</span>
+                            <span class="genre-badge">Crime</span>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-movies">
+                        <h3>Top Movies in this Genre</h3>
+                        <div class="movies-grid" id="featuredMoviesGrid">
+                            <!-- Movies will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                        <span>CINEMATIC</span>
+                    </div>
+                    <p>Your ultimate destination for movies and entertainment. Stream thousands of titles anytime, anywhere.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Browse</h4>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../browse/genres.html">All Genres</a></li>
+                        <li><a href="../browse/movies.html">Latest Movies</a></li>
+                        <li><a href="smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="../tools/calendar.html">Release Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Features -->
+                <div class="footer-links">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="watchlist.html">Watchlist</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="movie-map.html">Movie Map</a></li>
+                        <li><a href="bundles.html">Movie Bundles</a></li>
+                        <li><a href="../tools/request.html">Request Movie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../info/about-help.html">About Us</a></li>
+                        <li><a href="../info/about-help.html#help">Help Center</a></li>
+                        <li><a href="../info/about-help.html#faq">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get updates on new releases and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cinematic. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <span>•</span>
+                    <a href="#">Terms</a>
+                    <span>•</span>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        /* Hero Section */
+        .hero-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .hero-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .hero-icon i {
+            font-size: 60px;
+            color: white;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #dc2626, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Map Controls */
+        .map-controls {
+            padding: 30px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .controls-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .view-selector {
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px;
+            border-radius: 12px;
+        }
+        
+        .view-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .view-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .view-btn.active {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            color: white;
+        }
+        
+        .legend-box {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .legend-icon i {
+            font-size: 12px;
+            color: white;
+        }
+        
+        .legend-item span {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Universe Map */
+        .universe-map-section {
+            padding: 60px 0;
+            min-height: 800px;
+        }
+        
+        .universe-container {
+            position: relative;
+            width: 100%;
+            height: 900px;
+            background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        /* Connection Lines */
+        .connection-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .connection-line {
+            stroke: rgba(220, 38, 38, 0.3);
+            stroke-width: 2;
+            stroke-dasharray: 5, 5;
+            animation: dashFlow 20s linear infinite;
+        }
+        
+        @keyframes dashFlow {
+            to {
+                stroke-dashoffset: -100;
+            }
+        }
+        
+        /* Genre Planets */
+        .genre-planet {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            cursor: pointer;
+            animation: planetPulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes planetPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.05); }
+        }
+        
+        .planet-core {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.5),
+                        inset 0 0 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 3;
+            transition: all 0.3s ease;
+        }
+        
+        .genre-planet:hover .planet-core {
+            transform: scale(1.2);
+            box-shadow: 0 0 50px rgba(220, 38, 38, 0.8),
+                        inset 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .planet-icon {
+            font-size: 40px;
+            color: white;
+        }
+        
+        /* Planet Orbit */
+        .planet-orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: 250px;
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: rotate 30s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        /* Movie Satellites */
+        .movie-satellite {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 80px;
+            transform-origin: 0 0;
+            transform: rotate(var(--rotation)) translateX(125px) rotate(calc(-1 * var(--rotation)));
+        }
+        
+        .movie-satellite img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .movie-satellite:hover img {
+            transform: scale(1.2);
+            border-color: #dc2626;
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.5);
+        }
+        
+        .satellite-info {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 8px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 8px 12px;
+            border-radius: 6px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+        }
+        
+        .movie-satellite:hover .satellite-info {
+            opacity: 1;
+        }
+        
+        .satellite-info span {
+            display: block;
+            font-size: 0.75rem;
+            color: white;
+        }
+        
+        .satellite-info .rating {
+            color: #fbbf24;
+            margin-top: 4px;
+        }
+        
+        .satellite-info .rating i {
+            margin-right: 2px;
+        }
+        
+        /* Planet Label */
+        .planet-label {
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Genre Details Panel */
+        .genre-details-panel {
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            background: rgba(15, 15, 15, 0.98);
+            backdrop-filter: blur(20px);
+            border-top: 2px solid rgba(220, 38, 38, 0.5);
+            padding: 40px 0;
+            z-index: 1000;
+            transition: bottom 0.4s ease;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .genre-details-panel.active {
+            bottom: 0;
+        }
+        
+        .close-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .close-panel:hover {
+            background: #dc2626;
+            transform: rotate(90deg);
+        }
+        
+        .details-content {
+            padding: 0 20px;
+        }
+        
+        .details-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .genre-icon-large {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            flex-shrink: 0;
+        }
+        
+        .genre-icon-large i {
+            font-size: 50px;
+            color: white;
+        }
+        
+        .details-header h2 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: white;
+        }
+        
+        .details-header p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 10px 0 0;
+        }
+        
+        .related-genres {
+            margin-bottom: 40px;
+        }
+        
+        .related-genres h3 {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .related-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .genre-badge {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            color: white;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .genre-badge:hover {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            border-color: #dc2626;
+            transform: translateY(-2px);
+        }
+        
+        .featured-movies h3 {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        
+        .movie-card-small {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .movie-card-small:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .movie-card-small img {
+            width: 100%;
+            aspect-ratio: 2/3;
+            object-fit: cover;
+        }
+        
+        .movie-card-small .info {
+            padding: 12px;
+        }
+        
+        .movie-card-small .title {
+            font-size: 0.9rem;
+            color: white;
+            margin-bottom: 5px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .movie-card-small .rating {
+            color: #fbbf24;
+            font-size: 0.85rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .universe-container {
+                height: 700px;
+            }
+            
+            .planet-core {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .planet-icon {
+                font-size: 30px;
+            }
+            
+            .planet-orbit {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .movie-satellite {
+                width: 50px;
+                height: 70px;
+            }
+            
+            .controls-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .universe-container {
+                height: 600px;
+            }
+            
+            .planet-core {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .planet-icon {
+                font-size: 25px;
+            }
+            
+            .planet-orbit {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .movie-satellite {
+                width: 40px;
+                height: 55px;
+            }
+            
+            .legend-box {
+                width: 100%;
+            }
+            
+            .details-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Genre data
+        const genreData = {
+            action: {
+                name: 'Action',
+                icon: 'bi-lightning-charge-fill',
+                gradient: 'linear-gradient(135deg, #dc2626, #991b1b)',
+                description: 'Experience heart-pounding excitement and adrenaline-fueled adventures',
+                related: ['Thriller', 'Sci-Fi', 'Crime'],
+                movies: [
+                    { title: 'John Wick 4', rating: 8.5, poster: 'https://image.tmdb.org/t/p/w200/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg' },
+                    { title: 'Oppenheimer', rating: 8.8, poster: 'https://image.tmdb.org/t/p/w200/sv1xJUazXeYqALyczSZ3O6nkH75.jpg' },
+                    { title: 'Mission Impossible', rating: 8.2, poster: 'https://image.tmdb.org/t/p/w200/kHlX3oqdD4VGaLpB8O78M25KfdS.jpg' },
+                    { title: 'Mad Max: Fury Road', rating: 8.1, poster: 'https://image.tmdb.org/t/p/w200/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg' },
+                    { title: 'The Dark Knight', rating: 9.0, poster: 'https://image.tmdb.org/t/p/w200/qJ2tW6WMUDux911r6m7haRef0WH.jpg' },
+                    { title: 'Gladiator', rating: 8.5, poster: 'https://image.tmdb.org/t/p/w200/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg' }
+                ]
+            },
+            scifi: {
+                name: 'Sci-Fi',
+                icon: 'bi-rocket-takeoff-fill',
+                gradient: 'linear-gradient(135deg, #8b5cf6, #6d28d9)',
+                description: 'Explore futuristic worlds and mind-bending science fiction',
+                related: ['Fantasy', 'Action', 'Thriller'],
+                movies: [
+                    { title: 'Dune: Part Two', rating: 8.9, poster: 'https://image.tmdb.org/t/p/w200/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg' },
+                    { title: 'Interstellar', rating: 8.7, poster: 'https://image.tmdb.org/t/p/w200/5ScPNT6fHtfYJeWBajZciPV3hEL.jpg' },
+                    { title: 'The Matrix', rating: 8.7, poster: 'https://image.tmdb.org/t/p/w200/8I37NtDffNV7AZlDa7uDvvqhovU.jpg' },
+                    { title: 'Blade Runner 2049', rating: 8.0, poster: 'https://image.tmdb.org/t/p/w200/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg' },
+                    { title: 'Arrival', rating: 7.9, poster: 'https://image.tmdb.org/t/p/w200/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg' },
+                    { title: 'Ex Machina', rating: 7.7, poster: 'https://image.tmdb.org/t/p/w200/9goPE2IoMIXxTLWzl7aizwuIiLh.jpg' }
+                ]
+            },
+            thriller: {
+                name: 'Thriller',
+                icon: 'bi-eye-fill',
+                gradient: 'linear-gradient(135deg, #dc2626, #7f1d1d)',
+                description: 'Edge-of-your-seat suspense and psychological intensity',
+                related: ['Action', 'Horror', 'Crime'],
+                movies: [
+                    { title: 'Shutter Island', rating: 8.2, poster: 'https://image.tmdb.org/t/p/w200/eGM9arOzHlGvKWcD7mVXuGKhxJx.jpg' },
+                    { title: 'Inception', rating: 8.8, poster: 'https://image.tmdb.org/t/p/w200/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg' },
+                    { title: 'Gone Girl', rating: 8.1, poster: 'https://image.tmdb.org/t/p/w200/npXJU668xH3zTLCqLvmJNs4ZRH.jpg' },
+                    { title: 'Se7en', rating: 8.6, poster: 'https://image.tmdb.org/t/p/w200/6yoghtyTpznpBik8EngEmJskVUO.jpg' },
+                    { title: 'Prisoners', rating: 8.1, poster: 'https://image.tmdb.org/t/p/w200/tuny2fo2TYL0jP8RjdVJzgwxTK7.jpg' },
+                    { title: 'The Prestige', rating: 8.5, poster: 'https://image.tmdb.org/t/p/w200/bdN3gXuIZYaJP7ftKK2sU0nPtEA.jpg' }
+                ]
+            },
+            horror: {
+                name: 'Horror',
+                icon: 'bi-moon-stars-fill',
+                gradient: 'linear-gradient(135deg, #7f1d1d, #450a0a)',
+                description: 'Terrifying tales that will keep you up at night',
+                related: ['Thriller', 'Mystery', 'Supernatural'],
+                movies: [
+                    { title: 'The Conjuring', rating: 7.5, poster: 'https://image.tmdb.org/t/p/w200/3bhkrj58Vtu7enYsRolD1fZdja1.jpg' },
+                    { title: 'Get Out', rating: 7.7, poster: 'https://image.tmdb.org/t/p/w200/db32LaOibwEliAmSL2jjDF6oDdj.jpg' },
+                    { title: 'A Quiet Place', rating: 7.5, poster: 'https://image.tmdb.org/t/p/w200/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg' },
+                    { title: 'Hereditary', rating: 7.3, poster: 'https://image.tmdb.org/t/p/w200/p9fmuz2Oj3HtNVqRkoTPgHCJPCf.jpg' },
+                    { title: 'The Shining', rating: 8.4, poster: 'https://image.tmdb.org/t/p/w200/xazWoLealQwEgqZ89MLZklLZD3k.jpg' },
+                    { title: 'The Exorcist', rating: 8.1, poster: 'https://image.tmdb.org/t/p/w200/5x0CeVHJI8tcDx8tUUwYHQSNILq.jpg' }
+                ]
+            },
+            drama: {
+                name: 'Drama',
+                icon: 'bi-film',
+                gradient: 'linear-gradient(135deg, #0ea5e9, #0369a1)',
+                description: 'Powerful stories that touch the heart and soul',
+                related: ['Romance', 'Biography', 'History'],
+                movies: [
+                    { title: 'Fight Club', rating: 8.8, poster: 'https://image.tmdb.org/t/p/w200/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg' },
+                    { title: 'Parasite', rating: 8.6, poster: 'https://image.tmdb.org/t/p/w200/8Xs20y8gFR0W9K2Tujvjyr6xVLf.jpg' },
+                    { title: 'The Shawshank Redemption', rating: 9.3, poster: 'https://image.tmdb.org/t/p/w200/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg' },
+                    { title: 'Forrest Gump', rating: 8.8, poster: 'https://image.tmdb.org/t/p/w200/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg' },
+                    { title: '12 Angry Men', rating: 9.0, poster: 'https://image.tmdb.org/t/p/w200/ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg' },
+                    { title: 'The Green Mile', rating: 8.6, poster: 'https://image.tmdb.org/t/p/w200/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg' }
+                ]
+            },
+            comedy: {
+                name: 'Comedy',
+                icon: 'bi-emoji-laughing-fill',
+                gradient: 'linear-gradient(135deg, #f59e0b, #d97706)',
+                description: 'Laughter and joy for every mood',
+                related: ['Family', 'Romance', 'Adventure'],
+                movies: [
+                    { title: 'The Grand Budapest Hotel', rating: 8.1, poster: 'https://image.tmdb.org/t/p/w200/xfWac8MTYDxujaxgPVcRD9yZaul.jpg' },
+                    { title: 'Deadpool', rating: 8.0, poster: 'https://image.tmdb.org/t/p/w200/hU42CRk14JuPEdqZG3AWmagiPAP.jpg' },
+                    { title: 'The Hangover', rating: 7.7, poster: 'https://image.tmdb.org/t/p/w200/zHdQ6yaqDf3OQO5uhr0auAgwK6O.jpg' },
+                    { title: 'Superbad', rating: 7.6, poster: 'https://image.tmdb.org/t/p/w200/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg' },
+                    { title: 'The Big Lebowski', rating: 8.1, poster: 'https://image.tmdb.org/t/p/w200/d9HdkBLNcnBvBEorvW73N4guxwr.jpg' },
+                    { title: 'Tropic Thunder', rating: 7.1, poster: 'https://image.tmdb.org/t/p/w200/zAurB9mNxfYRoVrVjAJJwGV3sPg.jpg' }
+                ]
+            },
+            fantasy: {
+                name: 'Fantasy',
+                icon: 'bi-stars',
+                gradient: 'linear-gradient(135deg, #a855f7, #7e22ce)',
+                description: 'Magical realms and epic adventures await',
+                related: ['Sci-Fi', 'Adventure', 'Family'],
+                movies: [
+                    { title: 'Lord of the Rings', rating: 8.9, poster: 'https://image.tmdb.org/t/p/w200/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg' },
+                    { title: 'Harry Potter', rating: 7.9, poster: 'https://image.tmdb.org/t/p/w200/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg' },
+                    { title: "Pan's Labyrinth", rating: 8.2, poster: 'https://image.tmdb.org/t/p/w200/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg' },
+                    { title: 'Spirited Away', rating: 8.6, poster: 'https://image.tmdb.org/t/p/w200/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg' },
+                    { title: 'The Hobbit', rating: 7.8, poster: 'https://image.tmdb.org/t/p/w200/yHA9Fc37VmpUA5UncTxxo3rTGVA.jpg' },
+                    { title: 'The Chronicles of Narnia', rating: 7.0, poster: 'https://image.tmdb.org/t/p/w200/iREd0rNCjYdf5Ar0vfaW32yrkm.jpg' }
+                ]
+            },
+            romance: {
+                name: 'Romance',
+                icon: 'bi-heart-fill',
+                gradient: 'linear-gradient(135deg, #ec4899, #be185d)',
+                description: 'Love stories that warm the heart',
+                related: ['Drama', 'Comedy', 'Family'],
+                movies: [
+                    { title: 'The Notebook', rating: 7.8, poster: 'https://image.tmdb.org/t/p/w200/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg' },
+                    { title: 'Titanic', rating: 7.9, poster: 'https://image.tmdb.org/t/p/w200/yb6Un2dAmfI3NCVVY8u7MPhZZPQ.jpg' },
+                    { title: 'La La Land', rating: 8.0, poster: 'https://image.tmdb.org/t/p/w200/kxB9E6fo0ycHzd13oOTHmGa5Njd.jpg' },
+                    { title: 'Pride and Prejudice', rating: 7.8, poster: 'https://image.tmdb.org/t/p/w200/fPSaZqPk9t7SNxWvbYDLNGmFc22.jpg' },
+                    { title: 'Eternal Sunshine', rating: 8.3, poster: 'https://image.tmdb.org/t/p/w200/5MwkWH9tYHv3mV9OdYTMR5mAkPZ.jpg' },
+                    { title: 'Before Sunrise', rating: 8.1, poster: 'https://image.tmdb.org/t/p/w200/2qk78vqvqe7RVgkJWxJJfVyX5iG.jpg' }
+                ]
+            }
+        };
+
+        // Genre planet click handlers
+        document.querySelectorAll('.genre-planet').forEach(planet => {
+            planet.addEventListener('click', function() {
+                const genre = this.getAttribute('data-genre');
+                showGenreDetails(genre);
+            });
+        });
+
+        // Show genre details
+        function showGenreDetails(genreKey) {
+            const data = genreData[genreKey];
+            if (!data) return;
+
+            const panel = document.getElementById('genreDetailsPanel');
+            const genreName = document.getElementById('genreName');
+            const genreDescription = document.getElementById('genreDescription');
+            const genreIconLarge = document.getElementById('genreIconLarge');
+            const relatedBadges = document.getElementById('relatedBadges');
+            const moviesGrid = document.getElementById('featuredMoviesGrid');
+
+            // Update content
+            genreName.textContent = data.name;
+            genreDescription.textContent = data.description;
+            genreIconLarge.style.background = data.gradient;
+            genreIconLarge.innerHTML = `<i class="${data.icon}"></i>`;
+
+            // Update related genres
+            relatedBadges.innerHTML = data.related.map(genre => 
+                `<span class="genre-badge">${genre}</span>`
+            ).join('');
+
+            // Update movies
+            moviesGrid.innerHTML = data.movies.map(movie => `
+                <div class="movie-card-small">
+                    <img src="${movie.poster}" alt="${movie.title}">
+                    <div class="info">
+                        <div class="title">${movie.title}</div>
+                        <div class="rating">
+                            <i class="bi bi-star-fill"></i> ${movie.rating}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Show panel
+            panel.classList.add('active');
+        }
+
+        // Close panel
+        document.getElementById('closePanel').addEventListener('click', function() {
+            document.getElementById('genreDetailsPanel').classList.remove('active');
+        });
+
+        // View selector
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const view = this.getAttribute('data-view');
+                // Here you can add logic to switch between different views
+                console.log('Switched to view:', view);
+            });
+        });
+    </script>
+</body>
+</html>

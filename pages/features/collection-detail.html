@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Details - Cinematic</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                <span>CINEMATIC</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Browse <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../browse/genres.html">All Genres</a></li>
+                        <li><a href="../browse/movies.html">Latest / Top Rated / Popular</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">Features <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="watchlist.html">My Watchlist</a></li>
+                        <li><a href="downloads.html">Downloads & History</a></li>
+                        <li><a href="movie-map.html">Movie Map</a></li>
+                        <li><a href="bundles.html">Movie Bundles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Tools <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../tools/calendar.html">Release Calendar</a></li>
+                        <li><a href="../tools/request.html">Request Movie</a></li>
+                    </ul>
+                </li>
+                <li><a href="../info/about-help.html" class="nav-link">About & Help</a></li>
+            </ul>
+            
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="../search-results.html" class="search-btn">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="#" class="profile-btn">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Collection Header -->
+        <section class="collection-header">
+            <div class="collection-backdrop">
+                <img src="https://image.tmdb.org/t/p/w1280/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Backdrop">
+                <div class="backdrop-overlay"></div>
+            </div>
+            
+            <div class="container">
+                <div class="collection-info">
+                    <div class="breadcrumb-nav">
+                        <a href="bundles.html">← Back to Bundles</a>
+                    </div>
+                    
+                    <div class="collection-header-content">
+                        <div class="collection-header-main">
+                            <h1 class="collection-title">Legendary Directors</h1>
+                            <p class="collection-subtitle">Masterworks from cinema's greatest visionaries</p>
+                            
+                            <div class="collection-stats-row">
+                                <div class="stat-item">
+                                    <i class="bi bi-film"></i>
+                                    <span>8 Movies</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>4.9/5</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>12.5 Hours</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-tag-fill"></i>
+                                    <span>Award-Winning</span>
+                                </div>
+                            </div>
+                            
+                            <p class="collection-description">
+                                Experience the finest works by legendary directors who have shaped cinema history. 
+                                Each film in this curated collection represents a masterpiece of director storytelling, 
+                                cinematography, and artistic vision. Perfect for cinephiles and film enthusiasts.
+                            </p>
+                            
+                            <div class="collection-actions">
+                                <button class="btn-play">
+                                    <i class="bi bi-play-fill"></i>
+                                    Start Collection
+                                </button>
+                                <button class="btn-add-watchlist">
+                                    <i class="bi bi-bookmark-heart"></i>
+                                    Save Collection
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter & Sort Section -->
+        <section class="collection-filters">
+            <div class="container">
+                <div class="filters-header">
+                    <h2>Movies in this Collection</h2>
+                    <div class="filter-controls">
+                        <div class="sort-control">
+                            <label for="sort-select">Sort by:</label>
+                            <select id="sort-select" class="sort-select">
+                                <option>Release Date (Newest)</option>
+                                <option>Rating (Highest)</option>
+                                <option>Title (A-Z)</option>
+                                <option>Duration</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movies Grid Section -->
+        <section class="collection-movies-section">
+            <div class="container">
+                <div class="movies-display-grid">
+                    <!-- Movie Card 1 -->
+                    <div class="movie-collection-card">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Movie">
+                            <div class="movie-overlay">
+                                <button class="play-btn">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge">#1 in Collection</div>
+                        </div>
+                        <div class="movie-details">
+                            <h3>The Masterpiece</h3>
+                            <p class="movie-director">by Renown Director</p>
+                            <div class="movie-meta">
+                                <span class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    9.1
+                                </span>
+                                <span class="duration">
+                                    <i class="bi bi-clock"></i>
+                                    2h 54m
+                                </span>
+                                <span class="year">2023</span>
+                            </div>
+                            <p class="movie-synopsis">A cinematic triumph that redefines storytelling and visual artistry.</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch-small">Watch Now</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 2 -->
+                    <div class="movie-collection-card">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg" alt="Movie">
+                            <div class="movie-overlay">
+                                <button class="play-btn">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge">#2 in Collection</div>
+                        </div>
+                        <div class="movie-details">
+                            <h3>City of Shadows</h3>
+                            <p class="movie-director">by Master Filmmaker</p>
+                            <div class="movie-meta">
+                                <span class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.8
+                                </span>
+                                <span class="duration">
+                                    <i class="bi bi-clock"></i>
+                                    2h 45m
+                                </span>
+                                <span class="year">2022</span>
+                            </div>
+                            <p class="movie-synopsis">An intricate thriller woven with stunning cinematography and compelling drama.</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch-small">Watch Now</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 3 -->
+                    <div class="movie-collection-card">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="Movie">
+                            <div class="movie-overlay">
+                                <button class="play-btn">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge">#3 in Collection</div>
+                        </div>
+                        <div class="movie-details">
+                            <h3>Epic Vision</h3>
+                            <p class="movie-director">by Visionary Artist</p>
+                            <div class="movie-meta">
+                                <span class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    9.0
+                                </span>
+                                <span class="duration">
+                                    <i class="bi bi-clock"></i>
+                                    3h 12m
+                                </span>
+                                <span class="year">2024</span>
+                            </div>
+                            <p class="movie-synopsis">A breathtaking journey through dimensions of human emotion and artistic expression.</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch-small">Watch Now</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 4 -->
+                    <div class="movie-collection-card">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Movie">
+                            <div class="movie-overlay">
+                                <button class="play-btn">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge">#4 in Collection</div>
+                        </div>
+                        <div class="movie-details">
+                            <h3>Lost Temple</h3>
+                            <p class="movie-director">by Acclaimed Director</p>
+                            <div class="movie-meta">
+                                <span class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.7
+                                </span>
+                                <span class="duration">
+                                    <i class="bi bi-clock"></i>
+                                    2h 38m
+                                </span>
+                                <span class="year">2021</span>
+                            </div>
+                            <p class="movie-synopsis">An adventure through mystery and discovery with exemplary directorial skill.</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch-small">Watch Now</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 5 -->
+                    <div class="movie-collection-card">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/cvsXj3I0emg2B6nP8SozsR7ld3X.jpg" alt="Movie">
+                            <div class="movie-overlay">
+                                <button class="play-btn">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge">#5 in Collection</div>
+                        </div>
+                        <div class="movie-details">
+                            <h3>Desert Storm</h3>
+                            <p class="movie-director">by Celebrated Auteur</p>
+                            <div class="movie-meta">
+                                <span class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.5
+                                </span>
+                                <span class="duration">
+                                    <i class="bi bi-clock"></i>
+                                    2h 42m
+                                </span>
+                                <span class="year">2023</span>
+                            </div>
+                            <p class="movie-synopsis">Raw intensity and powerful storytelling define this remarkable work.</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch-small">Watch Now</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 6 -->
+                    <div class="movie-collection-card">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg" alt="Movie">
+                            <div class="movie-overlay">
+                                <button class="play-btn">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge">#6 in Collection</div>
+                        </div>
+                        <div class="movie-details">
+                            <h3>Ocean's Edge</h3>
+                            <p class="movie-director">by Innovative Artist</p>
+                            <div class="movie-meta">
+                                <span class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.9
+                                </span>
+                                <span class="duration">
+                                    <i class="bi bi-clock"></i>
+                                    2h 50m
+                                </span>
+                                <span class="year">2024</span>
+                            </div>
+                            <p class="movie-synopsis">A visual masterpiece exploring human connection and the natural world.</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch-small">Watch Now</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 7 -->
+                    <div class="movie-collection-card">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Movie">
+                            <div class="movie-overlay">
+                                <button class="play-btn">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge">#7 in Collection</div>
+                        </div>
+                        <div class="movie-details">
+                            <h3>Sky Warriors</h3>
+                            <p class="movie-director">by Epic Storyteller</p>
+                            <div class="movie-meta">
+                                <span class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.6
+                                </span>
+                                <span class="duration">
+                                    <i class="bi bi-clock"></i>
+                                    2h 56m
+                                </span>
+                                <span class="year">2023</span>
+                            </div>
+                            <p class="movie-synopsis">Soaring ambition and technical brilliance in every frame.</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch-small">Watch Now</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 8 -->
+                    <div class="movie-collection-card">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg" alt="Movie">
+                            <div class="movie-overlay">
+                                <button class="play-btn">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge">#8 in Collection</div>
+                        </div>
+                        <div class="movie-details">
+                            <h3>Jungle Expedition</h3>
+                            <p class="movie-director">by Master Craftsman</p>
+                            <div class="movie-meta">
+                                <span class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.4
+                                </span>
+                                <span class="duration">
+                                    <i class="bi bi-clock"></i>
+                                    2h 48m
+                                </span>
+                                <span class="year">2022</span>
+                            </div>
+                            <p class="movie-synopsis">An adventurous exploration of cinema's endless possibilities.</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch-small">Watch Now</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collection Info Section -->
+        <section class="collection-about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2>About This Collection</h2>
+                        <p>
+                            This carefully curated collection celebrates the artistry of legendary directors who have left an indelible mark on cinema. 
+                            Each film represents not just entertainment, but a masterclass in visual storytelling, narrative construction, and artistic vision.
+                        </p>
+                        <p>
+                            From intimate character studies to sweeping epics, these directors have proven that film is a legitimate art form capable of 
+                            moving audiences on profound emotional and intellectual levels. Their work has influenced generations of filmmakers and continues 
+                            to inspire audiences worldwide.
+                        </p>
+                        <h3>Why This Collection Matters</h3>
+                        <ul class="about-list">
+                            <li>Showcases the evolution of directorial vision across different eras</li>
+                            <li>Highlights the technical mastery and innovation of great directors</li>
+                            <li>Provides insights into diverse storytelling approaches and styles</li>
+                            <li>Perfect for film enthusiasts and aspiring filmmakers</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-sidebar">
+                        <div class="collection-summary">
+                            <h3>Collection Details</h3>
+                            <div class="summary-item">
+                                <span class="label">Total Movies:</span>
+                                <span class="value">8</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Total Duration:</span>
+                                <span class="value">22 hours 45 min</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Average Rating:</span>
+                                <span class="value">8.7/10</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Release Span:</span>
+                                <span class="value">2021 - 2024</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Collection Type:</span>
+                                <span class="value">Curated</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Created:</span>
+                                <span class="value">March 2024</span>
+                            </div>
+                            <button class="btn-add-collection">
+                                <i class="bi bi-duplicate"></i>
+                                Save This Collection
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section class="collection-recommendations-section">
+            <div class="container">
+                <h2>Similar Collections You Might Enjoy</h2>
+                <div class="recommendations-grid">
+                    <div class="recommendation-card">
+                        <div class="rec-image">
+                            <img src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Collection">
+                        </div>
+                        <h3>Award Winning Films</h3>
+                        <p>10 Movies</p>
+                        <p class="rec-rating">
+                            <i class="bi bi-star-fill"></i>
+                            4.8/5
+                        </p>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="rec-image">
+                            <img src="https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg" alt="Collection">
+                        </div>
+                        <h3>Classic Cinema</h3>
+                        <p>12 Movies</p>
+                        <p class="rec-rating">
+                            <i class="bi bi-star-fill"></i>
+                            4.9/5
+                        </p>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="rec-image">
+                            <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="Collection">
+                        </div>
+                        <h3>International Masterpieces</h3>
+                        <p>9 Movies</p>
+                        <p class="rec-rating">
+                            <i class="bi bi-star-fill"></i>
+                            4.7/5
+                        </p>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="rec-image">
+                            <img src="https://image.tmdb.org/t/p/w500/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg" alt="Collection">
+                        </div>
+                        <h3>Hidden Gems</h3>
+                        <p>15 Movies</p>
+                        <p class="rec-rating">
+                            <i class="bi bi-star-fill"></i>
+                            4.6/5
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                        <span>CINEMATIC</span>
+                    </div>
+                    <p>Your ultimate destination for movies and entertainment. Stream thousands of titles anytime, anywhere.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Browse</h4>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../browse/genres.html">All Genres</a></li>
+                        <li><a href="../browse/movies.html">Latest Movies</a></li>
+                        <li><a href="smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="../tools/calendar.html">Release Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Features -->
+                <div class="footer-links">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="watchlist.html">Watchlist</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="movie-map.html">Movie Map</a></li>
+                        <li><a href="bundles.html">Movie Bundles</a></li>
+                        <li><a href="../tools/request.html">Request Movie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../info/about-help.html">About Us</a></li>
+                        <li><a href="../info/about-help.html#help">Help Center</a></li>
+                        <li><a href="../info/about-help.html#faq">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get updates on new releases and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cinematic. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <span>•</span>
+                    <a href="#">Terms</a>
+                    <span>•</span>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

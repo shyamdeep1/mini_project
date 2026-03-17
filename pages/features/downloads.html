@@ -73,11 +73,510 @@
     </nav>
 
     <!-- Main Content -->
-    <main style="min-height: 60vh; padding: 100px 0;">
-        <div class="container">
-            <h1>Downloads & History</h1>
-            <p>Content coming soon...</p>
-        </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="downloads-hero">
+            <div class="container">
+                <div class="downloads-hero-content">
+                    <h1>📥 Downloads & History</h1>
+                    <p>Manage your downloaded movies and watch history</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Storage Information Section -->
+        <section class="storage-info-section">
+            <div class="container">
+                <div class="storage-stats">
+                    <div class="storage-card">
+                        <div class="storage-icon">
+                            <i class="bi bi-download"></i>
+                        </div>
+                        <div class="storage-details">
+                            <h3>Downloaded Movies</h3>
+                            <p class="storage-value">24 Movies</p>
+                            <small>Offline Available</small>
+                        </div>
+                    </div>
+
+                    <div class="storage-card">
+                        <div class="storage-icon">
+                            <i class="bi bi-hdd-fill"></i>
+                        </div>
+                        <div class="storage-details">
+                            <h3>Storage Used</h3>
+                            <p class="storage-value">45.2 GB</p>
+                            <small>Out of 100 GB</small>
+                        </div>
+                    </div>
+
+                    <div class="storage-card">
+                        <div class="storage-icon">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <div class="storage-details">
+                            <h3>Watch History</h3>
+                            <p class="storage-value">156 Watched</p>
+                            <small>All Time</small>
+                        </div>
+                    </div>
+
+                    <div class="storage-card">
+                        <div class="storage-icon">
+                            <i class="bi bi-hourglass-bottom"></i>
+                        </div>
+                        <div class="storage-details">
+                            <h3>Continue Watching</h3>
+                            <p class="storage-value">8 Paused</p>
+                            <small>In Progress</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storage Usage Bar -->
+                <div class="storage-bar-container">
+                    <div class="storage-bar-header">
+                        <span>Storage Usage</span>
+                        <span class="storage-percentage">45%</span>
+                    </div>
+                    <div class="storage-bar">
+                        <div class="storage-bar-fill" style="width: 45%;"></div>
+                    </div>
+                    <div class="storage-note">
+                        <i class="bi bi-info-circle"></i>
+                        <span>You can store up to 100 GB of content. <a href="#">Upgrade plan</a> to get more storage.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter & Sort Section -->
+        <section class="downloads-filter-section">
+            <div class="container">
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <button class="filter-btn active">All</button>
+                        <button class="filter-btn">Downloaded</button>
+                        <button class="filter-btn">Watch History</button>
+                        <button class="filter-btn">Continue Watching</button>
+                    </div>
+
+                    <div class="sort-group">
+                        <select class="sort-select">
+                            <option>Recently Downloaded</option>
+                            <option>Recently Watched</option>
+                            <option>File Size (Large First)</option>
+                            <option>Title (A-Z)</option>
+                            <option>Duration (Longest First)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloads Grid Section -->
+        <section class="downloads-grid-section">
+            <div class="container">
+                <!-- Downloaded Section -->
+                <div class="section-divider">
+                    <h2>Downloaded Movies (24)</h2>
+                </div>
+
+                <div class="downloads-grid">
+                    <!-- Download Card 1 -->
+                    <div class="download-card">
+                        <div class="download-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Movie">
+                            <div class="download-overlay">
+                                <button class="play-btn-download">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="download-status">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Offline</span>
+                            </div>
+                        </div>
+                        <div class="download-details">
+                            <h3>Lost Temple</h3>
+                            <p class="download-meta">Action • 2.5 GB • 2h 38m</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="download-actions">
+                                <button class="btn-watch-download">Watch</button>
+                                <button class="btn-delete">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Card 2 -->
+                    <div class="download-card">
+                        <div class="download-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/cvsXj3I0emg2B6nP8SozsR7ld3X.jpg" alt="Movie">
+                            <div class="download-overlay">
+                                <button class="play-btn-download">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="download-status">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Offline</span>
+                            </div>
+                        </div>
+                        <div class="download-details">
+                            <h3>Desert Storm</h3>
+                            <p class="download-meta">Thriller • 3.1 GB • 2h 42m</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="download-actions">
+                                <button class="btn-watch-download">Watch</button>
+                                <button class="btn-delete">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Card 3 -->
+                    <div class="download-card">
+                        <div class="download-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg" alt="Movie">
+                            <div class="download-overlay">
+                                <button class="play-btn-download">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="download-status">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Offline</span>
+                            </div>
+                        </div>
+                        <div class="download-details">
+                            <h3>Ocean's Edge</h3>
+                            <p class="download-meta">Adventure • 2.8 GB • 2h 50m</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="download-actions">
+                                <button class="btn-watch-download">Watch</button>
+                                <button class="btn-delete">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Card 4 -->
+                    <div class="download-card">
+                        <div class="download-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Movie">
+                            <div class="download-overlay">
+                                <button class="play-btn-download">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="download-status">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Offline</span>
+                            </div>
+                        </div>
+                        <div class="download-details">
+                            <h3>Sky Warriors</h3>
+                            <p class="download-meta">Action • 2.9 GB • 2h 56m</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="download-actions">
+                                <button class="btn-watch-download">Watch</button>
+                                <button class="btn-delete">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Card 5 -->
+                    <div class="download-card">
+                        <div class="download-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg" alt="Movie">
+                            <div class="download-overlay">
+                                <button class="play-btn-download">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="download-status">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Offline</span>
+                            </div>
+                        </div>
+                        <div class="download-details">
+                            <h3>Jungle Expedition</h3>
+                            <p class="download-meta">Adventure • 3.2 GB • 2h 48m</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="download-actions">
+                                <button class="btn-watch-download">Watch</button>
+                                <button class="btn-delete">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Card 6 -->
+                    <div class="download-card">
+                        <div class="download-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" alt="Movie">
+                            <div class="download-overlay">
+                                <button class="play-btn-download">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="download-status">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Offline</span>
+                            </div>
+                        </div>
+                        <div class="download-details">
+                            <h3>Arctic Rescue</h3>
+                            <p class="download-meta">Thriller • 2.7 GB • 2h 44m</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="download-actions">
+                                <button class="btn-watch-download">Watch</button>
+                                <button class="btn-delete">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Continue Watching Section -->
+        <section class="continue-watching-section">
+            <div class="container">
+                <div class="section-divider">
+                    <h2>Continue Watching (8)</h2>
+                </div>
+
+                <div class="continue-grid">
+                    <!-- Continue Card 1 -->
+                    <div class="continue-card">
+                        <div class="continue-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Movie">
+                            <div class="continue-progress">
+                                <div class="progress-bar-continue">
+                                    <div class="progress-fill-continue" style="width: 65%;"></div>
+                                </div>
+                                <span class="time-remaining">45 min left</span>
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-continue">
+                                    <i class="bi bi-play-fill"></i>
+                                    <span>Continue</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="continue-info">
+                            <h3>The Last Adventure</h3>
+                            <p>S01E04 • 65% watched</p>
+                        </div>
+                    </div>
+
+                    <!-- Continue Card 2 -->
+                    <div class="continue-card">
+                        <div class="continue-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg" alt="Movie">
+                            <div class="continue-progress">
+                                <div class="progress-bar-continue">
+                                    <div class="progress-fill-continue" style="width: 42%;"></div>
+                                </div>
+                                <span class="time-remaining">78 min left</span>
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-continue">
+                                    <i class="bi bi-play-fill"></i>
+                                    <span>Continue</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="continue-info">
+                            <h3>City of Shadows</h3>
+                            <p>42% watched</p>
+                        </div>
+                    </div>
+
+                    <!-- Continue Card 3 -->
+                    <div class="continue-card">
+                        <div class="continue-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/1Ag56zYAtLMVUAPzLnihDSLsPT2.jpg" alt="Movie">
+                            <div class="continue-progress">
+                                <div class="progress-bar-continue">
+                                    <div class="progress-fill-continue" style="width: 88%;"></div>
+                                </div>
+                                <span class="time-remaining">18 min left</span>
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-continue">
+                                    <i class="bi bi-play-fill"></i>
+                                    <span>Continue</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="continue-info">
+                            <h3>Mystic Forest</h3>
+                            <p>88% watched</p>
+                        </div>
+                    </div>
+
+                    <!-- Continue Card 4 -->
+                    <div class="continue-card">
+                        <div class="continue-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/4sNQPx7UwAqwP1lELNI5J9cGo5C.jpg" alt="Movie">
+                            <div class="continue-progress">
+                                <div class="progress-bar-continue">
+                                    <div class="progress-fill-continue" style="width: 35%;"></div>
+                                </div>
+                                <span class="time-remaining">97 min left</span>
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-btn-continue">
+                                    <i class="bi bi-play-fill"></i>
+                                    <span>Continue</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="continue-info">
+                            <h3>Quantum Realm</h3>
+                            <p>35% watched</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Watch History Section -->
+        <section class="watch-history-section">
+            <div class="container">
+                <div class="section-divider">
+                    <h2>Recent Watch History</h2>
+                </div>
+
+                <div class="history-list">
+                    <!-- History Item 1 -->
+                    <div class="history-item">
+                        <div class="history-poster">
+                            <img src="https://image.tmdb.org/t/p/w185/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Movie">
+                        </div>
+                        <div class="history-content">
+                            <h3>Lost Temple</h3>
+                            <p class="history-meta">Action • 2023</p>
+                            <p class="history-watch">Watched on March 15, 2026</p>
+                        </div>
+                        <div class="history-actions">
+                            <button class="btn-watch-again">Watch Again</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+                    </div>
+
+                    <!-- History Item 2 -->
+                    <div class="history-item">
+                        <div class="history-poster">
+                            <img src="https://image.tmdb.org/t/p/w185/cvsXj3I0emg2B6nP8SozsR7ld3X.jpg" alt="Movie">
+                        </div>
+                        <div class="history-content">
+                            <h3>Desert Storm</h3>
+                            <p class="history-meta">Thriller • 2024</p>
+                            <p class="history-watch">Watched on March 14, 2026</p>
+                        </div>
+                        <div class="history-actions">
+                            <button class="btn-watch-again">Watch Again</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+                    </div>
+
+                    <!-- History Item 3 -->
+                    <div class="history-item">
+                        <div class="history-poster">
+                            <img src="https://image.tmdb.org/t/p/w185/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg" alt="Movie">
+                        </div>
+                        <div class="history-content">
+                            <h3>Ocean's Edge</h3>
+                            <p class="history-meta">Adventure • 2023</p>
+                            <p class="history-watch">Watched on March 13, 2026</p>
+                        </div>
+                        <div class="history-actions">
+                            <button class="btn-watch-again">Watch Again</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+                    </div>
+
+                    <!-- History Item 4 -->
+                    <div class="history-item">
+                        <div class="history-poster">
+                            <img src="https://image.tmdb.org/t/p/w185/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Movie">
+                        </div>
+                        <div class="history-content">
+                            <h3>Sky Warriors</h3>
+                            <p class="history-meta">Action • 2024</p>
+                            <p class="history-watch">Watched on March 12, 2026</p>
+                        </div>
+                        <div class="history-actions">
+                            <button class="btn-watch-again">Watch Again</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+                    </div>
+
+                    <!-- History Item 5 -->
+                    <div class="history-item">
+                        <div class="history-poster">
+                            <img src="https://image.tmdb.org/t/p/w185/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg" alt="Movie">
+                        </div>
+                        <div class="history-content">
+                            <h3>Jungle Expedition</h3>
+                            <p class="history-meta">Adventure • 2022</p>
+                            <p class="history-watch">Watched on March 11, 2026</p>
+                        </div>
+                        <div class="history-actions">
+                            <button class="btn-watch-again">Watch Again</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+                    </div>
+
+                    <!-- History Item 6 -->
+                    <div class="history-item">
+                        <div class="history-poster">
+                            <img src="https://image.tmdb.org/t/p/w185/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" alt="Movie">
+                        </div>
+                        <div class="history-content">
+                            <h3>Arctic Rescue</h3>
+                            <p class="history-meta">Thriller • 2021</p>
+                            <p class="history-watch">Watched on March 10, 2026</p>
+                        </div>
+                        <div class="history-actions">
+                            <button class="btn-watch-again">Watch Again</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clear History Button -->
+                <div class="clear-history-action">
+                    <button class="btn-clear-history">
+                        <i class="bi bi-trash3"></i>
+                        Clear All History
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->

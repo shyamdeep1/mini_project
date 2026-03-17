@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre Details - Cinematic</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                <span>CINEMATIC</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">Browse <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="genres.html">All Genres</a></li>
+                        <li><a href="movies.html">Latest / Top Rated / Popular</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Features <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../features/smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="../features/watchlist.html">My Watchlist</a></li>
+                        <li><a href="../features/downloads.html">Downloads & History</a></li>
+                        <li><a href="../features/movie-map.html">Movie Map</a></li>
+                        <li><a href="../features/bundles.html">Movie Bundles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Tools <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../tools/calendar.html">Release Calendar</a></li>
+                        <li><a href="../tools/request.html">Request Movie</a></li>
+                    </ul>
+                </li>
+                <li><a href="../info/about-help.html" class="nav-link">About & Help</a></li>
+            </ul>
+            
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="../search-results.html" class="search-btn">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="#" class="profile-btn">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Genre Header -->
+        <section class="genre-header">
+            <div class="genre-backdrop">
+                <div class="genre-backdrop-icon">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                </div>
+                <div class="backdrop-overlay"></div>
+            </div>
+            
+            <div class="container">
+                <div class="genre-info">
+                    <div class="breadcrumb-nav">
+                        <a href="genres.html">← Back to Genres</a>
+                    </div>
+                    
+                    <div class="genre-header-content">
+                        <div class="genre-header-main">
+                            <h1 class="genre-title">Action Movies</h1>
+                            <p class="genre-subtitle">High-octane thrills and explosive adventures</p>
+                            
+                            <div class="genre-stats-row">
+                                <div class="stat-item">
+                                    <i class="bi bi-film"></i>
+                                    <span>1,240 Movies</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>4.6/5 Avg</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-calendar"></i>
+                                    <span>1980 - 2024</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="bi bi-people-fill"></i>
+                                    <span>2.3M+ Views</span>
+                                </div>
+                            </div>
+                            
+                            <p class="genre-description">
+                                Dive into the world of non-stop excitement with adrenaline-pumping action films. 
+                                From epic superhero battles to thrilling spy adventures, our action collection features 
+                                the best blockbusters and hidden gems that deliver explosive entertainment.
+                            </p>
+                            
+                            <div class="genre-actions">
+                                <button class="btn-play-genre">
+                                    <i class="bi bi-play-fill"></i>
+                                    Start Watching
+                                </button>
+                                <button class="btn-explore-more">
+                                    <i class="bi bi-filter"></i>
+                                    Filter & Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subgenres Section -->
+        <section class="subgenres-section">
+            <div class="container">
+                <h2>Popular Sub-genres</h2>
+                <div class="subgenres-pills">
+                    <a href="#" class="subgenre-pill active">All</a>
+                    <a href="#" class="subgenre-pill">Superhero</a>
+                    <a href="#" class="subgenre-pill">Spy Thriller</a>
+                    <a href="#" class="subgenre-pill">Adventure</a>
+                    <a href="#" class="subgenre-pill">Combat</a>
+                    <a href="#" class="subgenre-pill">Heist</a>
+                    <a href="#" class="subgenre-pill">Crime</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter & Sort Section -->
+        <section class="genre-filters">
+            <div class="container">
+                <div class="filters-header">
+                    <h2>Movies in Action Genre</h2>
+                    <div class="filter-controls">
+                        <div class="sort-control">
+                            <label for="sort-select-genre">Sort by:</label>
+                            <select id="sort-select-genre" class="sort-select">
+                                <option>Trending Now</option>
+                                <option>Rating (Highest)</option>
+                                <option>Release Date (Newest)</option>
+                                <option>Title (A-Z)</option>
+                                <option>Most Popular</option>
+                            </select>
+                        </div>
+                        <div class="filter-control">
+                            <label for="rating-select">Rating:</label>
+                            <select id="rating-select" class="sort-select">
+                                <option>All Ratings</option>
+                                <option>8.0+</option>
+                                <option>7.0+</option>
+                                <option>6.0+</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movies Grid Section -->
+        <section class="genre-movies-section">
+            <div class="container">
+                <div class="genre-display-grid">
+                    <!-- Movie Card 1 -->
+                    <div class="movie-genre-card">
+                        <div class="movie-poster-genre">
+                            <img src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Movie">
+                            <div class="movie-overlay-genre">
+                                <button class="play-btn-genre">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge-genre">TRENDING</div>
+                        </div>
+                        <div class="movie-details-genre">
+                            <h3>Lost Temple</h3>
+                            <p class="movie-year">2023</p>
+                            <div class="movie-meta-genre">
+                                <span class="rating-genre">
+                                    <i class="bi bi-star-fill"></i>
+                                    7.5
+                                </span>
+                                <span class="duration-genre">
+                                    <i class="bi bi-clock"></i>
+                                    2h 38m
+                                </span>
+                            </div>
+                            <p class="movie-synopsis-genre">Action, Mystery. An adventure through mystery and discovery.</p>
+                            <div class="movie-actions-genre">
+                                <button class="btn-watch-genre">Watch</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 2 -->
+                    <div class="movie-genre-card">
+                        <div class="movie-poster-genre">
+                            <img src="https://image.tmdb.org/t/p/w500/cvsXj3I0emg2B6nP8SozsR7ld3X.jpg" alt="Movie">
+                            <div class="movie-overlay-genre">
+                                <button class="play-btn-genre">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge-genre">TOP RATED</div>
+                        </div>
+                        <div class="movie-details-genre">
+                            <h3>Desert Storm</h3>
+                            <p class="movie-year">2024</p>
+                            <div class="movie-meta-genre">
+                                <span class="rating-genre">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.0
+                                </span>
+                                <span class="duration-genre">
+                                    <i class="bi bi-clock"></i>
+                                    2h 42m
+                                </span>
+                            </div>
+                            <p class="movie-synopsis-genre">Action, Thriller. Raw intensity and powerful storytelling.</p>
+                            <div class="movie-actions-genre">
+                                <button class="btn-watch-genre">Watch</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 3 -->
+                    <div class="movie-genre-card">
+                        <div class="movie-poster-genre">
+                            <img src="https://image.tmdb.org/t/p/w500/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg" alt="Movie">
+                            <div class="movie-overlay-genre">
+                                <button class="play-btn-genre">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge-genre">FEATURED</div>
+                        </div>
+                        <div class="movie-details-genre">
+                            <h3>Ocean's Edge</h3>
+                            <p class="movie-year">2023</p>
+                            <div class="movie-meta-genre">
+                                <span class="rating-genre">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.5
+                                </span>
+                                <span class="duration-genre">
+                                    <i class="bi bi-clock"></i>
+                                    2h 50m
+                                </span>
+                            </div>
+                            <p class="movie-synopsis-genre">Action, Adventure. A visual masterpiece with stunning action.</p>
+                            <div class="movie-actions-genre">
+                                <button class="btn-watch-genre">Watch</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 4 -->
+                    <div class="movie-genre-card">
+                        <div class="movie-poster-genre">
+                            <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Movie">
+                            <div class="movie-overlay-genre">
+                                <button class="play-btn-genre">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge-genre">NEW</div>
+                        </div>
+                        <div class="movie-details-genre">
+                            <h3>Sky Warriors</h3>
+                            <p class="movie-year">2024</p>
+                            <div class="movie-meta-genre">
+                                <span class="rating-genre">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.3
+                                </span>
+                                <span class="duration-genre">
+                                    <i class="bi bi-clock"></i>
+                                    2h 56m
+                                </span>
+                            </div>
+                            <p class="movie-synopsis-genre">Action, War. Soaring ambition and technical brilliance.</p>
+                            <div class="movie-actions-genre">
+                                <button class="btn-watch-genre">Watch</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 5 -->
+                    <div class="movie-genre-card">
+                        <div class="movie-poster-genre">
+                            <img src="https://image.tmdb.org/t/p/w500/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg" alt="Movie">
+                            <div class="movie-overlay-genre">
+                                <button class="play-btn-genre">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge-genre">POPULAR</div>
+                        </div>
+                        <div class="movie-details-genre">
+                            <h3>Jungle Expedition</h3>
+                            <p class="movie-year">2022</p>
+                            <div class="movie-meta-genre">
+                                <span class="rating-genre">
+                                    <i class="bi bi-star-fill"></i>
+                                    7.8
+                                </span>
+                                <span class="duration-genre">
+                                    <i class="bi bi-clock"></i>
+                                    2h 48m
+                                </span>
+                            </div>
+                            <p class="movie-synopsis-genre">Action, Adventure. An adventurous exploration of cinema.</p>
+                            <div class="movie-actions-genre">
+                                <button class="btn-watch-genre">Watch</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 6 -->
+                    <div class="movie-genre-card">
+                        <div class="movie-poster-genre">
+                            <img src="https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" alt="Movie">
+                            <div class="movie-overlay-genre">
+                                <button class="play-btn-genre">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge-genre">CLASSIC</div>
+                        </div>
+                        <div class="movie-details-genre">
+                            <h3>Arctic Rescue</h3>
+                            <p class="movie-year">2021</p>
+                            <div class="movie-meta-genre">
+                                <span class="rating-genre">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.1
+                                </span>
+                                <span class="duration-genre">
+                                    <i class="bi bi-clock"></i>
+                                    2h 44m
+                                </span>
+                            </div>
+                            <p class="movie-synopsis-genre">Action, Thriller. A thrilling survival story in frozen wilderness.</p>
+                            <div class="movie-actions-genre">
+                                <button class="btn-watch-genre">Watch</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 7 -->
+                    <div class="movie-genre-card">
+                        <div class="movie-poster-genre">
+                            <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Movie">
+                            <div class="movie-overlay-genre">
+                                <button class="play-btn-genre">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge-genre">AWARD</div>
+                        </div>
+                        <div class="movie-details-genre">
+                            <h3>The Last Adventure</h3>
+                            <p class="movie-year">2024</p>
+                            <div class="movie-meta-genre">
+                                <span class="rating-genre">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.7
+                                </span>
+                                <span class="duration-genre">
+                                    <i class="bi bi-clock"></i>
+                                    2h 34m
+                                </span>
+                            </div>
+                            <p class="movie-synopsis-genre">Action, Adventure. An epic journey that redefines adventure.</p>
+                            <div class="movie-actions-genre">
+                                <button class="btn-watch-genre">Watch</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Card 8 -->
+                    <div class="movie-genre-card">
+                        <div class="movie-poster-genre">
+                            <img src="https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg" alt="Movie">
+                            <div class="movie-overlay-genre">
+                                <button class="play-btn-genre">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                            </div>
+                            <div class="movie-badge-genre">TRENDING</div>
+                        </div>
+                        <div class="movie-details-genre">
+                            <h3>City of Shadows</h3>
+                            <p class="movie-year">2023</p>
+                            <div class="movie-meta-genre">
+                                <span class="rating-genre">
+                                    <i class="bi bi-star-fill"></i>
+                                    8.6
+                                </span>
+                                <span class="duration-genre">
+                                    <i class="bi bi-clock"></i>
+                                    2h 45m
+                                </span>
+                            </div>
+                            <p class="movie-synopsis-genre">Action, Mystery. An intricate thriller with stunning cinematography.</p>
+                            <div class="movie-actions-genre">
+                                <button class="btn-watch-genre">Watch</button>
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="btn-load-more">
+                        <i class="bi bi-arrow-down"></i>
+                        Load More Movies
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Genre Info Section -->
+        <section class="genre-about-section">
+            <div class="container">
+                <div class="about-grid-genre">
+                    <div class="about-content-genre">
+                        <h2>About Action Movies</h2>
+                        <p>
+                            Action movies are defined by their high-paced, physically intense sequences. These films are characterized by their emphasis on 
+                            spectacular fight scenes, chases, stunts, and other physical feats, often in the context of adventure, espionage, or crime stories.
+                        </p>
+                        <p>
+                            The action genre has evolved significantly since its inception, incorporating modern filmmaking techniques, CGI effects, and compelling 
+                            character development alongside the trademark explosive sequences that define the genre.
+                        </p>
+                        <h3>Popular Action Sub-genres</h3>
+                        <ul class="about-list-genre">
+                            <li><strong>Superhero:</strong> Films featuring masked heroes with superhuman abilities</li>
+                            <li><strong>Spy Thriller:</strong> Intelligence agencies, espionage, and covert operations</li>
+                            <li><strong>Heist:</strong> Elaborate theft and crime planning narratives</li>
+                            <li><strong>Combat/War:</strong> Military confrontations and battle sequences</li>
+                            <li><strong>Martial Arts:</strong> Hand-to-hand combat and martial arts expertise</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-sidebar-genre">
+                        <div class="genre-summary">
+                            <h3>Genre Statistics</h3>
+                            <div class="summary-item-genre">
+                                <span class="label">Total Movies:</span>
+                                <span class="value">1,240</span>
+                            </div>
+                            <div class="summary-item-genre">
+                                <span class="label">Avg Rating:</span>
+                                <span class="value">7.2/10</span>
+                            </div>
+                            <div class="summary-item-genre">
+                                <span class="label">Most Popular Year:</span>
+                                <span class="value">2024</span>
+                            </div>
+                            <div class="summary-item-genre">
+                                <span class="label">Director Count:</span>
+                                <span class="value">342 Directors</span>
+                            </div>
+                            <div class="summary-item-genre">
+                                <span class="label">Available Languages:</span>
+                                <span class="value">45+ Languages</span>
+                            </div>
+                            <div class="summary-item-genre">
+                                <span class="label">Countries:</span>
+                                <span class="value">78+ Countries</span>
+                            </div>
+                            <button class="btn-add-genre-list">
+                                <i class="bi bi-bookmark-heart-fill"></i>
+                                Save This Genre
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Genres Section -->
+        <section class="related-genres-section">
+            <div class="container">
+                <h2>Related Genres You Might Like</h2>
+                <div class="related-genres-grid">
+                    <a href="genre-detail.html" class="related-genre-card">
+                        <div class="related-icon">
+                            <i class="bi bi-exclamation-circle-fill"></i>
+                        </div>
+                        <h3>Thriller</h3>
+                        <p>1,450+ Movies</p>
+                    </a>
+
+                    <a href="genre-detail.html" class="related-genre-card">
+                        <div class="related-icon">
+                            <i class="bi bi-compass-fill"></i>
+                        </div>
+                        <h3>Adventure</h3>
+                        <p>980+ Movies</p>
+                    </a>
+
+                    <a href="genre-detail.html" class="related-genre-card">
+                        <div class="related-icon">
+                            <i class="bi bi-rocket-takeoff-fill"></i>
+                        </div>
+                        <h3>Sci-Fi</h3>
+                        <p>1,320+ Movies</p>
+                    </a>
+
+                    <a href="genre-detail.html" class="related-genre-card">
+                        <div class="related-icon">
+                            <i class="bi bi-magic"></i>
+                        </div>
+                        <h3>Fantasy</h3>
+                        <p>1,050+ Movies</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                        <span>CINEMATIC</span>
+                    </div>
+                    <p>Your ultimate destination for movies and entertainment. Stream thousands of titles anytime, anywhere.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Browse</h4>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="genres.html">All Genres</a></li>
+                        <li><a href="movies.html">Latest Movies</a></li>
+                        <li><a href="../features/smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="../tools/calendar.html">Release Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Features -->
+                <div class="footer-links">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="../features/watchlist.html">Watchlist</a></li>
+                        <li><a href="../features/downloads.html">Downloads</a></li>
+                        <li><a href="../features/movie-map.html">Movie Map</a></li>
+                        <li><a href="../features/bundles.html">Movie Bundles</a></li>
+                        <li><a href="../tools/request.html">Request Movie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../info/about-help.html">About Us</a></li>
+                        <li><a href="../info/about-help.html#help">Help Center</a></li>
+                        <li><a href="../info/about-help.html#faq">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get updates on new releases and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cinematic. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <span>•</span>
+                    <a href="#">Terms</a>
+                    <span>•</span>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

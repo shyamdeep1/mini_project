@@ -73,11 +73,404 @@
     </nav>
 
     <!-- Main Content -->
-    <main style="min-height: 60vh; padding: 100px 0;">
-        <div class="container">
-            <h1>Request a Movie</h1>
-            <p>Content coming soon...</p>
-        </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="request-hero">
+            <div class="container">
+                <div class="request-hero-content">
+                    <h1>🎥 Request a Movie</h1>
+                    <p>Can't find the movie you're looking for? Request it here!</p>
+                    <p class="hero-subtitle">Let us know what you'd like to watch, and our community votes to help decide what gets added</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Request Form Section -->
+        <section class="request-form-section">
+            <div class="container">
+                <div class="form-wrapper">
+                    <div class="form-header">
+                        <i class="bi bi-pencil-square"></i>
+                        <h2>Submit Your Movie Request</h2>
+                        <p>Fill in the details below to request a movie</p>
+                    </div>
+
+                    <form class="request-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="movie-title">Movie Title *</label>
+                                <input type="text" id="movie-title" placeholder="Enter movie title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="release-year">Release Year</label>
+                                <input type="number" id="release-year" placeholder="e.g., 2024" min="1900" max="2099">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="director">Director/Creator</label>
+                                <input type="text" id="director" placeholder="e.g., Christopher Nolan">
+                            </div>
+                            <div class="form-group">
+                                <label for="genre">Genre *</label>
+                                <select id="genre" required>
+                                    <option value="">Select a genre</option>
+                                    <option value="action">Action</option>
+                                    <option value="comedy">Comedy</option>
+                                    <option value="drama">Drama</option>
+                                    <option value="thriller">Thriller</option>
+                                    <option value="horror">Horror</option>
+                                    <option value="scifi">Science Fiction</option>
+                                    <option value="fantasy">Fantasy</option>
+                                    <option value="adventure">Adventure</option>
+                                    <option value="animation">Animation</option>
+                                    <option value="documentary">Documentary</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reason">Why do you want this movie? *</label>
+                            <textarea id="reason" placeholder="Tell us why this movie is important to you..." rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Movie Description (Optional)</label>
+                            <textarea id="description" placeholder="Brief description about the movie..." rows="4"></textarea>
+                        </div>
+
+                        <div class="form-row checkbox-row">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="agree-terms" required>
+                                <label for="agree-terms">I agree that this request will be public and voted on by the community</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit-request">
+                            <i class="bi bi-send"></i>
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Request Stats Section -->
+        <section class="request-stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-chat-dots"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2,847</h3>
+                            <p>Total Requests</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>15,324</h3>
+                            <p>Community Votes</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>342</h3>
+                            <p>Movies Added</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>54K+</h3>
+                            <p>Active Members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Requests Section -->
+        <section class="popular-requests-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🔥 Most Requested Movies</h2>
+                    <p>These movies have the most votes from our community</p>
+                </div>
+
+                <div class="requests-grid">
+                    <!-- Request 1 -->
+                    <div class="request-card">
+                        <div class="request-rank">
+                            <span class="rank-number">1</span>
+                            <span class="rank-label">Top Request</span>
+                        </div>
+                        <div class="request-content">
+                            <h3>The Dark Knight Rises Extended Cut</h3>
+                            <div class="request-meta">
+                                <span class="year">2024 Request</span>
+                                <span class="requests-count">
+                                    <i class="bi bi-people"></i>
+                                    2,480 Votes
+                                </span>
+                            </div>
+                            <p class="request-description">Fans want the extended cut version with bonus features and deleted scenes</p>
+                            <div class="request-progress">
+                                <div class="progress-bar-request">
+                                    <div class="progress-fill-request" style="width: 95%;"></div>
+                                </div>
+                                <span class="progress-text">95% Popular</span>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn-vote-request">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    Vote
+                                </button>
+                                <button class="btn-view-request">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Request 2 -->
+                    <div class="request-card">
+                        <div class="request-rank">
+                            <span class="rank-number">2</span>
+                            <span class="rank-label">Popular</span>
+                        </div>
+                        <div class="request-content">
+                            <h3>Japanese Studio Ghibli Collection</h3>
+                            <div class="request-meta">
+                                <span class="year">2024 Request</span>
+                                <span class="requests-count">
+                                    <i class="bi bi-people"></i>
+                                    2,156 Votes
+                                </span>
+                            </div>
+                            <p class="request-description">Complete collection of all Studio Ghibli films in HD quality</p>
+                            <div class="request-progress">
+                                <div class="progress-bar-request">
+                                    <div class="progress-fill-request" style="width: 87%;"></div>
+                                </div>
+                                <span class="progress-text">87% Popular</span>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn-vote-request">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    Vote
+                                </button>
+                                <button class="btn-view-request">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Request 3 -->
+                    <div class="request-card">
+                        <div class="request-rank">
+                            <span class="rank-number">3</span>
+                            <span class="rank-label">Trending</span>
+                        </div>
+                        <div class="request-content">
+                            <h3>Breaking Bad Movie Remaster</h3>
+                            <div class="request-meta">
+                                <span class="year">2024 Request</span>
+                                <span class="requests-count">
+                                    <i class="bi bi-people"></i>
+                                    1,923 Votes
+                                </span>
+                            </div>
+                            <p class="request-description">Remastered version of the complete Breaking Bad series with new commentary</p>
+                            <div class="request-progress">
+                                <div class="progress-bar-request">
+                                    <div class="progress-fill-request" style="width: 78%;"></div>
+                                </div>
+                                <span class="progress-text">78% Popular</span>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn-vote-request">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    Vote
+                                </button>
+                                <button class="btn-view-request">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Request 4 -->
+                    <div class="request-card">
+                        <div class="request-rank">
+                            <span class="rank-number">4</span>
+                            <span class="rank-label">Rising</span>
+                        </div>
+                        <div class="request-content">
+                            <h3>Indie Film Festival Highlights 2024</h3>
+                            <div class="request-meta">
+                                <span class="year">2024 Request</span>
+                                <span class="requests-count">
+                                    <i class="bi bi-people"></i>
+                                    1,645 Votes
+                                </span>
+                            </div>
+                            <p class="request-description">Curated collection of award-winning independent films from 2024</p>
+                            <div class="request-progress">
+                                <div class="progress-bar-request">
+                                    <div class="progress-fill-request" style="width: 66%;"></div>
+                                </div>
+                                <span class="progress-text">66% Popular</span>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn-vote-request">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    Vote
+                                </button>
+                                <button class="btn-view-request">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Request 5 -->
+                    <div class="request-card">
+                        <div class="request-rank">
+                            <span class="rank-number">5</span>
+                            <span class="rank-label">Growing</span>
+                        </div>
+                        <div class="request-content">
+                            <h3>Classic Hitchcock Restored Collection</h3>
+                            <div class="request-meta">
+                                <span class="year">2024 Request</span>
+                                <span class="requests-count">
+                                    <i class="bi bi-people"></i>
+                                    1,532 Votes
+                                </span>
+                            </div>
+                            <p class="request-description">All Hitchcock classics restored in 4K with original audio tracks</p>
+                            <div class="request-progress">
+                                <div class="progress-bar-request">
+                                    <div class="progress-fill-request" style="width: 61%;"></div>
+                                </div>
+                                <span class="progress-text">61% Popular</span>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn-vote-request">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    Vote
+                                </button>
+                                <button class="btn-view-request">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Request 6 -->
+                    <div class="request-card">
+                        <div class="request-rank">
+                            <span class="rank-number">6</span>
+                            <span class="rank-label">New</span>
+                        </div>
+                        <div class="request-content">
+                            <h3>Korean Sci-Fi Masterpieces</h3>
+                            <div class="request-meta">
+                                <span class="year">2024 Request</span>
+                                <span class="requests-count">
+                                    <i class="bi bi-people"></i>
+                                    1,389 Votes
+                                </span>
+                            </div>
+                            <p class="request-description">Collection of groundbreaking Korean science fiction films</p>
+                            <div class="request-progress">
+                                <div class="progress-bar-request">
+                                    <div class="progress-fill-request" style="width: 55%;"></div>
+                                </div>
+                                <span class="progress-text">55% Popular</span>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn-vote-request">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    Vote
+                                </button>
+                                <button class="btn-view-request">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Submit Request</h3>
+                        <p>Fill out the form with movie details you'd like to see on our platform</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Community Votes</h3>
+                        <p>Other users can vote on your request and comment with their interest</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>We Review</h3>
+                        <p>Our team reviews the top voted requests for licensing possibilities</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Movie Added!</h3>
+                        <p>Once acquired, the movie is added to our library and members are notified</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guidelines Section -->
+        <section class="guidelines-section">
+            <div class="container">
+                <div class="guidelines-wrapper">
+                    <div class="guidelines-header">
+                        <i class="bi bi-info-circle"></i>
+                        <h2>Request Guidelines</h2>
+                    </div>
+                    <ul class="guidelines-list">
+                        <li><i class="bi bi-check"></i> Be specific with the movie title and year</li>
+                        <li><i class="bi bi-check"></i> Avoid duplicate requests - check existing ones first</li>
+                        <li><i class="bi bi-check"></i> Provide a compelling reason why the movie matters</li>
+                        <li><i class="bi bi-check"></i> Include director or cast information if helpful</li>
+                        <li><i class="bi bi-check"></i> Requests must be publicly available films</li>
+                        <li><i class="bi bi-check"></i> Respectful language and community standards apply</li>
+                        <li><i class="bi bi-check"></i> One request per submission</li>
+                        <li><i class="bi bi-check"></i> Voting is limited to registered users only</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="request-cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Your Voice Matters!</h2>
+                    <p>Help shape our library by requesting the movies you love. With each vote, you bring your favorite films closer to everyone.</p>
+                    <button class="btn-start-requesting">
+                        <i class="bi bi-lightbulb"></i>
+                        Start Requesting Now
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream by Platform - Cinematic</title>
+    <link href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="../../css/style.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: rgba(0, 0, 0, 0.5) !important;
+            backdrop-filter: blur(15px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Hero Section */
+        .platform-hero {
+            margin-top: 70px;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #1a0505 0%, #0a0a0a 100%);
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ff4444, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 3rem;
+        }
+        
+        /* Platform Filter */
+        .platform-filter {
+            display: flex;
+            gap: 1rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .platform-btn {
+            padding: 0.8rem 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+            color: #fff;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .platform-btn:hover,
+        .platform-btn.active {
+            background: #dc2626;
+            border-color: #dc2626;
+            transform: translateY(-2px);
+        }
+        
+        /* Movies Grid */
+        .movies-section {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+        
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .movie-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .movie-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #dc2626;
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.3);
+        }
+        
+        .movie-poster {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 2/3;
+            background: linear-gradient(135deg, #1a0505, #2d0a0a);
+            overflow: hidden;
+        }
+        
+        .movie-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .movie-card:hover .movie-poster img {
+            transform: scale(1.1);
+        }
+        
+        .platform-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #fff;
+            z-index: 2;
+        }
+        
+        .badge-netflix { background: #e50914; }
+        .badge-prime { background: #00a8e1; }
+        .badge-disney { background: #113ccf; }
+        .badge-hbo { background: #7e15d4; }
+        
+        .movie-info {
+            padding: 1.5rem;
+        }
+        
+        .movie-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        
+        .movie-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(126, 21, 212, 0.1));
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 4rem 2rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-text {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn-primary {
+            background: #dc2626;
+            color: #fff;
+        }
+        
+        .cta-btn-primary:hover {
+            background: #991b1b;
+            transform: translateY(-2px);
+        }
+        
+        .cta-btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .cta-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Footer */
+        .footer {
+            background: linear-gradient(180deg, rgba(10, 10, 10, 0.9), #000);
+            border-top: 1px solid rgba(220, 38, 38, 0.2);
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .movies-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
+            .cta-title { font-size: 1.8rem; }
+            .cta-section { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                <span>CINEMATIC</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Browse <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../browse/genres.html">All Genres</a></li>
+                        <li><a href="../browse/movies.html">Latest / Top Rated / Popular</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link active">Features <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="watchlist.html">My Watchlist</a></li>
+                        <li><a href="downloads.html">Downloads & History</a></li>
+                        <li><a href="movie-map.html">Movie Map</a></li>
+                        <li><a href="bundles.html">Movie Bundles</a></li>
+                        <li><a href="ott-movies.html">OTT Movies</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Tools <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../tools/calendar.html">Release Calendar</a></li>
+                        <li><a href="../tools/request.html">Request Movie</a></li>
+                    </ul>
+                </li>
+                <li><a href="../info/about-help.html" class="nav-link">About & Help</a></li>
+            </ul>
+            
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="../../pages/search-results.html" class="search-btn">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="#" class="profile-btn">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="platform-hero">
+        <div class="container">
+            <h1 class="hero-title">Stream by Platform</h1>
+            <p class="hero-subtitle">Find movies available on your favorite streaming services</p>
+        </div>
+    </section>
+    
+    <!-- Platform Filter -->
+    <div class="container">
+        <div class="platform-filter">
+            <button class="platform-btn active" data-platform="all" onclick="filterPlatform('all', this)">All Platforms</button>
+            <button class="platform-btn" data-platform="netflix" onclick="filterPlatform('netflix', this)">Netflix</button>
+            <button class="platform-btn" data-platform="prime" onclick="filterPlatform('prime', this)">Prime Video</button>
+            <button class="platform-btn" data-platform="disney" onclick="filterPlatform('disney', this)">Disney+</button>
+            <button class="platform-btn" data-platform="hbo" onclick="filterPlatform('hbo', this)">HBO Max</button>
+        </div>
+    </div>
+    
+    <!-- Netflix Movies -->
+    <section class="movies-section">
+        <h2 class="section-title netflix-section">Netflix</h2>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a1a2e/16c784?text=Movie+1" alt="Movie">
+                    <span class="platform-badge badge-netflix">NETFLIX</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">The Crown</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Drama</span>
+                        <span>⭐ 8.5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a1a2e/16c784?text=Movie+2" alt="Movie">
+                    <span class="platform-badge badge-netflix">NETFLIX</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Stranger Things</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Sci-Fi</span>
+                        <span>⭐ 8.7</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a1a2e/16c784?text=Movie+3" alt="Movie">
+                    <span class="platform-badge badge-netflix">NETFLIX</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Black Mirror</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Thriller</span>
+                        <span>⭐ 8.0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a1a2e/16c784?text=Movie+4" alt="Movie">
+                    <span class="platform-badge badge-netflix">NETFLIX</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Money Heist</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Crime</span>
+                        <span>⭐ 8.3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Prime Video Movies -->
+    <section class="movies-section">
+        <h2 class="section-title prime-section">Prime Video</h2>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a3d5c/00a8e1?text=Movie+5" alt="Movie">
+                    <span class="platform-badge badge-prime">PRIME</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">The Boys</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Action</span>
+                        <span>⭐ 8.7</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a3d5c/00a8e1?text=Movie+6" alt="Movie">
+                    <span class="platform-badge badge-prime">PRIME</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Fallout</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Sci-Fi</span>
+                        <span>⭐ 8.5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a3d5c/00a8e1?text=Movie+7" alt="Movie">
+                    <span class="platform-badge badge-prime">PRIME</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">The Marvelous Mrs</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Comedy</span>
+                        <span>⭐ 8.0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a3d5c/00a8e1?text=Movie+8" alt="Movie">
+                    <span class="platform-badge badge-prime">PRIME</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Invincible</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Animation</span>
+                        <span>⭐ 8.4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Disney+ Movies -->
+    <section class="movies-section">
+        <h2 class="section-title disney-section">Disney+</h2>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a1f3d/113ccf?text=Movie+9" alt="Movie">
+                    <span class="platform-badge badge-disney">DISNEY+</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Mandalorian</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Sci-Fi</span>
+                        <span>⭐ 8.7</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a1f3d/113ccf?text=Movie+10" alt="Movie">
+                    <span class="platform-badge badge-disney">DISNEY+</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Loki</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Fantasy</span>
+                        <span>⭐ 8.4</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a1f3d/113ccf?text=Movie+11" alt="Movie">
+                    <span class="platform-badge badge-disney">DISNEY+</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Andor</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Drama</span>
+                        <span>⭐ 8.5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/1a1f3d/113ccf?text=Movie+12" alt="Movie">
+                    <span class="platform-badge badge-disney">DISNEY+</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Hawkeye</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Action</span>
+                        <span>⭐ 8.1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- HBO Max Movies -->
+    <section class="movies-section">
+        <h2 class="section-title hbo-section">HBO Max</h2>
+        <div class="movies-grid">
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/2d1f3d/7e15d4?text=Movie+13" alt="Movie">
+                    <span class="platform-badge badge-hbo">HBO MAX</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Game of Thrones</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Fantasy</span>
+                        <span>⭐ 9.2</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/2d1f3d/7e15d4?text=Movie+14" alt="Movie">
+                    <span class="platform-badge badge-hbo">HBO MAX</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">True Detective</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Crime</span>
+                        <span>⭐ 8.9</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/2d1f3d/7e15d4?text=Movie+15" alt="Movie">
+                    <span class="platform-badge badge-hbo">HBO MAX</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Chernobyl</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Drama</span>
+                        <span>⭐ 8.4</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x380/2d1f3d/7e15d4?text=Movie+16" alt="Movie">
+                    <span class="platform-badge badge-hbo">HBO MAX</span>
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">Succession</h3>
+                    <div class="movie-meta">
+                        <span>2024</span>
+                        <span>Drama</span>
+                        <span>⭐ 8.8</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2 class="cta-title">Ready to Stream?</h2>
+        <p class="cta-text">Subscribe to your favorite platform and start watching now</p>
+        <div class="cta-buttons">
+            <button class="cta-btn cta-btn-primary">Get Started</button>
+            <button class="cta-btn cta-btn-secondary">Learn More</button>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../images/wb_logo_without_bg.png" alt="Logo">
+                        <span>CINEMATIC</span>
+                    </div>
+                    <p>Your ultimate destination for movies and entertainment. Stream thousands of titles anytime, anywhere.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Browse</h4>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../browse/genres.html">All Genres</a></li>
+                        <li><a href="../browse/movies.html">Latest Movies</a></li>
+                        <li><a href="smart-discovery.html">Smart Discovery</a></li>
+                        <li><a href="../tools/calendar.html">Release Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Features -->
+                <div class="footer-links">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="watchlist.html">Watchlist</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="movie-map.html">Movie Map</a></li>
+                        <li><a href="bundles.html">Movie Bundles</a></li>
+                        <li><a href="ott-movies.html">OTT Movies</a></li>
+                        <li><a href="../tools/request.html">Request Movie</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../info/about-help.html">About Us</a></li>
+                        <li><a href="../info/about-help.html#help">Help Center</a></li>
+                        <li><a href="../info/about-help.html#faq">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get updates on new releases and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cinematic. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <span>•</span>
+                    <a href="#">Terms</a>
+                    <span>•</span>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function filterPlatform(platform, triggerButton = null) {
+            const buttons = document.querySelectorAll('.platform-btn');
+            const sections = document.querySelectorAll('.movies-section');
+
+            buttons.forEach(button => button.classList.remove('active'));
+
+            const activeButton = triggerButton || document.querySelector(`.platform-btn[data-platform="${platform}"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+
+            if (platform === 'all') {
+                sections.forEach(section => section.style.display = 'block');
+                return;
+            }
+
+            sections.forEach(section => section.style.display = 'none');
+            const sectionTitle = document.querySelector(`.${platform}-section`);
+            if (sectionTitle && sectionTitle.parentElement) {
+                sectionTitle.parentElement.style.display = 'block';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const allowedPlatforms = ['all', 'netflix', 'prime', 'disney', 'hbo'];
+            const params = new URLSearchParams(window.location.search);
+            const requestedPlatform = (params.get('platform') || 'all').toLowerCase();
+            const activePlatform = allowedPlatforms.includes(requestedPlatform) ? requestedPlatform : 'all';
+            const activeButton = document.querySelector(`.platform-btn[data-platform="${activePlatform}"]`);
+            filterPlatform(activePlatform, activeButton);
+        });
+    </script>
+</body>
+</html>

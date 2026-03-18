@@ -19,7 +19,8 @@ uiux_project/
 │   │   ├── watchlist.html (User Watchlist)
 │   │   ├── downloads.html (Downloads & History)
 │   │   ├── movie-map.html (Movie Map)
-│   │   └── bundles.html (Movie Bundles/Collections)
+│   │   ├── bundles.html (Movie Bundles/Collections)
+│   │   └── ott-movies.html (OTT Movies by Platform)
 │   │
 │   ├── tools/
 │   │   ├── calendar.html (Release Calendar)
@@ -76,6 +77,8 @@ uiux_project/
 
 **Bundles** - Curated movie collections
 
+**OTT Movies** - Browse movies by streaming platform (Netflix, Prime, Disney+, HBO Max)
+
 ### 6. Tools Section (pages/tools/)
 **Release Calendar** - Upcoming movie releases
 
@@ -99,6 +102,7 @@ uiux_project/
    - My Watchlist
    - Downloads & History
    - Movie Map
+   - OTT Movies
    - Movie Bundles
 4. **Tools** (dropdown)
    - Release Calendar

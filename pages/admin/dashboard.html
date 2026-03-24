@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Cinematic</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body class="admin-dashboard-page">
+
+    <!-- Sidebar Overlay for Mobile -->
+    <button class="admin-sidebar-overlay" aria-label="Close sidebar"></button>
+
+    <div class="admin-dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-head">
+                <a href="../../index.html" class="admin-sidebar-brand">
+                    <img src="../../images/wb_logo_without_bg.png" alt="Cinematic Logo">
+                    <div>
+                        <span>CINEMATIC</span>
+                        <small>Admin Panel</small>
+                    </div>
+                </a>
+                <button class="admin-sidebar-close" aria-label="Close sidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <nav class="admin-sidebar-nav">
+                <a href="dashboard.html" class="admin-sidebar-link active">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Dashboard
+                </a>
+                <a href="movies.html" class="admin-sidebar-link">
+                    <i class="bi bi-film"></i>
+                    Movies
+                </a>
+                <a href="uploads.html" class="admin-sidebar-link">
+                    <i class="bi bi-cloud-upload"></i>
+                    Uploads
+                </a>
+                <a href="downloads.html" class="admin-sidebar-link">
+                    <i class="bi bi-cloud-download"></i>
+                    Downloads
+                </a>
+                <a href="users.html" class="admin-sidebar-link">
+                    <i class="bi bi-people"></i>
+                    Users
+                </a>
+                <a href="reports.html" class="admin-sidebar-link">
+                    <i class="bi bi-bar-chart-line"></i>
+                    Reports
+                </a>
+                <a href="settings.html" class="admin-sidebar-link">
+                    <i class="bi bi-gear"></i>
+                    Settings
+                </a>
+            </nav>
+
+            <div class="admin-sidebar-foot">
+                <a href="login.html" class="admin-sidebar-logout">
+                    <i class="bi bi-box-arrow-left"></i>
+                    Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Top Bar -->
+            <header class="admin-topbar">
+                <div class="admin-topbar-left">
+                    <button class="admin-menu-toggle" aria-label="Toggle sidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div>
+                        <h1>Dashboard</h1>
+                        <p>Welcome back, Admin! Here's your platform overview.</p>
+                    </div>
+                </div>
+
+                <div class="admin-topbar-right">
+                    <div class="admin-search-wrap">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search movies, users...">
+                    </div>
+
+                    <button class="admin-topbar-icon" aria-label="Notifications">
+                        <i class="bi bi-bell"></i>
+                        <span class="admin-dot"></span>
+                    </button>
+
+                    <a href="#" class="admin-profile-chip">
+                        <span class="admin-avatar">A</span>
+                        <div>
+                            <strong>Admin User</strong>
+                            <small>Super Admin</small>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <section class="admin-content">
+                <!-- KPI Cards -->
+                <div class="admin-kpi-grid">
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-film"></i>
+                        </div>
+                        <div>
+                            <small>Total Movies</small>
+                            <h3>1,248</h3>
+                            <span><i class="bi bi-arrow-up"></i> +24 this week</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-cloud-download"></i>
+                        </div>
+                        <div>
+                            <small>Total Downloads</small>
+                            <h3>45.2K</h3>
+                            <span><i class="bi bi-arrow-up"></i> +1.2K today</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div>
+                            <small>Active Users</small>
+                            <h3>8,392</h3>
+                            <span><i class="bi bi-arrow-up"></i> +156 new</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-hdd-stack"></i>
+                        </div>
+                        <div>
+                            <small>Storage Used</small>
+                            <h3>2.4 TB</h3>
+                            <span>78% of 3 TB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="admin-section-card">
+                    <div class="admin-section-head">
+                        <h2>Quick Actions</h2>
+                    </div>
+                    <div class="admin-actions-grid">
+                        <a href="movies.html" class="admin-action-btn">
+                            <i class="bi bi-plus-circle"></i>
+                            Add New Movie
+                        </a>
+                        <a href="uploads.html" class="admin-action-btn">
+                            <i class="bi bi-cloud-upload"></i>
+                            Upload Files
+                        </a>
+                        <a href="users.html" class="admin-action-btn">
+                            <i class="bi bi-people-fill"></i>
+                            Manage Users
+                        </a>
+                        <a href="reports.html" class="admin-action-btn">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            View Reports
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recent Movies & Pending Tasks -->
+                <div class="admin-grid-2-1">
+                    <!-- Recent Movies Table -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2>Recent Movies</h2>
+                            <a href="movies.html">View All</a>
+                        </div>
+                        <div class="admin-table-wrap">
+                            <table class="admin-table">
+                                <caption class="admin-table-caption">Recently added movies</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Genre</th>
+                                        <th>Year</th>
+                                        <th>Status</th>
+                                        <th>Downloads</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>The Last Frontier</td>
+                                        <td>Action</td>
+                                        <td>2025</td>
+                                        <td><span class="admin-pill success">Live</span></td>
+                                        <td>1,248</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Midnight Express</td>
+                                        <td>Thriller</td>
+                                        <td>2024</td>
+                                        <td><span class="admin-pill success">Live</span></td>
+                                        <td>982</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ocean Dreams</td>
+                                        <td>Drama</td>
+                                        <td>2025</td>
+                                        <td><span class="admin-pill warning">Pending</span></td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Starlight Journey</td>
+                                        <td>Sci-Fi</td>
+                                        <td>2024</td>
+                                        <td><span class="admin-pill success">Live</span></td>
+                                        <td>2,456</td>
+                                    </tr>
+                                    <tr>
+                                        <td>The Silent Echo</td>
+                                        <td>Horror</td>
+                                        <td>2025</td>
+                                        <td><span class="admin-pill danger">Draft</span></td>
+                                        <td>--</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Pending Tasks -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2>Pending Tasks</h2>
+                            <a href="#">View All</a>
+                        </div>
+                        <ul class="admin-task-list">
+                            <li>
+                                <div>
+                                    <h4>Upload Movie Files</h4>
+                                    <p>3 movies pending upload</p>
+                                </div>
+                                <span>High</span>
+                            </li>
+                            <li>
+                                <div>
+                                    <h4>Review User Reports</h4>
+                                    <p>5 reports awaiting review</p>
+                                </div>
+                                <span>Medium</span>
+                            </li>
+                            <li>
+                                <div>
+                                    <h4>Update Movie Info</h4>
+                                    <p>12 movies need metadata</p>
+                                </div>
+                                <span>Low</span>
+                            </li>
+                            <li>
+                                <div>
+                                    <h4>Verify Downloads</h4>
+                                    <p>Check broken links</p>
+                                </div>
+                                <span>Medium</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Download Stats & Movie Requests -->
+                <div class="admin-grid-1-1">
+                    <!-- Top Downloaded Movies -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2>Top Downloaded Movies</h2>
+                            <a href="downloads.html">View All</a>
+                        </div>
+                        <div class="admin-list">
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Avatar: The Way of Water</h4>
+                                    <p>12,458 downloads • 4K, 1080p, 720p</p>
+                                </div>
+                                <button>Details</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Oppenheimer</h4>
+                                    <p>10,892 downloads • 4K, 1080p</p>
+                                </div>
+                                <button>Details</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Barbie</h4>
+                                    <p>9,654 downloads • 1080p, 720p</p>
+                                </div>
+                                <button>Details</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>The Batman</h4>
+                                    <p>8,432 downloads • 4K, 1080p, 720p</p>
+                                </div>
+                                <button>Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Movie Requests -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2>Movie Requests</h2>
+                            <a href="#">View All</a>
+                        </div>
+                        <div class="admin-list">
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Dune: Part Three</h4>
+                                    <p>Requested by 248 users</p>
+                                </div>
+                                <button>Approve</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Deadpool 4</h4>
+                                    <p>Requested by 186 users</p>
+                                </div>
+                                <button>Approve</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>The Flash 2</h4>
+                                    <p>Requested by 142 users</p>
+                                </div>
+                                <button>Approve</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Mission Impossible 9</h4>
+                                    <p>Requested by 98 users</p>
+                                </div>
+                                <button>Approve</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity Timeline -->
+                <div class="admin-section-card">
+                    <div class="admin-section-head">
+                        <h2>Recent Activity</h2>
+                        <a href="#">View Log</a>
+                    </div>
+                    <div class="admin-timeline">
+                        <div class="admin-timeline-item">
+                            <span>2 mins ago</span>
+                            <p><strong>Avatar 2</strong> was downloaded by user <strong>john_doe</strong></p>
+                        </div>
+                        <div class="admin-timeline-item">
+                            <span>15 mins ago</span>
+                            <p>New movie <strong>Starlight Journey</strong> was added to the catalog</p>
+                        </div>
+                        <div class="admin-timeline-item">
+                            <span>1 hour ago</span>
+                            <p>User <strong>sarah_smith</strong> reported a broken download link</p>
+                        </div>
+                        <div class="admin-timeline-item">
+                            <span>3 hours ago</span>
+                            <p>System backup completed successfully (2.4 TB)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        const body = document.body;
+        const menuToggle = document.querySelector('.admin-menu-toggle');
+        const sidebarClose = document.querySelector('.admin-sidebar-close');
+        const overlay = document.querySelector('.admin-sidebar-overlay');
+
+        function openSidebar() {
+            body.classList.add('is-sidebar-open');
+        }
+
+        function closeSidebar() {
+            body.classList.remove('is-sidebar-open');
+        }
+
+        if (menuToggle) menuToggle.addEventListener('click', openSidebar);
+        if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+        if (overlay) overlay.addEventListener('click', closeSidebar);
+    </script>
+</body>
+</html>

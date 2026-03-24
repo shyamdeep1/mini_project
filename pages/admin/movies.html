@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Movies - Cinematic Admin</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body class="admin-dashboard-page">
+
+    <!-- Sidebar Overlay for Mobile -->
+    <button class="admin-sidebar-overlay" aria-label="Close sidebar"></button>
+
+    <div class="admin-dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-head">
+                <a href="../../index.html" class="admin-sidebar-brand">
+                    <img src="../../images/wb_logo_without_bg.png" alt="Cinematic Logo">
+                    <div>
+                        <span>CINEMATIC</span>
+                        <small>Admin Panel</small>
+                    </div>
+                </a>
+                <button class="admin-sidebar-close" aria-label="Close sidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <nav class="admin-sidebar-nav">
+                <a href="dashboard.html" class="admin-sidebar-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Dashboard
+                </a>
+                <a href="movies.html" class="admin-sidebar-link active">
+                    <i class="bi bi-film"></i>
+                    Movies
+                </a>
+                <a href="uploads.html" class="admin-sidebar-link">
+                    <i class="bi bi-cloud-upload"></i>
+                    Uploads
+                </a>
+                <a href="downloads.html" class="admin-sidebar-link">
+                    <i class="bi bi-cloud-download"></i>
+                    Downloads
+                </a>
+                <a href="users.html" class="admin-sidebar-link">
+                    <i class="bi bi-people"></i>
+                    Users
+                </a>
+                <a href="reports.html" class="admin-sidebar-link">
+                    <i class="bi bi-bar-chart-line"></i>
+                    Reports
+                </a>
+                <a href="settings.html" class="admin-sidebar-link">
+                    <i class="bi bi-gear"></i>
+                    Settings
+                </a>
+            </nav>
+
+            <div class="admin-sidebar-foot">
+                <a href="login.html" class="admin-sidebar-logout">
+                    <i class="bi bi-box-arrow-left"></i>
+                    Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Top Bar -->
+            <header class="admin-topbar">
+                <div class="admin-topbar-left">
+                    <button class="admin-menu-toggle" aria-label="Toggle sidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div>
+                        <h1>Movies</h1>
+                        <p>Manage your movie catalog</p>
+                    </div>
+                </div>
+
+                <div class="admin-topbar-right">
+                    <div class="admin-search-wrap">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search movies...">
+                    </div>
+
+                    <button class="admin-topbar-icon" aria-label="Notifications">
+                        <i class="bi bi-bell"></i>
+                        <span class="admin-dot"></span>
+                    </button>
+
+                    <a href="#" class="admin-profile-chip">
+                        <span class="admin-avatar">A</span>
+                        <div>
+                            <strong>Admin User</strong>
+                            <small>Super Admin</small>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Movies Content -->
+            <section class="admin-content">
+                <!-- Filter Pills & Add Button -->
+                <div class="admin-section-card">
+                    <div class="admin-section-head">
+                        <h2>Movie Catalog</h2>
+                        <button class="admin-action-btn" id="addMovieBtn">
+                            <i class="bi bi-plus-circle"></i>
+                            Add New Movie
+                        </button>
+                    </div>
+                    <div class="admin-movies-filters">
+                        <button class="admin-filter-pill active">All Movies</button>
+                        <button class="admin-filter-pill">Live</button>
+                        <button class="admin-filter-pill">Pending</button>
+                        <button class="admin-filter-pill">Draft</button>
+                        <button class="admin-filter-pill">Action</button>
+                        <button class="admin-filter-pill">Drama</button>
+                        <button class="admin-filter-pill">Comedy</button>
+                        <button class="admin-filter-pill">Sci-Fi</button>
+                        <button class="admin-filter-pill">Horror</button>
+                        <button class="admin-filter-pill">Thriller</button>
+                    </div>
+
+                    <!-- Movies Table -->
+                    <div class="admin-table-wrap">
+                        <table class="admin-table">
+                            <caption class="admin-table-caption">Movie catalog list</caption>
+                            <thead>
+                                <tr>
+                                    <th>Poster</th>
+                                    <th>Title</th>
+                                    <th>Genre</th>
+                                    <th>Year</th>
+                                    <th>Rating</th>
+                                    <th>Status</th>
+                                    <th>Downloads</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="../../images/mv_poster_1.jpg" alt="Movie" style="width: 45px; height: 65px; object-fit: cover; border-radius: 6px;"></td>
+                                    <td><strong>The Last Frontier</strong></td>
+                                    <td>Action</td>
+                                    <td>2025</td>
+                                    <td><i class="bi bi-star-fill" style="color: #fbbf24;"></i> 8.5</td>
+                                    <td><span class="admin-pill success">Live</span></td>
+                                    <td>1,248</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../../images/mv_poater_2.jpg" alt="Movie" style="width: 45px; height: 65px; object-fit: cover; border-radius: 6px;"></td>
+                                    <td><strong>Midnight Express</strong></td>
+                                    <td>Thriller</td>
+                                    <td>2024</td>
+                                    <td><i class="bi bi-star-fill" style="color: #fbbf24;"></i> 7.9</td>
+                                    <td><span class="admin-pill success">Live</span></td>
+                                    <td>982</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../../images/mv_poster_3.jpg" alt="Movie" style="width: 45px; height: 65px; object-fit: cover; border-radius: 6px;"></td>
+                                    <td><strong>Ocean Dreams</strong></td>
+                                    <td>Drama</td>
+                                    <td>2025</td>
+                                    <td><i class="bi bi-star-fill" style="color: #fbbf24;"></i> 8.2</td>
+                                    <td><span class="admin-pill warning">Pending</span></td>
+                                    <td>--</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../../images/mv_poster_1.jpg" alt="Movie" style="width: 45px; height: 65px; object-fit: cover; border-radius: 6px;"></td>
+                                    <td><strong>Starlight Journey</strong></td>
+                                    <td>Sci-Fi</td>
+                                    <td>2024</td>
+                                    <td><i class="bi bi-star-fill" style="color: #fbbf24;"></i> 9.1</td>
+                                    <td><span class="admin-pill success">Live</span></td>
+                                    <td>2,456</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../../images/mv_poater_2.jpg" alt="Movie" style="width: 45px; height: 65px; object-fit: cover; border-radius: 6px;"></td>
+                                    <td><strong>The Silent Echo</strong></td>
+                                    <td>Horror</td>
+                                    <td>2025</td>
+                                    <td><i class="bi bi-star-fill" style="color: #fbbf24;"></i> 7.4</td>
+                                    <td><span class="admin-pill danger">Draft</span></td>
+                                    <td>--</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../../images/mv_poster_3.jpg" alt="Movie" style="width: 45px; height: 65px; object-fit: cover; border-radius: 6px;"></td>
+                                    <td><strong>City of Shadows</strong></td>
+                                    <td>Action</td>
+                                    <td>2024</td>
+                                    <td><i class="bi bi-star-fill" style="color: #fbbf24;"></i> 8.0</td>
+                                    <td><span class="admin-pill success">Live</span></td>
+                                    <td>3,124</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Add/Edit Movie Form -->
+                <div class="admin-grid-2-1">
+                    <div class="admin-section-card" id="movieFormSection">
+                        <div class="admin-section-head">
+                            <h2>Add New Movie</h2>
+                        </div>
+                        <form class="admin-movie-form">
+                            <div class="admin-movie-form-grid">
+                                <div class="admin-form-group">
+                                    <label for="movieTitle">Movie Title</label>
+                                    <input type="text" id="movieTitle" placeholder="Enter movie title">
+                                </div>
+                                <div class="admin-form-group">
+                                    <label for="movieYear">Release Year</label>
+                                    <input type="number" id="movieYear" placeholder="2025">
+                                </div>
+                                <div class="admin-form-group">
+                                    <label for="movieGenre">Genre</label>
+                                    <select id="movieGenre">
+                                        <option value="">Select genre</option>
+                                        <option value="action">Action</option>
+                                        <option value="drama">Drama</option>
+                                        <option value="comedy">Comedy</option>
+                                        <option value="sci-fi">Sci-Fi</option>
+                                        <option value="horror">Horror</option>
+                                        <option value="thriller">Thriller</option>
+                                        <option value="romance">Romance</option>
+                                        <option value="animation">Animation</option>
+                                    </select>
+                                </div>
+                                <div class="admin-form-group">
+                                    <label for="movieRating">IMDB Rating</label>
+                                    <input type="number" id="movieRating" placeholder="8.5" step="0.1" min="0" max="10">
+                                </div>
+                                <div class="admin-form-group">
+                                    <label for="movieDuration">Duration</label>
+                                    <input type="text" id="movieDuration" placeholder="2h 15m">
+                                </div>
+                                <div class="admin-form-group">
+                                    <label for="movieStatus">Status</label>
+                                    <select id="movieStatus">
+                                        <option value="draft">Draft</option>
+                                        <option value="pending">Pending Review</option>
+                                        <option value="live">Live</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="admin-form-group">
+                                <label for="movieDescription">Description</label>
+                                <textarea id="movieDescription" rows="4" placeholder="Enter movie description..."></textarea>
+                            </div>
+                            <div class="admin-form-group">
+                                <label for="moviePoster">Poster URL</label>
+                                <input type="url" id="moviePoster" placeholder="https://example.com/poster.jpg">
+                            </div>
+                            <div class="admin-movie-form-actions">
+                                <button type="submit" class="admin-action-btn">
+                                    <i class="bi bi-check-circle"></i>
+                                    Save Movie
+                                </button>
+                                <button type="button" class="admin-action-btn" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15);">
+                                    <i class="bi bi-x-circle"></i>
+                                    Cancel
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- File Quality Management -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2>Quality Versions</h2>
+                            <button class="admin-inline-btn">
+                                <i class="bi bi-plus"></i> Add
+                            </button>
+                        </div>
+                        <div class="admin-quality-list">
+                            <div class="admin-quality-item">
+                                <div>
+                                    <h4>4K Ultra HD</h4>
+                                    <p>3840x2160 • ~8 GB</p>
+                                </div>
+                                <button>Remove</button>
+                            </div>
+                            <div class="admin-quality-item">
+                                <div>
+                                    <h4>1080p Full HD</h4>
+                                    <p>1920x1080 • ~2.5 GB</p>
+                                </div>
+                                <button>Remove</button>
+                            </div>
+                            <div class="admin-quality-item">
+                                <div>
+                                    <h4>720p HD</h4>
+                                    <p>1280x720 • ~1.2 GB</p>
+                                </div>
+                                <button>Remove</button>
+                            </div>
+                            <div class="admin-quality-item">
+                                <div>
+                                    <h4>480p SD</h4>
+                                    <p>854x480 • ~600 MB</p>
+                                </div>
+                                <button>Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts -->
+    <script>
+        const body = document.body;
+        const menuToggle = document.querySelector('.admin-menu-toggle');
+        const sidebarClose = document.querySelector('.admin-sidebar-close');
+        const overlay = document.querySelector('.admin-sidebar-overlay');
+
+        function openSidebar() {
+            body.classList.add('is-sidebar-open');
+        }
+
+        function closeSidebar() {
+            body.classList.remove('is-sidebar-open');
+        }
+
+        if (menuToggle) menuToggle.addEventListener('click', openSidebar);
+        if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+        if (overlay) overlay.addEventListener('click', closeSidebar);
+
+        // Filter pills toggle
+        const filterPills = document.querySelectorAll('.admin-filter-pill');
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', function() {
+                filterPills.forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -17,59 +17,71 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <!-- Logo -->
-            <a href="../index.html" class="nav-logo">
+            <a href="../index.html" class="navbar-brand nav-logo">
                 <img src="../images/wb_logo_without_bg.png" alt="Logo">
                 <span>CINEMATIC</span>
             </a>
             
-            <!-- Navigation Links -->
-            <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Browse <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="browse/genres.html">All Genres</a></li>
-                        <li><a href="browse/movies.html">Latest / Top Rated / Popular</a></li>
-                    </ul>
-                </li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Features <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="features/smart-discovery.html">Smart Discovery</a></li>
-                        <li><a href="features/watchlist.html">My Watchlist</a></li>
-                        <li><a href="features/downloads.html">Downloads & History</a></li>
-                        <li><a href="features/movie-map.html">Movie Map</a></li>
-                        <li><a href="features/bundles.html">Movie Bundles</a></li>
-                        <li><a href="features/ott-movies.html">OTT Movies</a></li>
-                    </ul>
-                </li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Tools <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="tools/calendar.html">Release Calendar</a></li>
-                        <li><a href="tools/request.html">Request Movie</a></li>
-                    </ul>
-                </li>
-                <li><a href="info/about-help.html" class="nav-link active">About & Help</a></li>
-            </ul>
-            
-            <!-- Right Actions -->
-            <div class="nav-actions">
-                <a href="search-results.html" class="search-btn">
-                    <i class="bi bi-search"></i>
-                </a>
-                <a href="#" class="profile-btn">
-                    <i class="bi bi-person-circle"></i>
-                </a>
-            </div>
-            
             <!-- Mobile Menu Toggle -->
-            <button class="mobile-toggle">
-                <i class="bi bi-list"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Browse
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="browse/genres.html">All Genres</a></li>
+                            <li><a class="dropdown-item" href="browse/movies.html">Latest / Top Rated / Popular</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Features
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="features/smart-discovery.html">Smart Discovery</a></li>
+                            <li><a class="dropdown-item" href="features/watchlist.html">My Watchlist</a></li>
+                            <li><a class="dropdown-item" href="features/downloads.html">Downloads & History</a></li>
+                            <li><a class="dropdown-item" href="features/movie-map.html">Movie Map</a></li>
+                            <li><a class="dropdown-item" href="features/bundles.html">Movie Bundles</a></li>
+                            <li><a class="dropdown-item" href="features/ott-movies.html">OTT Movies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tools
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tools/calendar.html">Release Calendar</a></li>
+                            <li><a class="dropdown-item" href="tools/request.html">Request Movie</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="info/about-help.html" class="nav-link">About & Help</a>
+                    </li>
+                </ul>
+                
+                <!-- Right Actions -->
+                <div class="nav-actions d-flex align-items-center gap-3">
+                    <a href="search-results.html" class="search-btn">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="#" class="profile-btn">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -156,7 +168,7 @@
                 </div>
 
                 <div class="results-list">
-                    <div class="result-item active" data-movie="1">
+                    <a href="movie-detail.html" class="result-item active" data-movie="1">
                         <div class="result-poster">
                             <img src="https://image.tmdb.org/t/p/w300/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Movie">
                         </div>
@@ -169,9 +181,9 @@
                             <p class="result-genre">Action, Adventure</p>
                         </div>
                         <i class="bi bi-chevron-right"></i>
-                    </div>
+                    </a>
 
-                    <div class="result-item" data-movie="2">
+                    <a href="movie-detail.html" class="result-item" data-movie="2">
                         <div class="result-poster">
                             <img src="https://image.tmdb.org/t/p/w300/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg" alt="Movie">
                         </div>
@@ -184,9 +196,9 @@
                             <p class="result-genre">Adventure, Drama</p>
                         </div>
                         <i class="bi bi-chevron-right"></i>
-                    </div>
+                    </a>
 
-                    <div class="result-item" data-movie="3">
+                    <a href="movie-detail.html" class="result-item" data-movie="3">
                         <div class="result-poster">
                             <img src="https://image.tmdb.org/t/p/w300/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="Movie">
                         </div>
@@ -199,9 +211,9 @@
                             <p class="result-genre">Adventure, Fantasy</p>
                         </div>
                         <i class="bi bi-chevron-right"></i>
-                    </div>
+                    </a>
 
-                    <div class="result-item" data-movie="4">
+                    <a href="movie-detail.html" class="result-item" data-movie="4">
                         <div class="result-poster">
                             <img src="https://image.tmdb.org/t/p/w300/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Movie">
                         </div>
@@ -214,9 +226,9 @@
                             <p class="result-genre">Action, Mystery</p>
                         </div>
                         <i class="bi bi-chevron-right"></i>
-                    </div>
+                    </a>
 
-                    <div class="result-item" data-movie="5">
+                    <a href="movie-detail.html" class="result-item" data-movie="5">
                         <div class="result-poster">
                             <img src="https://image.tmdb.org/t/p/w300/cvsXj3I0emg2B6nP8SozsR7ld3X.jpg" alt="Movie">
                         </div>
@@ -229,9 +241,9 @@
                             <p class="result-genre">Action, Thriller</p>
                         </div>
                         <i class="bi bi-chevron-right"></i>
-                    </div>
+                    </a>
 
-                    <div class="result-item" data-movie="6">
+                    <a href="movie-detail.html" class="result-item" data-movie="6">
                         <div class="result-poster">
                             <img src="https://image.tmdb.org/t/p/w300/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg" alt="Movie">
                         </div>
@@ -244,9 +256,9 @@
                             <p class="result-genre">Adventure, Sci-Fi</p>
                         </div>
                         <i class="bi bi-chevron-right"></i>
-                    </div>
+                    </a>
 
-                    <div class="result-item" data-movie="7">
+                    <a href="movie-detail.html" class="result-item" data-movie="7">
                         <div class="result-poster">
                             <img src="https://image.tmdb.org/t/p/w300/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Movie">
                         </div>
@@ -259,9 +271,9 @@
                             <p class="result-genre">Action, War</p>
                         </div>
                         <i class="bi bi-chevron-right"></i>
-                    </div>
+                    </a>
 
-                    <div class="result-item" data-movie="8">
+                    <a href="movie-detail.html" class="result-item" data-movie="8">
                         <div class="result-poster">
                             <img src="https://image.tmdb.org/t/p/w300/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg" alt="Movie">
                         </div>
@@ -274,9 +286,9 @@
                             <p class="result-genre">Adventure, Drama</p>
                         </div>
                         <i class="bi bi-chevron-right"></i>
-                    </div>
+                    </a>
 
-                    <div class="result-item" data-movie="9">
+                    <a href="movie-detail.html" class="result-item" data-movie="9">
                         <div class="result-poster">
                             <img src="https://image.tmdb.org/t/p/w300/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" alt="Movie">
                         </div>
@@ -289,9 +301,9 @@
                             <p class="result-genre">Action, Thriller</p>
                         </div>
                         <i class="bi bi-chevron-right"></i>
-                    </div>
+                    </a>
 
-                    <div class="result-item" data-movie="10">
+                    <a href="movie-detail.html" class="result-item" data-movie="10">
                         <div class="result-poster">
                             <img src="https://image.tmdb.org/t/p/w300/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg" alt="Movie">
                         </div>
@@ -304,7 +316,7 @@
                             <p class="result-genre">Action, Mystery</p>
                         </div>
                         <i class="bi bi-chevron-right"></i>
-                    </div>
+                    </a>
                 </div>
 
                 <button class="load-more-btn">

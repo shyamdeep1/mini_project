@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users - Cinematic Admin</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body class="admin-dashboard-page">
+
+    <!-- Sidebar Overlay for Mobile -->
+    <button class="admin-sidebar-overlay" aria-label="Close sidebar"></button>
+
+    <div class="admin-dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-head">
+                <a href="../../index.html" class="admin-sidebar-brand">
+                    <img src="../../images/wb_logo_without_bg.png" alt="Cinematic Logo">
+                    <div>
+                        <span>CINEMATIC</span>
+                        <small>Admin Panel</small>
+                    </div>
+                </a>
+                <button class="admin-sidebar-close" aria-label="Close sidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <nav class="admin-sidebar-nav">
+                <a href="dashboard.html" class="admin-sidebar-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Dashboard
+                </a>
+                <a href="movies.html" class="admin-sidebar-link">
+                    <i class="bi bi-film"></i>
+                    Movies
+                </a>
+                <a href="uploads.html" class="admin-sidebar-link">
+                    <i class="bi bi-cloud-upload"></i>
+                    Uploads
+                </a>
+                <a href="downloads.html" class="admin-sidebar-link">
+                    <i class="bi bi-cloud-download"></i>
+                    Downloads
+                </a>
+                <a href="users.html" class="admin-sidebar-link active">
+                    <i class="bi bi-people"></i>
+                    Users
+                </a>
+                <a href="reports.html" class="admin-sidebar-link">
+                    <i class="bi bi-bar-chart-line"></i>
+                    Reports
+                </a>
+                <a href="settings.html" class="admin-sidebar-link">
+                    <i class="bi bi-gear"></i>
+                    Settings
+                </a>
+            </nav>
+
+            <div class="admin-sidebar-foot">
+                <a href="login.html" class="admin-sidebar-logout">
+                    <i class="bi bi-box-arrow-left"></i>
+                    Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Top Bar -->
+            <header class="admin-topbar">
+                <div class="admin-topbar-left">
+                    <button class="admin-menu-toggle" aria-label="Toggle sidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div>
+                        <h1>Users</h1>
+                        <p>Manage user accounts and permissions</p>
+                    </div>
+                </div>
+
+                <div class="admin-topbar-right">
+                    <div class="admin-search-wrap">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search users...">
+                    </div>
+
+                    <button class="admin-topbar-icon" aria-label="Notifications">
+                        <i class="bi bi-bell"></i>
+                        <span class="admin-dot"></span>
+                    </button>
+
+                    <a href="#" class="admin-profile-chip">
+                        <span class="admin-avatar">A</span>
+                        <div>
+                            <strong>Admin User</strong>
+                            <small>Super Admin</small>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Users Content -->
+            <section class="admin-content">
+                <!-- User KPIs -->
+                <div class="admin-kpi-grid">
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div>
+                            <small>Total Users</small>
+                            <h3>8,392</h3>
+                            <span><i class="bi bi-arrow-up"></i> +156 this week</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-person-check"></i>
+                        </div>
+                        <div>
+                            <small>Active Now</small>
+                            <h3>1,248</h3>
+                            <span>Online users</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-person-plus"></i>
+                        </div>
+                        <div>
+                            <small>New Today</small>
+                            <h3>47</h3>
+                            <span>Registrations</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-person-x"></i>
+                        </div>
+                        <div>
+                            <small>Banned</small>
+                            <h3>23</h3>
+                            <span>Suspended accounts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Filters & Table -->
+                <div class="admin-section-card">
+                    <div class="admin-section-head">
+                        <h2>User Accounts</h2>
+                        <button class="admin-action-btn">
+                            <i class="bi bi-person-plus"></i>
+                            Add User
+                        </button>
+                    </div>
+                    <div class="admin-movies-filters">
+                        <button class="admin-filter-pill active">All Users</button>
+                        <button class="admin-filter-pill">Active</button>
+                        <button class="admin-filter-pill">Inactive</button>
+                        <button class="admin-filter-pill">Banned</button>
+                        <button class="admin-filter-pill">Premium</button>
+                        <button class="admin-filter-pill">Admins</button>
+                    </div>
+
+                    <!-- Users Table -->
+                    <div class="admin-table-wrap">
+                        <table class="admin-table">
+                            <caption class="admin-table-caption">User accounts list</caption>
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Email</th>
+                                    <th>Joined</th>
+                                    <th>Downloads</th>
+                                    <th>Status</th>
+                                    <th>Role</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                            <span class="admin-avatar" style="width: 36px; height: 36px; font-size: 0.78rem;">JD</span>
+                                            <strong>John Doe</strong>
+                                        </div>
+                                    </td>
+                                    <td>john.doe@email.com</td>
+                                    <td>Jan 15, 2024</td>
+                                    <td>248</td>
+                                    <td><span class="admin-pill success">Active</span></td>
+                                    <td>User</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-slash-circle"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                            <span class="admin-avatar" style="width: 36px; height: 36px; font-size: 0.78rem;">SS</span>
+                                            <strong>Sarah Smith</strong>
+                                        </div>
+                                    </td>
+                                    <td>sarah.smith@email.com</td>
+                                    <td>Feb 22, 2024</td>
+                                    <td>186</td>
+                                    <td><span class="admin-pill success">Active</span></td>
+                                    <td>Premium</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-slash-circle"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                            <span class="admin-avatar" style="width: 36px; height: 36px; font-size: 0.78rem;">MW</span>
+                                            <strong>Mike Wilson</strong>
+                                        </div>
+                                    </td>
+                                    <td>mike.wilson@email.com</td>
+                                    <td>Mar 5, 2024</td>
+                                    <td>92</td>
+                                    <td><span class="admin-pill warning">Inactive</span></td>
+                                    <td>User</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-slash-circle"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                            <span class="admin-avatar" style="width: 36px; height: 36px; font-size: 0.78rem;">EB</span>
+                                            <strong>Emily Brown</strong>
+                                        </div>
+                                    </td>
+                                    <td>emily.brown@email.com</td>
+                                    <td>Apr 18, 2024</td>
+                                    <td>324</td>
+                                    <td><span class="admin-pill success">Active</span></td>
+                                    <td>Premium</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-slash-circle"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                            <span class="admin-avatar" style="width: 36px; height: 36px; font-size: 0.78rem;">AJ</span>
+                                            <strong>Alex Jones</strong>
+                                        </div>
+                                    </td>
+                                    <td>alex.jones@email.com</td>
+                                    <td>May 2, 2024</td>
+                                    <td>12</td>
+                                    <td><span class="admin-pill danger">Banned</span></td>
+                                    <td>User</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-person-check"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                            <span class="admin-avatar" style="width: 36px; height: 36px; font-size: 0.78rem;">CL</span>
+                                            <strong>Chris Lee</strong>
+                                        </div>
+                                    </td>
+                                    <td>chris.lee@email.com</td>
+                                    <td>Jun 10, 2024</td>
+                                    <td>567</td>
+                                    <td><span class="admin-pill success">Active</span></td>
+                                    <td>Admin</td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-pencil"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-slash-circle"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- User Stats & Recent Activity -->
+                <div class="admin-grid-1-1">
+                    <!-- Top Downloaders -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2>Top Downloaders</h2>
+                            <a href="#">View All</a>
+                        </div>
+                        <div class="admin-list">
+                            <div class="admin-list-item">
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <span class="admin-avatar" style="width: 36px; height: 36px;">EB</span>
+                                    <div>
+                                        <h4>Emily Brown</h4>
+                                        <p>567 downloads this month</p>
+                                    </div>
+                                </div>
+                                <span class="admin-pill success">Premium</span>
+                            </div>
+                            <div class="admin-list-item">
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <span class="admin-avatar" style="width: 36px; height: 36px;">CL</span>
+                                    <div>
+                                        <h4>Chris Lee</h4>
+                                        <p>423 downloads this month</p>
+                                    </div>
+                                </div>
+                                <span class="admin-pill" style="background: rgba(139, 92, 246, 0.16); color: #c4b5fd;">Admin</span>
+                            </div>
+                            <div class="admin-list-item">
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <span class="admin-avatar" style="width: 36px; height: 36px;">JD</span>
+                                    <div>
+                                        <h4>John Doe</h4>
+                                        <p>312 downloads this month</p>
+                                    </div>
+                                </div>
+                                <span class="admin-pill" style="background: rgba(255,255,255,0.08);">User</span>
+                            </div>
+                            <div class="admin-list-item">
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <span class="admin-avatar" style="width: 36px; height: 36px;">SS</span>
+                                    <div>
+                                        <h4>Sarah Smith</h4>
+                                        <p>289 downloads this month</p>
+                                    </div>
+                                </div>
+                                <span class="admin-pill success">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Registrations -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2>Recent Registrations</h2>
+                            <a href="#">View All</a>
+                        </div>
+                        <div class="admin-list">
+                            <div class="admin-list-item">
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <span class="admin-avatar" style="width: 36px; height: 36px;">MG</span>
+                                    <div>
+                                        <h4>Maria Garcia</h4>
+                                        <p>Joined 15 minutes ago</p>
+                                    </div>
+                                </div>
+                                <button>View</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <span class="admin-avatar" style="width: 36px; height: 36px;">RK</span>
+                                    <div>
+                                        <h4>Robert Kim</h4>
+                                        <p>Joined 1 hour ago</p>
+                                    </div>
+                                </div>
+                                <button>View</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <span class="admin-avatar" style="width: 36px; height: 36px;">LP</span>
+                                    <div>
+                                        <h4>Lisa Park</h4>
+                                        <p>Joined 3 hours ago</p>
+                                    </div>
+                                </div>
+                                <button>View</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <span class="admin-avatar" style="width: 36px; height: 36px;">DT</span>
+                                    <div>
+                                        <h4>David Thompson</h4>
+                                        <p>Joined 5 hours ago</p>
+                                    </div>
+                                </div>
+                                <button>View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts -->
+    <script>
+        const body = document.body;
+        const menuToggle = document.querySelector('.admin-menu-toggle');
+        const sidebarClose = document.querySelector('.admin-sidebar-close');
+        const overlay = document.querySelector('.admin-sidebar-overlay');
+
+        function openSidebar() {
+            body.classList.add('is-sidebar-open');
+        }
+
+        function closeSidebar() {
+            body.classList.remove('is-sidebar-open');
+        }
+
+        if (menuToggle) menuToggle.addEventListener('click', openSidebar);
+        if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+        if (overlay) overlay.addEventListener('click', closeSidebar);
+
+        // Filter pills toggle
+        const filterPills = document.querySelectorAll('.admin-filter-pill');
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', function() {
+                filterPills.forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -26,8 +26,13 @@ uiux_project/
 │   │   ├── calendar.html (Release Calendar)
 │   │   └── request.html (Movie Request)
 │   │
-│   └── info/
-│       └── about-help.html (About Us & Help Center - Combined)
+│   ├── info/
+│   │   └── about-help.html (About Us & Help Center - Combined)
+│   │
+│   └── admin/
+│       ├── login.html (Admin Login Page)
+│       ├── dashboard.html (Admin Operations Dashboard)
+│       └── movies.html (Admin Movies & Upload Manager)
 │
 ├── css/
 │   └── style.css
@@ -89,6 +94,19 @@ uiux_project/
 - About Us
 - Help Center
 - FAQ
+
+### 8. Admin Section (pages/admin/)
+**Admin Login**
+- Secure entry page for administrators
+- Access gateway for dashboard and management modules
+
+**Admin Dashboard**
+- Operations-first layout with quick actions and workflow sections
+- Includes recent downloads, pending approvals, moderation and report snapshots
+
+**Admin Movies Manager**
+- Manage movie metadata, quality files, and mirror status
+- Includes QC queue and publish workflow controls
 
 ## Navigation Structure
 

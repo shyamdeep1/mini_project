@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploads - Cinematic Admin</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body class="admin-dashboard-page">
+
+    <!-- Sidebar Overlay for Mobile -->
+    <button class="admin-sidebar-overlay" aria-label="Close sidebar"></button>
+
+    <div class="admin-dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-head">
+                <a href="../../index.html" class="admin-sidebar-brand">
+                    <img src="../../images/wb_logo_without_bg.png" alt="Cinematic Logo">
+                    <div>
+                        <span>CINEMATIC</span>
+                        <small>Admin Panel</small>
+                    </div>
+                </a>
+                <button class="admin-sidebar-close" aria-label="Close sidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <nav class="admin-sidebar-nav">
+                <a href="dashboard.html" class="admin-sidebar-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Dashboard
+                </a>
+                <a href="movies.html" class="admin-sidebar-link">
+                    <i class="bi bi-film"></i>
+                    Movies
+                </a>
+                <a href="uploads.html" class="admin-sidebar-link active">
+                    <i class="bi bi-cloud-upload"></i>
+                    Uploads
+                </a>
+                <a href="downloads.html" class="admin-sidebar-link">
+                    <i class="bi bi-cloud-download"></i>
+                    Downloads
+                </a>
+                <a href="users.html" class="admin-sidebar-link">
+                    <i class="bi bi-people"></i>
+                    Users
+                </a>
+                <a href="reports.html" class="admin-sidebar-link">
+                    <i class="bi bi-bar-chart-line"></i>
+                    Reports
+                </a>
+                <a href="settings.html" class="admin-sidebar-link">
+                    <i class="bi bi-gear"></i>
+                    Settings
+                </a>
+            </nav>
+
+            <div class="admin-sidebar-foot">
+                <a href="login.html" class="admin-sidebar-logout">
+                    <i class="bi bi-box-arrow-left"></i>
+                    Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Top Bar -->
+            <header class="admin-topbar">
+                <div class="admin-topbar-left">
+                    <button class="admin-menu-toggle" aria-label="Toggle sidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div>
+                        <h1>Uploads</h1>
+                        <p>Manage file uploads and media storage</p>
+                    </div>
+                </div>
+
+                <div class="admin-topbar-right">
+                    <div class="admin-search-wrap">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search uploads...">
+                    </div>
+
+                    <button class="admin-topbar-icon" aria-label="Notifications">
+                        <i class="bi bi-bell"></i>
+                        <span class="admin-dot"></span>
+                    </button>
+
+                    <a href="#" class="admin-profile-chip">
+                        <span class="admin-avatar">A</span>
+                        <div>
+                            <strong>Admin User</strong>
+                            <small>Super Admin</small>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Uploads Content -->
+            <section class="admin-content">
+                <!-- Upload KPIs -->
+                <div class="admin-kpi-grid">
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-cloud-upload"></i>
+                        </div>
+                        <div>
+                            <small>Total Uploads</small>
+                            <h3>3,842</h3>
+                            <span><i class="bi bi-arrow-up"></i> +18 today</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-hourglass-split"></i>
+                        </div>
+                        <div>
+                            <small>Pending</small>
+                            <h3>12</h3>
+                            <span>Awaiting processing</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-hdd"></i>
+                        </div>
+                        <div>
+                            <small>Storage Used</small>
+                            <h3>2.4 TB</h3>
+                            <span>78% capacity</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-kpi-card">
+                        <div class="admin-kpi-icon">
+                            <i class="bi bi-lightning"></i>
+                        </div>
+                        <div>
+                            <small>Processing</small>
+                            <h3>3</h3>
+                            <span>Files encoding</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upload Zone -->
+                <div class="admin-section-card">
+                    <div class="admin-section-head">
+                        <h2>Upload New Files</h2>
+                    </div>
+                    <div class="admin-upload-zone" style="border: 2px dashed rgba(220, 38, 38, 0.4); border-radius: 16px; padding: 3rem; text-align: center; background: rgba(220, 38, 38, 0.05); cursor: pointer; transition: all 0.3s ease;">
+                        <i class="bi bi-cloud-arrow-up" style="font-size: 3rem; color: #dc2626; margin-bottom: 1rem; display: block;"></i>
+                        <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem;">Drag & drop files here</h3>
+                        <p style="margin: 0; color: rgba(255,255,255,0.65); font-size: 0.88rem;">or click to browse • MP4, MKV, AVI up to 50GB</p>
+                        <input type="file" style="display: none;" multiple accept="video/*">
+                    </div>
+                </div>
+
+                <!-- Active Uploads & Recent Uploads -->
+                <div class="admin-grid-1-1">
+                    <!-- Active Uploads -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2>Active Uploads</h2>
+                        </div>
+                        <div class="admin-list">
+                            <div class="admin-list-item" style="flex-direction: column; align-items: stretch; gap: 0.6rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <h4>The Dark Knight Rises.mkv</h4>
+                                        <p>4K • 8.2 GB • 67% complete</p>
+                                    </div>
+                                    <button>Pause</button>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.1); border-radius: 999px; height: 6px; overflow: hidden;">
+                                    <div style="width: 67%; height: 100%; background: linear-gradient(90deg, #dc2626, #991b1b); border-radius: 999px;"></div>
+                                </div>
+                            </div>
+                            <div class="admin-list-item" style="flex-direction: column; align-items: stretch; gap: 0.6rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <h4>Inception.mp4</h4>
+                                        <p>1080p • 2.4 GB • 34% complete</p>
+                                    </div>
+                                    <button>Pause</button>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.1); border-radius: 999px; height: 6px; overflow: hidden;">
+                                    <div style="width: 34%; height: 100%; background: linear-gradient(90deg, #dc2626, #991b1b); border-radius: 999px;"></div>
+                                </div>
+                            </div>
+                            <div class="admin-list-item" style="flex-direction: column; align-items: stretch; gap: 0.6rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <h4>Interstellar.mkv</h4>
+                                        <p>4K • 12.1 GB • 12% complete</p>
+                                    </div>
+                                    <button>Pause</button>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.1); border-radius: 999px; height: 6px; overflow: hidden;">
+                                    <div style="width: 12%; height: 100%; background: linear-gradient(90deg, #dc2626, #991b1b); border-radius: 999px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Processing Queue -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2>Processing Queue</h2>
+                        </div>
+                        <div class="admin-list">
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Avatar 2 - 4K Encoding</h4>
+                                    <p>Converting to H.265 • ETA: 45 mins</p>
+                                </div>
+                                <span class="admin-pill warning">Encoding</span>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Barbie - Generate Thumbnails</h4>
+                                    <p>Creating poster & screenshots</p>
+                                </div>
+                                <span class="admin-pill warning">Processing</span>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Oppenheimer - Quality Check</h4>
+                                    <p>Validating file integrity</p>
+                                </div>
+                                <span class="admin-pill success">Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Uploads Table -->
+                <div class="admin-section-card">
+                    <div class="admin-section-head">
+                        <h2>Recent Uploads</h2>
+                        <a href="#">View All</a>
+                    </div>
+                    <div class="admin-table-wrap">
+                        <table class="admin-table">
+                            <caption class="admin-table-caption">Recent file uploads</caption>
+                            <thead>
+                                <tr>
+                                    <th>Filename</th>
+                                    <th>Size</th>
+                                    <th>Quality</th>
+                                    <th>Uploaded</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>The Matrix Resurrections.mkv</strong></td>
+                                    <td>7.8 GB</td>
+                                    <td>4K</td>
+                                    <td>2 hours ago</td>
+                                    <td><span class="admin-pill success">Ready</span></td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-link-45deg"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Spider-Man No Way Home.mp4</strong></td>
+                                    <td>2.3 GB</td>
+                                    <td>1080p</td>
+                                    <td>5 hours ago</td>
+                                    <td><span class="admin-pill success">Ready</span></td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-link-45deg"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Dune Part Two.mkv</strong></td>
+                                    <td>9.2 GB</td>
+                                    <td>4K</td>
+                                    <td>Yesterday</td>
+                                    <td><span class="admin-pill success">Ready</span></td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-link-45deg"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>John Wick 4.mp4</strong></td>
+                                    <td>2.8 GB</td>
+                                    <td>1080p</td>
+                                    <td>Yesterday</td>
+                                    <td><span class="admin-pill danger">Failed</span></td>
+                                    <td>
+                                        <button class="admin-inline-btn"><i class="bi bi-arrow-clockwise"></i></button>
+                                        <button class="admin-inline-btn"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts -->
+    <script>
+        const body = document.body;
+        const menuToggle = document.querySelector('.admin-menu-toggle');
+        const sidebarClose = document.querySelector('.admin-sidebar-close');
+        const overlay = document.querySelector('.admin-sidebar-overlay');
+
+        function openSidebar() {
+            body.classList.add('is-sidebar-open');
+        }
+
+        function closeSidebar() {
+            body.classList.remove('is-sidebar-open');
+        }
+
+        if (menuToggle) menuToggle.addEventListener('click', openSidebar);
+        if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+        if (overlay) overlay.addEventListener('click', closeSidebar);
+
+        // Upload zone interaction
+        const uploadZone = document.querySelector('.admin-upload-zone');
+        const fileInput = uploadZone?.querySelector('input[type="file"]');
+        
+        if (uploadZone && fileInput) {
+            uploadZone.addEventListener('click', () => fileInput.click());
+            uploadZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadZone.style.borderColor = 'rgba(220, 38, 38, 0.8)';
+                uploadZone.style.background = 'rgba(220, 38, 38, 0.1)';
+            });
+            uploadZone.addEventListener('dragleave', () => {
+                uploadZone.style.borderColor = 'rgba(220, 38, 38, 0.4)';
+                uploadZone.style.background = 'rgba(220, 38, 38, 0.05)';
+            });
+        }
+    </script>
+</body>
+</html>

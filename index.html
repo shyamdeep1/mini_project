@@ -17,59 +17,71 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <!-- Logo -->
-            <a href="#" class="nav-logo">
+            <a href="index.html" class="navbar-brand nav-logo">
                 <img src="images/wb_logo_without_bg.png" alt="Logo">
                 <span>CINEMATIC</span>
             </a>
             
-            <!-- Navigation Links -->
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Browse <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/browse/genres.html">All Genres</a></li>
-                        <li><a href="pages/browse/movies.html">Latest / Top Rated / Popular</a></li>
-                    </ul>
-                </li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Features <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/features/smart-discovery.html">Smart Discovery</a></li>
-                        <li><a href="pages/features/watchlist.html">My Watchlist</a></li>
-                        <li><a href="pages/features/downloads.html">Downloads & History</a></li>
-                        <li><a href="pages/features/movie-map.html">Movie Map</a></li>
-                        <li><a href="pages/features/bundles.html">Movie Bundles</a></li>
-                        <li><a href="pages/features/ott-movies.html">OTT Movies</a></li>
-                    </ul>
-                </li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Tools <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/tools/calendar.html">Release Calendar</a></li>
-                        <li><a href="pages/tools/request.html">Request Movie</a></li>
-                    </ul>
-                </li>
-                <li><a href="pages/info/about-help.html" class="nav-link">About & Help</a></li>
-            </ul>
-            
-            <!-- Right Actions -->
-            <div class="nav-actions">
-                <a href="pages/search-results.html" class="search-btn">
-                    <i class="bi bi-search"></i>
-                </a>
-                <a href="#" class="profile-btn">
-                    <i class="bi bi-person-circle"></i>
-                </a>
-            </div>
-            
             <!-- Mobile Menu Toggle -->
-            <button class="mobile-toggle">
-                <i class="bi bi-list"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Browse
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pages/browse/genres.html">All Genres</a></li>
+                            <li><a class="dropdown-item" href="pages/browse/movies.html">Latest / Top Rated / Popular</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Features
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pages/features/smart-discovery.html">Smart Discovery</a></li>
+                            <li><a class="dropdown-item" href="pages/features/watchlist.html">My Watchlist</a></li>
+                            <li><a class="dropdown-item" href="pages/features/downloads.html">Downloads & History</a></li>
+                            <li><a class="dropdown-item" href="pages/features/movie-map.html">Movie Map</a></li>
+                            <li><a class="dropdown-item" href="pages/features/bundles.html">Movie Bundles</a></li>
+                            <li><a class="dropdown-item" href="pages/features/ott-movies.html">OTT Movies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tools
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pages/tools/calendar.html">Release Calendar</a></li>
+                            <li><a class="dropdown-item" href="pages/tools/request.html">Request Movie</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/info/about-help.html" class="nav-link">About & Help</a>
+                    </li>
+                </ul>
+                
+                <!-- Right Actions -->
+                <div class="nav-actions d-flex align-items-center gap-3">
+                    <a href="pages/search-results.html" class="search-btn">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="#" class="profile-btn">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -93,11 +105,11 @@
                         </div>
                         <p>Explore thousands of movies and TV shows. Watch trailers, read reviews, and find your next favorite film from our extensive collection.</p>
                         <div class="carousel-actions">
-                            <a href="#" class="carousel-btn">
+                            <a href="pages/movie-detail.html" class="carousel-btn">
                                 <i class="bi bi-play-fill"></i>
                                 Watch Now
                             </a>
-                            <a href="#" class="carousel-btn carousel-btn-outline">
+                            <a href="pages/movie-detail.html" class="carousel-btn carousel-btn-outline">
                                 <i class="bi bi-info-circle"></i>
                                 More Info
                             </a>
@@ -122,11 +134,11 @@
                         </div>
                         <p>Stay updated with the latest blockbusters and trending content from around the world. Don't miss out on what everyone's watching.</p>
                         <div class="carousel-actions">
-                            <a href="#" class="carousel-btn">
+                            <a href="pages/movie-detail.html" class="carousel-btn">
                                 <i class="bi bi-play-fill"></i>
                                 Watch Now
                             </a>
-                            <a href="#" class="carousel-btn carousel-btn-outline">
+                            <a href="pages/movie-detail.html" class="carousel-btn carousel-btn-outline">
                                 <i class="bi bi-info-circle"></i>
                                 More Info
                             </a>
@@ -151,11 +163,11 @@
                         </div>
                         <p>Get personalized recommendations based on your viewing history and preferences. Discover content tailored just for you.</p>
                         <div class="carousel-actions">
-                            <a href="#" class="carousel-btn">
+                            <a href="pages/movie-detail.html" class="carousel-btn">
                                 <i class="bi bi-play-fill"></i>
                                 Watch Now
                             </a>
-                            <a href="#" class="carousel-btn carousel-btn-outline">
+                            <a href="pages/movie-detail.html" class="carousel-btn carousel-btn-outline">
                                 <i class="bi bi-info-circle"></i>
                                 More Info
                             </a>
@@ -243,13 +255,13 @@
             
             <div class="movies-grid">
                 <!-- Movie Card 1 -->
-                <div class="movie-card">
+                <a href="pages/movie-detail.html" class="movie-card">
                     <div class="movie-poster">
                         <img src="images/mv_poster_1.jpg" alt="Movie 1">
                         <div class="movie-overlay">
-                            <button class="play-btn">
+                            <span class="play-btn">
                                 <i class="bi bi-play-fill"></i>
-                            </button>
+                            </span>
                         </div>
                         <span class="movie-badge">New</span>
                         <span class="movie-rating">
@@ -266,16 +278,16 @@
                             <span>2h 15m</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Movie Card 2 -->
-                <div class="movie-card">
+                <a href="pages/movie-detail.html" class="movie-card">
                     <div class="movie-poster">
                         <img src="images/mv_poater_2.jpg" alt="Movie 2">
                         <div class="movie-overlay">
-                            <button class="play-btn">
+                            <span class="play-btn">
                                 <i class="bi bi-play-fill"></i>
-                            </button>
+                            </span>
                         </div>
                         <span class="movie-badge trending">Trending</span>
                         <span class="movie-rating">
@@ -292,16 +304,16 @@
                             <span>2h 30m</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Movie Card 3 -->
-                <div class="movie-card">
+                <a href="pages/movie-detail.html" class="movie-card">
                     <div class="movie-poster">
                         <img src="images/mv_poster_3.jpg" alt="Movie 3">
                         <div class="movie-overlay">
-                            <button class="play-btn">
+                            <span class="play-btn">
                                 <i class="bi bi-play-fill"></i>
-                            </button>
+                            </span>
                         </div>
                         <span class="movie-badge hot">Hot</span>
                         <span class="movie-rating">
@@ -318,16 +330,16 @@
                             <span>1h 58m</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Movie Card 4 -->
-                <div class="movie-card">
+                <a href="pages/movie-detail.html" class="movie-card">
                     <div class="movie-poster">
                         <img src="images/mv_poster_1.jpg" alt="Movie 4">
                         <div class="movie-overlay">
-                            <button class="play-btn">
+                            <span class="play-btn">
                                 <i class="bi bi-play-fill"></i>
-                            </button>
+                            </span>
                         </div>
                         <span class="movie-rating">
                             <i class="bi bi-star-fill"></i> 7.9
@@ -343,16 +355,16 @@
                             <span>2h 05m</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Movie Card 5 -->
-                <div class="movie-card">
+                <a href="pages/movie-detail.html" class="movie-card">
                     <div class="movie-poster">
                         <img src="images/mv_poater_2.jpg" alt="Movie 5">
                         <div class="movie-overlay">
-                            <button class="play-btn">
+                            <span class="play-btn">
                                 <i class="bi bi-play-fill"></i>
-                            </button>
+                            </span>
                         </div>
                         <span class="movie-badge">New</span>
                         <span class="movie-rating">
@@ -369,16 +381,16 @@
                             <span>1h 45m</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Movie Card 6 -->
-                <div class="movie-card">
+                <a href="pages/movie-detail.html" class="movie-card">
                     <div class="movie-poster">
                         <img src="images/mv_poster_3.jpg" alt="Movie 6">
                         <div class="movie-overlay">
-                            <button class="play-btn">
+                            <span class="play-btn">
                                 <i class="bi bi-play-fill"></i>
-                            </button>
+                            </span>
                         </div>
                         <span class="movie-rating">
                             <i class="bi bi-star-fill"></i> 8.1
@@ -394,11 +406,11 @@
                             <span>1h 52m</span>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="view-all-container">
-                <a href="#" class="view-all-btn">
+                <a href="pages/browse/movies.html" class="view-all-btn">
                     View All Movies
                     <i class="bi bi-arrow-right"></i>
                 </a>
@@ -416,20 +428,20 @@
             
             <div class="bento-grid">
                 <!-- Large Feature Card -->
-                <div class="bento-item large">
+                <a href="pages/features/collection-detail.html" class="bento-item large">
                     <img src="images/mv_poster_1.jpg" alt="Featured">
                     <div class="bento-content">
                         <span class="bento-tag">Editor's Choice</span>
                         <h3>Epic Blockbuster</h3>
                         <p>The most anticipated movie of the year</p>
-                        <a href="#" class="bento-link">
+                        <span class="bento-link">
                             <i class="bi bi-play-circle-fill"></i> Watch Trailer
-                        </a>
+                        </span>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Tall Card -->
-                <div class="bento-item tall">
+                <a href="pages/features/collection-detail.html" class="bento-item tall">
                     <img src="images/mv_poater_2.jpg" alt="Top Rated">
                     <div class="bento-content">
                         <span class="bento-tag gold">Top Rated</span>
@@ -442,43 +454,43 @@
                             <i class="bi bi-star-fill"></i>
                         </div>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Wide Card -->
-                <div class="bento-item wide">
+                <a href="pages/features/collection-detail.html" class="bento-item wide">
                     <img src="images/mv_poster_3.jpg" alt="Trending">
                     <div class="bento-content">
                         <span class="bento-tag pink">Trending #1</span>
                         <h3>Fan Favorite</h3>
                         <p>Everyone's talking about this</p>
                     </div>
-                </div>
+                </a>
                 
-                <!-- Small Card 1 -->
-                <div class="bento-item small">
+                <!-- Small Card 1 - Action Genre -->
+                <a href="pages/browse/genre-detail.html?genre=action" class="bento-item small">
                     <img src="images/mv_poster_1.jpg" alt="Action">
                     <div class="bento-content">
                         <h3>Action</h3>
                     </div>
-                </div>
+                </a>
                 
-                <!-- Small Card 2 -->
-                <div class="bento-item small">
+                <!-- Small Card 2 - Comedy Genre -->
+                <a href="pages/browse/genre-detail.html?genre=comedy" class="bento-item small">
                     <img src="images/mv_poater_2.jpg" alt="Comedy">
                     <div class="bento-content">
                         <h3>Comedy</h3>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Medium Card -->
-                <div class="bento-item medium">
+                <a href="pages/browse/movies.html" class="bento-item medium">
                     <img src="images/mv_poster_3.jpg" alt="New Release">
                     <div class="bento-content">
                         <span class="bento-tag orange">Just Added</span>
                         <h3>Fresh Release</h3>
                         <p>Available now</p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -492,7 +504,7 @@
         
         <div class="showcase-scroll">
             <!-- Showcase Card 1 -->
-            <div class="showcase-card">
+            <a href="pages/movie-detail.html" class="showcase-card">
                 <div class="showcase-image">
                     <img src="images/mv_poster_1.jpg" alt="Movie 1">
                     <div class="showcase-gradient"></div>
@@ -516,15 +528,15 @@
                             <span>2h 25m</span>
                         </div>
                     </div>
-                    <button class="showcase-btn">
+                    <span class="showcase-btn">
                         <i class="bi bi-play-fill"></i>
                         Watch Now
-                    </button>
+                    </span>
                 </div>
-            </div>
+            </a>
             
             <!-- Showcase Card 2 -->
-            <div class="showcase-card">
+            <a href="pages/movie-detail.html" class="showcase-card">
                 <div class="showcase-image">
                     <img src="images/mv_poater_2.jpg" alt="Movie 2">
                     <div class="showcase-gradient"></div>
@@ -548,15 +560,15 @@
                             <span>2h 10m</span>
                         </div>
                     </div>
-                    <button class="showcase-btn">
+                    <span class="showcase-btn">
                         <i class="bi bi-play-fill"></i>
                         Watch Now
-                    </button>
+                    </span>
                 </div>
-            </div>
+            </a>
             
             <!-- Showcase Card 3 -->
-            <div class="showcase-card">
+            <a href="pages/movie-detail.html" class="showcase-card">
                 <div class="showcase-image">
                     <img src="images/mv_poster_3.jpg" alt="Movie 3">
                     <div class="showcase-gradient"></div>
@@ -580,15 +592,15 @@
                             <span>1h 55m</span>
                         </div>
                     </div>
-                    <button class="showcase-btn">
+                    <span class="showcase-btn">
                         <i class="bi bi-play-fill"></i>
                         Watch Now
-                    </button>
+                    </span>
                 </div>
-            </div>
+            </a>
             
             <!-- Showcase Card 4 -->
-            <div class="showcase-card">
+            <a href="pages/movie-detail.html" class="showcase-card">
                 <div class="showcase-image">
                     <img src="images/mv_poster_1.jpg" alt="Movie 4">
                     <div class="showcase-gradient"></div>
@@ -612,12 +624,12 @@
                             <span>2h 40m</span>
                         </div>
                     </div>
-                    <button class="showcase-btn">
+                    <span class="showcase-btn">
                         <i class="bi bi-play-fill"></i>
                         Watch Now
-                    </button>
+                    </span>
                 </div>
-            </div>
+            </a>
         </div>
         
         <div class="showcase-indicators">

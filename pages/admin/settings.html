@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Cinematic Admin</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body class="admin-dashboard-page">
+
+    <!-- Sidebar Overlay for Mobile -->
+    <button class="admin-sidebar-overlay" aria-label="Close sidebar"></button>
+
+    <div class="admin-dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-head">
+                <a href="../../index.html" class="admin-sidebar-brand">
+                    <img src="../../images/wb_logo_without_bg.png" alt="Cinematic Logo">
+                    <div>
+                        <span>CINEMATIC</span>
+                        <small>Admin Panel</small>
+                    </div>
+                </a>
+                <button class="admin-sidebar-close" aria-label="Close sidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <nav class="admin-sidebar-nav">
+                <a href="dashboard.html" class="admin-sidebar-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Dashboard
+                </a>
+                <a href="movies.html" class="admin-sidebar-link">
+                    <i class="bi bi-film"></i>
+                    Movies
+                </a>
+                <a href="uploads.html" class="admin-sidebar-link">
+                    <i class="bi bi-cloud-upload"></i>
+                    Uploads
+                </a>
+                <a href="downloads.html" class="admin-sidebar-link">
+                    <i class="bi bi-cloud-download"></i>
+                    Downloads
+                </a>
+                <a href="users.html" class="admin-sidebar-link">
+                    <i class="bi bi-people"></i>
+                    Users
+                </a>
+                <a href="reports.html" class="admin-sidebar-link">
+                    <i class="bi bi-bar-chart-line"></i>
+                    Reports
+                </a>
+                <a href="settings.html" class="admin-sidebar-link active">
+                    <i class="bi bi-gear"></i>
+                    Settings
+                </a>
+            </nav>
+
+            <div class="admin-sidebar-foot">
+                <a href="login.html" class="admin-sidebar-logout">
+                    <i class="bi bi-box-arrow-left"></i>
+                    Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Top Bar -->
+            <header class="admin-topbar">
+                <div class="admin-topbar-left">
+                    <button class="admin-menu-toggle" aria-label="Toggle sidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div>
+                        <h1>Settings</h1>
+                        <p>Configure platform settings and preferences</p>
+                    </div>
+                </div>
+
+                <div class="admin-topbar-right">
+                    <div class="admin-search-wrap">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search settings...">
+                    </div>
+
+                    <button class="admin-topbar-icon" aria-label="Notifications">
+                        <i class="bi bi-bell"></i>
+                        <span class="admin-dot"></span>
+                    </button>
+
+                    <a href="#" class="admin-profile-chip">
+                        <span class="admin-avatar">A</span>
+                        <div>
+                            <strong>Admin User</strong>
+                            <small>Super Admin</small>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Settings Content -->
+            <section class="admin-content">
+                <!-- General Settings -->
+                <div class="admin-section-card">
+                    <div class="admin-section-head">
+                        <h2><i class="bi bi-sliders me-2"></i>General Settings</h2>
+                    </div>
+                    <form class="admin-movie-form">
+                        <div class="admin-movie-form-grid">
+                            <div class="admin-form-group">
+                                <label for="siteName">Site Name</label>
+                                <input type="text" id="siteName" value="Cinematic">
+                            </div>
+                            <div class="admin-form-group">
+                                <label for="siteTagline">Tagline</label>
+                                <input type="text" id="siteTagline" value="Your Ultimate Movie Destination">
+                            </div>
+                            <div class="admin-form-group">
+                                <label for="adminEmail">Admin Email</label>
+                                <input type="email" id="adminEmail" value="admin@cinematic.com">
+                            </div>
+                            <div class="admin-form-group">
+                                <label for="timezone">Timezone</label>
+                                <select id="timezone">
+                                    <option value="UTC">UTC</option>
+                                    <option value="EST" selected>Eastern Time (EST)</option>
+                                    <option value="PST">Pacific Time (PST)</option>
+                                    <option value="IST">India Standard Time (IST)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="admin-movie-form-actions">
+                            <button type="submit" class="admin-action-btn">
+                                <i class="bi bi-check-circle"></i>
+                                Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="admin-grid-1-1">
+                    <!-- Download Settings -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2><i class="bi bi-cloud-download me-2"></i>Download Settings</h2>
+                        </div>
+                        <div class="admin-list">
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Enable Guest Downloads</h4>
+                                    <p>Allow non-registered users to download</p>
+                                </div>
+                                <button role="switch" aria-checked="false">OFF</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Download Speed Limit</h4>
+                                    <p>Limit bandwidth per user</p>
+                                </div>
+                                <button role="switch" aria-checked="true">ON</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Require CAPTCHA</h4>
+                                    <p>CAPTCHA before download</p>
+                                </div>
+                                <button role="switch" aria-checked="true">ON</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Download Count Tracking</h4>
+                                    <p>Track download statistics</p>
+                                </div>
+                                <button role="switch" aria-checked="true">ON</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upload Settings -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2><i class="bi bi-cloud-upload me-2"></i>Upload Settings</h2>
+                        </div>
+                        <div class="admin-list">
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Max File Size</h4>
+                                    <p>Maximum upload size allowed</p>
+                                </div>
+                                <button>50 GB</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Auto-Encode 4K</h4>
+                                    <p>Automatically generate 4K versions</p>
+                                </div>
+                                <button role="switch" aria-checked="true">ON</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Generate Thumbnails</h4>
+                                    <p>Auto-create movie thumbnails</p>
+                                </div>
+                                <button role="switch" aria-checked="true">ON</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Virus Scan Uploads</h4>
+                                    <p>Scan files for malware</p>
+                                </div>
+                                <button role="switch" aria-checked="true">ON</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-grid-1-1">
+                    <!-- Security Settings -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2><i class="bi bi-shield-lock me-2"></i>Security</h2>
+                        </div>
+                        <div class="admin-list">
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Two-Factor Authentication</h4>
+                                    <p>Require 2FA for admin login</p>
+                                </div>
+                                <button role="switch" aria-checked="true">ON</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>IP Whitelisting</h4>
+                                    <p>Restrict admin access by IP</p>
+                                </div>
+                                <button role="switch" aria-checked="false">OFF</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Session Timeout</h4>
+                                    <p>Auto-logout after inactivity</p>
+                                </div>
+                                <button>30 mins</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Login Attempt Limit</h4>
+                                    <p>Lock account after failed attempts</p>
+                                </div>
+                                <button>5 attempts</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification Settings -->
+                    <div class="admin-section-card">
+                        <div class="admin-section-head">
+                            <h2><i class="bi bi-bell me-2"></i>Notifications</h2>
+                        </div>
+                        <div class="admin-list">
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Email Notifications</h4>
+                                    <p>Receive email for important events</p>
+                                </div>
+                                <button role="switch" aria-checked="true">ON</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>New User Alerts</h4>
+                                    <p>Notify on new registrations</p>
+                                </div>
+                                <button role="switch" aria-checked="true">ON</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>Download Alerts</h4>
+                                    <p>Notify on download milestones</p>
+                                </div>
+                                <button role="switch" aria-checked="false">OFF</button>
+                            </div>
+                            <div class="admin-list-item">
+                                <div>
+                                    <h4>System Alerts</h4>
+                                    <p>Critical system notifications</p>
+                                </div>
+                                <button role="switch" aria-checked="true">ON</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storage & Backup -->
+                <div class="admin-section-card">
+                    <div class="admin-section-head">
+                        <h2><i class="bi bi-hdd-stack me-2"></i>Storage & Backup</h2>
+                    </div>
+                    <div class="admin-kpi-grid" style="margin-bottom: 1rem;">
+                        <div class="admin-kpi-card">
+                            <div class="admin-kpi-icon">
+                                <i class="bi bi-hdd"></i>
+                            </div>
+                            <div>
+                                <small>Primary Storage</small>
+                                <h3>2.4 TB</h3>
+                                <span>of 3 TB used (78%)</span>
+                            </div>
+                        </div>
+                        <div class="admin-kpi-card">
+                            <div class="admin-kpi-icon">
+                                <i class="bi bi-cloud"></i>
+                            </div>
+                            <div>
+                                <small>Cloud Backup</small>
+                                <h3>2.1 TB</h3>
+                                <span>Last sync: 2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="admin-kpi-card">
+                            <div class="admin-kpi-icon">
+                                <i class="bi bi-archive"></i>
+                            </div>
+                            <div>
+                                <small>Last Backup</small>
+                                <h3>Today</h3>
+                                <span>03:00 AM UTC</span>
+                            </div>
+                        </div>
+                        <div class="admin-kpi-card">
+                            <div class="admin-kpi-icon">
+                                <i class="bi bi-calendar-check"></i>
+                            </div>
+                            <div>
+                                <small>Backup Schedule</small>
+                                <h3>Daily</h3>
+                                <span>Automatic backups</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin-actions-grid">
+                        <button class="admin-action-btn">
+                            <i class="bi bi-arrow-clockwise"></i>
+                            Backup Now
+                        </button>
+                        <button class="admin-action-btn">
+                            <i class="bi bi-cloud-download"></i>
+                            Restore Backup
+                        </button>
+                        <button class="admin-action-btn">
+                            <i class="bi bi-trash"></i>
+                            Clear Cache
+                        </button>
+                        <button class="admin-action-btn">
+                            <i class="bi bi-file-earmark-zip"></i>
+                            Export Data
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Danger Zone -->
+                <div class="admin-section-card" style="border-color: rgba(239, 68, 68, 0.3);">
+                    <div class="admin-section-head">
+                        <h2 style="color: #fca5a5;"><i class="bi bi-exclamation-triangle me-2"></i>Danger Zone</h2>
+                    </div>
+                    <div class="admin-list">
+                        <div class="admin-list-item">
+                            <div>
+                                <h4>Reset All Statistics</h4>
+                                <p>Clear all download and view counters</p>
+                            </div>
+                            <button style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4);">Reset</button>
+                        </div>
+                        <div class="admin-list-item">
+                            <div>
+                                <h4>Delete All Movies</h4>
+                                <p>Remove all movies from catalog (irreversible)</p>
+                            </div>
+                            <button style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4);">Delete</button>
+                        </div>
+                        <div class="admin-list-item">
+                            <div>
+                                <h4>Factory Reset</h4>
+                                <p>Reset entire platform to default settings</p>
+                            </div>
+                            <button style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4);">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts -->
+    <script>
+        const body = document.body;
+        const menuToggle = document.querySelector('.admin-menu-toggle');
+        const sidebarClose = document.querySelector('.admin-sidebar-close');
+        const overlay = document.querySelector('.admin-sidebar-overlay');
+
+        function openSidebar() {
+            body.classList.add('is-sidebar-open');
+        }
+
+        function closeSidebar() {
+            body.classList.remove('is-sidebar-open');
+        }
+
+        if (menuToggle) menuToggle.addEventListener('click', openSidebar);
+        if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+        if (overlay) overlay.addEventListener('click', closeSidebar);
+
+        // Toggle switches
+        document.querySelectorAll('button[role="switch"]').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const isChecked = this.getAttribute('aria-checked') === 'true';
+                this.setAttribute('aria-checked', !isChecked);
+                this.textContent = !isChecked ? 'ON' : 'OFF';
+            });
+        });
+    </script>
+</body>
+</html>

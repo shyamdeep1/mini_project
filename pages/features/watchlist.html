@@ -17,59 +17,71 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <!-- Logo -->
-            <a href="../../index.html" class="nav-logo">
+            <a href="../../index.html" class="navbar-brand nav-logo">
                 <img src="../../images/wb_logo_without_bg.png" alt="Logo">
                 <span>CINEMATIC</span>
             </a>
             
-            <!-- Navigation Links -->
-            <ul class="nav-menu">
-                <li><a href="../../index.html" class="nav-link">Home</a></li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Browse <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../browse/genres.html">All Genres</a></li>
-                        <li><a href="../browse/movies.html">Latest / Top Rated / Popular</a></li>
-                    </ul>
-                </li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link active">Features <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="smart-discovery.html">Smart Discovery</a></li>
-                        <li><a href="watchlist.html">My Watchlist</a></li>
-                        <li><a href="downloads.html">Downloads & History</a></li>
-                        <li><a href="movie-map.html">Movie Map</a></li>
-                        <li><a href="bundles.html">Movie Bundles</a></li>
-                        <li><a href="ott-movies.html">OTT Movies</a></li>
-                    </ul>
-                </li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Tools <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../tools/calendar.html">Release Calendar</a></li>
-                        <li><a href="../tools/request.html">Request Movie</a></li>
-                    </ul>
-                </li>
-                <li><a href="../info/about-help.html" class="nav-link">About & Help</a></li>
-            </ul>
-            
-            <!-- Right Actions -->
-            <div class="nav-actions">
-                <a href="../search-results.html" class="search-btn">
-                    <i class="bi bi-search"></i>
-                </a>
-                <a href="#" class="profile-btn">
-                    <i class="bi bi-person-circle"></i>
-                </a>
-            </div>
-            
             <!-- Mobile Menu Toggle -->
-            <button class="mobile-toggle">
-                <i class="bi bi-list"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="../../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Browse
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../browse/genres.html">All Genres</a></li>
+                            <li><a class="dropdown-item" href="../browse/movies.html">Latest / Top Rated / Popular</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Features
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../features/smart-discovery.html">Smart Discovery</a></li>
+                            <li><a class="dropdown-item" href="../features/watchlist.html">My Watchlist</a></li>
+                            <li><a class="dropdown-item" href="../features/downloads.html">Downloads & History</a></li>
+                            <li><a class="dropdown-item" href="../features/movie-map.html">Movie Map</a></li>
+                            <li><a class="dropdown-item" href="../features/bundles.html">Movie Bundles</a></li>
+                            <li><a class="dropdown-item" href="../features/ott-movies.html">OTT Movies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tools
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../tools/calendar.html">Release Calendar</a></li>
+                            <li><a class="dropdown-item" href="../tools/request.html">Request Movie</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../info/about-help.html" class="nav-link">About & Help</a>
+                    </li>
+                </ul>
+                
+                <!-- Right Actions -->
+                <div class="nav-actions d-flex align-items-center gap-3">
+                    <a href="../search-results.html" class="search-btn">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="#" class="profile-btn">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -150,8 +162,7 @@
                                 <i class="bi bi-grid-3x3-gap-fill"></i>
                             </button>
                             <button class="view-btn active" data-view="list">
-                                <i class="bi bi-list-ul"></i>
-                            </button>
+                                <i class="bi bi-list-ul"></i></span>
                         </div>
                     </div>
                 </div>
@@ -163,13 +174,12 @@
                         </div>
 
                         <div class="movies-list">
-                            <div class="movie-item">
+                            <a href="../movie-detail.html" class="movie-item">
                                 <div class="movie-poster">
                                     <img src="https://image.tmdb.org/t/p/w500/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg" alt="Inception">
                                     <div class="poster-overlay">
-                                        <button class="play-btn">
-                                            <i class="bi bi-play-fill"></i>
-                                        </button>
+                                        <span class="play-btn">
+                                            <i class="bi bi-play-fill"></i></span>
                                     </div>
                                 </div>
                                 <div class="movie-details">
@@ -200,15 +210,14 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="movie-item">
+                            <a href="../movie-detail.html" class="movie-item">
                                 <div class="movie-poster">
                                     <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight">
                                     <div class="poster-overlay">
-                                        <button class="play-btn">
-                                            <i class="bi bi-play-fill"></i>
-                                        </button>
+                                        <span class="play-btn">
+                                            <i class="bi bi-play-fill"></i></span>
                                     </div>
                                 </div>
                                 <div class="movie-details">
@@ -239,15 +248,14 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="movie-item">
+                            <a href="../movie-detail.html" class="movie-item">
                                 <div class="movie-poster">
                                     <img src="https://image.tmdb.org/t/p/w500/nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg" alt="Interstellar">
                                     <div class="poster-overlay">
-                                        <button class="play-btn">
-                                            <i class="bi bi-play-fill"></i>
-                                        </button>
+                                        <span class="play-btn">
+                                            <i class="bi bi-play-fill"></i></span>
                                     </div>
                                 </div>
                                 <div class="movie-details">
@@ -278,14 +286,13 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="load-more-container">
                             <button class="btn-load-more">
                                 <span>View All 18 Movies</span>
-                                <i class="bi bi-arrow-down-circle"></i>
-                            </button>
+                                <i class="bi bi-arrow-down-circle"></i></span>
                         </div>
                     </div>
 
@@ -295,13 +302,12 @@
                         </div>
 
                         <div class="movies-list">
-                            <div class="movie-item">
+                            <a href="../movie-detail.html" class="movie-item">
                                 <div class="movie-poster">
                                     <img src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="Fight Club">
                                     <div class="poster-overlay">
-                                        <button class="play-btn">
-                                            <i class="bi bi-play-fill"></i>
-                                        </button>
+                                        <span class="play-btn">
+                                            <i class="bi bi-play-fill"></i></span>
                                     </div>
                                     <div class="progress-badge">45%</div>
                                 </div>
@@ -332,7 +338,7 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
@@ -346,9 +352,8 @@
                                 <div class="movie-poster">
                                     <img src="https://image.tmdb.org/t/p/w500/9O7gLzmreU0nGkIB6K3BsJbzvNv.jpg" alt="The Shawshank Redemption">
                                     <div class="poster-overlay">
-                                        <button class="play-btn">
-                                            <i class="bi bi-play-fill"></i>
-                                        </button>
+                                        <span class="play-btn">
+                                            <i class="bi bi-play-fill"></i></span>
                                     </div>
                                     <div class="completed-badge">
                                         <i class="bi bi-check-circle-fill"></i>
